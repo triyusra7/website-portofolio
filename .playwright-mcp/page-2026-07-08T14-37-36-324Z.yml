@@ -1,0 +1,99 @@
+- generic [ref=e3]:
+  - region "top of page"
+  - link "wix This website was built on Wix. Create yours today. Get Started" [ref=e5] [cursor=pointer]:
+    - /url: https://www.wix.com/lpviral/enviral?utm_campaign=vir_wixad_live&adsVersion=banner_2024&orig_msid=aa99f552-cce6-4d9b-96f0-a304175f7068&orig_msid=4c7aebdb-4865-4c39-be8d-b4261c131016&adsVersion=banner_2024
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - img "wix" [ref=e10]
+        - text: This website was built on Wix. Create yours today.
+      - generic [ref=e15]: Get Started
+  - generic [ref=e22]:
+    - banner [ref=e23]:
+      - generic [ref=e31]:
+        - link "logo full-11.png" [ref=e37] [cursor=pointer]:
+          - /url: https://triyusra77.wixsite.com/portfolio
+          - img "logo full-11.png" [ref=e38]
+        - navigation "Site" [ref=e44]:
+          - list [ref=e45]:
+            - listitem [ref=e46]:
+              - link "Home" [ref=e47] [cursor=pointer]:
+                - /url: https://triyusra77.wixsite.com/portfolio
+                - paragraph [ref=e51]: Home
+            - listitem [ref=e52]:
+              - link "Profile" [ref=e53] [cursor=pointer]:
+                - /url: https://triyusra77.wixsite.com/portfolio/profile
+                - paragraph [ref=e57]: Profile
+            - listitem [ref=e58]:
+              - link "Contact" [ref=e59] [cursor=pointer]:
+                - /url: https://triyusra77.wixsite.com/portfolio/contact
+                - paragraph [ref=e63]: Contact
+    - main [ref=e64]:
+      - generic [ref=e69]:
+        - generic:
+          - generic:
+            - generic:
+              - generic [ref=e79]:
+                - img "BG.jpg" [ref=e84]
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img [ref=e87]
+                          - img [ref=e92]
+                          - img [ref=e97]
+                          - heading "Hello!I’m Tri,an UX Designer,Product Designer,and Graphic Designer who bridges people with design and bring happiness" [level=1] [ref=e100]:
+                            - generic [ref=e101]:
+                              - text: Hello!I’m Tri,
+                              - generic [ref=e102]:
+                                - text: an UX Designer,Product Designer,and Graphic Designer
+                                - text: who
+                              - text: bridges
+                              - generic [ref=e103]:
+                                - text: people with
+                                - text: design and bring
+                              - text: happiness
+                    - generic:
+                      - generic:
+                        - generic:
+                          - paragraph [ref=e104]:
+                            - generic [ref=e108]: Scroll to explore
+                          - img [ref=e111]
+              - generic [ref=e116]:
+                - generic:
+                  - generic:
+                    - heading "Projects work" [level=2] [ref=e120]:
+                      - generic [ref=e122]: Projects work
+                    - region [ref=e129]:
+                      - generic [ref=e130]:
+                        - generic [ref=e131]:
+                          - generic:
+                            - generic [ref=e132] [cursor=pointer]:
+                              - link "image"
+                            - generic [ref=e138] [cursor=pointer]:
+                              - link
+                            - generic [ref=e144] [cursor=pointer]:
+                              - link
+                        - button "Next Item" [ref=e150] [cursor=pointer]:
+                          - img [ref=e151]
+    - contentinfo [ref=e155]:
+      - generic [ref=e159]:
+        - generic:
+          - generic:
+            - paragraph [ref=e161]:
+              - generic [ref=e164]: "\"Find your happiness and success at the same time\""
+            - paragraph [ref=e165]:
+              - link "Linkedin" [ref=e167] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/tri-anugerah-yusra-14a204115/
+                - generic [ref=e168]: Linkedin
+            - paragraph [ref=e169]:
+              - link "Dribbble" [ref=e170] [cursor=pointer]:
+                - /url: https://dribbble.com/trian77
+                - generic [ref=e171]: Dribbble
+            - paragraph [ref=e172]:
+              - link "Behance" [ref=e173] [cursor=pointer]:
+                - /url: https://www.behance.net/trianugerah1
+                - generic [ref=e174]: Behance
+            - paragraph [ref=e184]:
+              - generic [ref=e185]: © 2021 by Tri Anugerah Yusra_Portfolio
+  - region "bottom of page"

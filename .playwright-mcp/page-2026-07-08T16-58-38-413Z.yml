@@ -1,0 +1,462 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Tri Anugerah Yusra" [ref=e4] [cursor=pointer]:
+        - /url: "#home"
+        - img "Tri Anugerah Yusra" [ref=e5]
+      - navigation [ref=e6]:
+        - link "Projects" [ref=e7] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Profile" [ref=e8] [cursor=pointer]:
+          - /url: "#profile"
+        - link "Contact" [ref=e9] [cursor=pointer]:
+          - /url: "#contact"
+        - link "Let's talk" [ref=e10] [cursor=pointer]:
+          - /url: "#contact"
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e14]:
+        - paragraph [ref=e15]: Portfolio
+        - heading "Hello! I'm Tri , UX Designer, Product Designer & Graphic Designer who bridges people with design and bring happiness" [level=1] [ref=e16]:
+          - text: Hello! I'm
+          - generic [ref=e17]: Tri
+          - text: ", UX Designer, Product Designer & Graphic Designer who"
+          - generic [ref=e18]: bridges
+          - text: people with design and bring
+          - generic [ref=e19]: happiness
+        - paragraph [ref=e20]: South Jakarta, Indonesia · Open to new opportunities
+        - generic [ref=e21]:
+          - link "View projects" [ref=e22] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Get in touch" [ref=e23] [cursor=pointer]:
+            - /url: "#contact"
+      - generic [ref=e24]:
+        - generic [ref=e25]: Scroll to explore
+        - img [ref=e27]
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - paragraph [ref=e33]: Projects work
+          - heading "Selected projects" [level=2] [ref=e34]
+          - paragraph [ref=e35]: 12 case studies from PasarMIKRO, Linkz Asia, freelance work, school projects, and community design.
+        - blockquote [ref=e36]: “Find your happiness and success at the same time”
+      - generic [ref=e37]:
+        - link "Marketplace PasarMIKRO Marketplace Product Design · Mobile App This is the project that I was working on in my company PasarMIKRO. This project is for our trading platform where user can do transactions, either want to buy or sell their commodity. Result — More flexible, secure transactions with improved trust between traders. Users could now discover and vet new partners digitally, and the streamlined checkout reduced friction for both buyers and sellers. B2B Agri-tech Mobile App" [ref=e38] [cursor=pointer]:
+          - /url: /projects/marketplace
+          - generic [ref=e39]:
+            - img "Marketplace" [ref=e40]
+            - generic [ref=e42]:
+              - paragraph [ref=e43]: PasarMIKRO
+              - heading "Marketplace" [level=3] [ref=e44]
+              - paragraph [ref=e45]: Product Design · Mobile App
+            - img [ref=e46]
+          - generic [ref=e49]:
+            - paragraph [ref=e50]: This is the project that I was working on in my company PasarMIKRO. This project is for our trading platform where user can do transactions, either want to buy or sell their commodity.
+            - paragraph [ref=e51]: Result — More flexible, secure transactions with improved trust between traders. Users could now discover and vet new partners digitally, and the streamlined checkout reduced friction for both buyers and sellers.
+            - generic [ref=e52]:
+              - generic [ref=e53]: B2B
+              - generic [ref=e54]: Agri-tech
+              - generic [ref=e55]: Mobile App
+        - link "REPO PasarMIKRO REPO Fintech · Credit Feature This is the project that I am working on in my company, PasarMIKRO. This project is for users to repo their documents like PO or SO to PasarMIKRO and get the credit to buy commodities they need. Result — Traders can now access credit efficiently to fulfill larger orders without cash flow constraints. Feature was designed, developed, and deployed within one sprint (2 weeks). Fintech Credit B2B" [ref=e56] [cursor=pointer]:
+          - /url: /projects/repo
+          - generic [ref=e57]:
+            - img "REPO" [ref=e58]
+            - generic [ref=e60]:
+              - paragraph [ref=e61]: PasarMIKRO
+              - heading "REPO" [level=3] [ref=e62]
+              - paragraph [ref=e63]: Fintech · Credit Feature
+            - img [ref=e64]
+          - generic [ref=e67]:
+            - paragraph [ref=e68]: This is the project that I am working on in my company, PasarMIKRO. This project is for users to repo their documents like PO or SO to PasarMIKRO and get the credit to buy commodities they need.
+            - paragraph [ref=e69]: Result — Traders can now access credit efficiently to fulfill larger orders without cash flow constraints. Feature was designed, developed, and deployed within one sprint (2 weeks).
+            - generic [ref=e70]:
+              - generic [ref=e71]: Fintech
+              - generic [ref=e72]: Credit
+              - generic [ref=e73]: B2B
+        - link "Rekam Wilayah PasarMIKRO Rekam Wilayah Product Design · Mobile App This is the project that I working on in my company PasarMIKRO. This project for users can measure the size of their territory for their business. Result — Users can now document their territory digitally for business records and commodity traceability. Feature deployed within one sprint and available to all PasarMIKRO users. GPS Field Research Mobile App" [ref=e74] [cursor=pointer]:
+          - /url: /projects/rekam-wilayah
+          - generic [ref=e75]:
+            - img "Rekam Wilayah" [ref=e76]
+            - generic [ref=e78]:
+              - paragraph [ref=e79]: PasarMIKRO
+              - heading "Rekam Wilayah" [level=3] [ref=e80]
+              - paragraph [ref=e81]: Product Design · Mobile App
+            - img [ref=e82]
+          - generic [ref=e85]:
+            - paragraph [ref=e86]: This is the project that I working on in my company PasarMIKRO. This project for users can measure the size of their territory for their business.
+            - paragraph [ref=e87]: Result — Users can now document their territory digitally for business records and commodity traceability. Feature deployed within one sprint and available to all PasarMIKRO users.
+            - generic [ref=e88]:
+              - generic [ref=e89]: GPS
+              - generic [ref=e90]: Field Research
+              - generic [ref=e91]: Mobile App
+        - link "Invoicing & Manage Linkz Asia Invoicing & Manage Product Design · SaaS This project is about improving the invoicing feature for order form and managing their inventory. Result — Reduced calculation errors, improved security through access control, more flexible inventory management workflow, and clearer document presentation that reduced user confusion. SaaS Tax Enterprise" [ref=e92] [cursor=pointer]:
+          - /url: /projects/invoicing
+          - generic [ref=e93]:
+            - img "Invoicing & Manage" [ref=e94]
+            - generic [ref=e96]:
+              - paragraph [ref=e97]: Linkz Asia
+              - heading "Invoicing & Manage" [level=3] [ref=e98]
+              - paragraph [ref=e99]: Product Design · SaaS
+            - img [ref=e100]
+          - generic [ref=e103]:
+            - paragraph [ref=e104]: This project is about improving the invoicing feature for order form and managing their inventory.
+            - paragraph [ref=e105]: Result — Reduced calculation errors, improved security through access control, more flexible inventory management workflow, and clearer document presentation that reduced user confusion.
+            - generic [ref=e106]:
+              - generic [ref=e107]: SaaS
+              - generic [ref=e108]: Tax
+              - generic [ref=e109]: Enterprise
+        - link "Design System Linkz Asia Design System Design System · Figma This is the project that I working on in my company Linkz. The design system is not organized and developers are confused about the previous design system. So it needs it to improve for the component. Result — Consistent UI across the product, faster design iterations, and clearer developer handoff. Completed in 3 days and adopted across the team. Figma Material Design Components" [ref=e110] [cursor=pointer]:
+          - /url: /projects/design-system
+          - generic [ref=e111]:
+            - img "Design System" [ref=e112]
+            - generic [ref=e114]:
+              - paragraph [ref=e115]: Linkz Asia
+              - heading "Design System" [level=3] [ref=e116]
+              - paragraph [ref=e117]: Design System · Figma
+            - img [ref=e118]
+          - generic [ref=e121]:
+            - paragraph [ref=e122]: This is the project that I working on in my company Linkz. The design system is not organized and developers are confused about the previous design system. So it needs it to improve for the component.
+            - paragraph [ref=e123]: Result — Consistent UI across the product, faster design iterations, and clearer developer handoff. Completed in 3 days and adopted across the team.
+            - generic [ref=e124]:
+              - generic [ref=e125]: Figma
+              - generic [ref=e126]: Material Design
+              - generic [ref=e127]: Components
+        - link "Lampu Kuning IDS — Studio Production Lampu Kuning Web Design · WordPress Students from the three departments of the International Design School (IDS), Digital Design, Digital Animation, and Digital Film and Multimedia, come together for the \"Lampu Kuning\" event/campaign to create a piece of art/product that the public may enjoy. Result — Successfully merged three disciplines (design, animation, film) into one cohesive interactive experience, published on the International Design School official website. Proved team resilience under COVID constraints. Web Design WordPress Collaborative" [ref=e128] [cursor=pointer]:
+          - /url: /projects/lampu-kuning
+          - generic [ref=e129]:
+            - img "Lampu Kuning" [ref=e130]
+            - generic [ref=e132]:
+              - paragraph [ref=e133]: IDS — Studio Production
+              - heading "Lampu Kuning" [level=3] [ref=e134]
+              - paragraph [ref=e135]: Web Design · WordPress
+            - img [ref=e136]
+          - generic [ref=e139]:
+            - paragraph [ref=e140]: Students from the three departments of the International Design School (IDS), Digital Design, Digital Animation, and Digital Film and Multimedia, come together for the "Lampu Kuning" event/campaign to create a piece of art/product that the public may enjoy.
+            - paragraph [ref=e141]: Result — Successfully merged three disciplines (design, animation, film) into one cohesive interactive experience, published on the International Design School official website. Proved team resilience under COVID constraints.
+            - generic [ref=e142]:
+              - generic [ref=e143]: Web Design
+              - generic [ref=e144]: WordPress
+              - generic [ref=e145]: Collaborative
+        - link "Wasnack Google & Coursera Wasnack UX Design · Mobile App This project was from my course \"coursera\" and Google. And the project was from a real situation in real life that I took. I want to develop my skills and my knowledge of UX. Result — Successfully addressed all identified user problems with an intuitive blue-themed interface. The app design received positive feedback in usability testing, with all critical tasks completed without assistance. Mobile App UX Research Food & Beverage" [ref=e146] [cursor=pointer]:
+          - /url: /projects/wasnack
+          - generic [ref=e147]:
+            - img "Wasnack" [ref=e148]
+            - generic [ref=e150]:
+              - paragraph [ref=e151]: Google & Coursera
+              - heading "Wasnack" [level=3] [ref=e152]
+              - paragraph [ref=e153]: UX Design · Mobile App
+            - img [ref=e154]
+          - generic [ref=e157]:
+            - paragraph [ref=e158]: This project was from my course "coursera" and Google. And the project was from a real situation in real life that I took. I want to develop my skills and my knowledge of UX.
+            - paragraph [ref=e159]: Result — Successfully addressed all identified user problems with an intuitive blue-themed interface. The app design received positive feedback in usability testing, with all critical tasks completed without assistance.
+            - generic [ref=e160]:
+              - generic [ref=e161]: Mobile App
+              - generic [ref=e162]: UX Research
+              - generic [ref=e163]: Food & Beverage
+        - link "Hylo Social Media Freelance Hylo Social Media Social Media · Graphic Design This is my project when I work as a freelance graphic designer. This project is about construction and interior design for building — live on Instagram at instagram.com/hylo.id. Result — Cohesive, premium social media presence that communicates Hylo's expertise to their target market through engaging video content and consistent brand application. Social Media Interior Design Branding" [ref=e164] [cursor=pointer]:
+          - /url: /projects/hylo
+          - generic [ref=e165]:
+            - img "Hylo Social Media" [ref=e166]
+            - generic [ref=e168]:
+              - paragraph [ref=e169]: Freelance
+              - heading "Hylo Social Media" [level=3] [ref=e170]
+              - paragraph [ref=e171]: Social Media · Graphic Design
+            - img [ref=e172]
+          - generic [ref=e175]:
+            - paragraph [ref=e176]: This is my project when I work as a freelance graphic designer. This project is about construction and interior design for building — live on Instagram at instagram.com/hylo.id.
+            - paragraph [ref=e177]: Result — Cohesive, premium social media presence that communicates Hylo's expertise to their target market through engaging video content and consistent brand application.
+            - generic [ref=e178]:
+              - generic [ref=e179]: Social Media
+              - generic [ref=e180]: Interior Design
+              - generic [ref=e181]: Branding
+        - link "LitUP Social Media LitUP Indonesia LitUP Social Media Social Media · Branding Brand identity and social media content design for LitUP, an Indonesian educational organization — helping students aged 17–22 define their futures through consistent Instagram and TikTok presence. Result — Successfully reached the target student audience across platforms, supported students in defining their future direction, and built a recognizable brand identity for the organization over two years. Social Media Education Branding" [ref=e182] [cursor=pointer]:
+          - /url: /projects/litup
+          - generic [ref=e183]:
+            - img "LitUP Social Media" [ref=e184]
+            - generic [ref=e186]:
+              - paragraph [ref=e187]: LitUP Indonesia
+              - heading "LitUP Social Media" [level=3] [ref=e188]
+              - paragraph [ref=e189]: Social Media · Branding
+            - img [ref=e190]
+          - generic [ref=e193]:
+            - paragraph [ref=e194]: Brand identity and social media content design for LitUP, an Indonesian educational organization — helping students aged 17–22 define their futures through consistent Instagram and TikTok presence.
+            - paragraph [ref=e195]: Result — Successfully reached the target student audience across platforms, supported students in defining their future direction, and built a recognizable brand identity for the organization over two years.
+            - generic [ref=e196]:
+              - generic [ref=e197]: Social Media
+              - generic [ref=e198]: Education
+              - generic [ref=e199]: Branding
+        - link "Biotalk Social Media Agency Biotalk Social Media Social Media · Branding This is my project when I work as an intern in graphic design. This is one of the project that I worked on when I working for one of the local digital agency — live on Instagram at instagram.com/biotalk.id. Result — Cohesive brand communication across social media that reinforced Biotalk's natural, skin-safe positioning and connected with their diverse target audience. Social Media Skincare Branding" [ref=e200] [cursor=pointer]:
+          - /url: /projects/biotalk
+          - generic [ref=e201]:
+            - img "Biotalk Social Media" [ref=e202]
+            - generic [ref=e204]:
+              - paragraph [ref=e205]: Agency
+              - heading "Biotalk Social Media" [level=3] [ref=e206]
+              - paragraph [ref=e207]: Social Media · Branding
+            - img [ref=e208]
+          - generic [ref=e211]:
+            - paragraph [ref=e212]: This is my project when I work as an intern in graphic design. This is one of the project that I worked on when I working for one of the local digital agency — live on Instagram at instagram.com/biotalk.id.
+            - paragraph [ref=e213]: Result — Cohesive brand communication across social media that reinforced Biotalk's natural, skin-safe positioning and connected with their diverse target audience.
+            - generic [ref=e214]:
+              - generic [ref=e215]: Social Media
+              - generic [ref=e216]: Skincare
+              - generic [ref=e217]: Branding
+        - link "PCC Branding IDS — School Project PCC Branding Branding · Packaging This project was from my design school \"International Design School\". This is a group project with my friend. For this project, we must use only \"typography\" to make the brand. Result — A complete brand identity — logo concepts, packaging mockups, and product applications — delivered within 2 weeks. Successfully communicated a futuristic, science-inspired chocolate brand using only typographic design elements. Branding Typography Packaging" [ref=e218] [cursor=pointer]:
+          - /url: /projects/pcc
+          - generic [ref=e219]:
+            - img "PCC Branding" [ref=e220]
+            - generic [ref=e222]:
+              - paragraph [ref=e223]: IDS — School Project
+              - heading "PCC Branding" [level=3] [ref=e224]
+              - paragraph [ref=e225]: Branding · Packaging
+            - img [ref=e226]
+          - generic [ref=e229]:
+            - paragraph [ref=e230]: This project was from my design school "International Design School". This is a group project with my friend. For this project, we must use only "typography" to make the brand.
+            - paragraph [ref=e231]: Result — A complete brand identity — logo concepts, packaging mockups, and product applications — delivered within 2 weeks. Successfully communicated a futuristic, science-inspired chocolate brand using only typographic design elements.
+            - generic [ref=e232]:
+              - generic [ref=e233]: Branding
+              - generic [ref=e234]: Typography
+              - generic [ref=e235]: Packaging
+        - link "My Collection Personal My Collection Photography · Vector · Book Design These are my other projects besides UX designer. I love art, design and photography, especially \"human interest\" and Keith Haring's masterpiece. I believe that art can bring joy to people around the world, and I hope my art can bring joy to people as well. Result — A living personal portfolio that reflects artistic interests and creative range beyond UX work — available for those interested in collaboration or purchase. Photography Vector Book Design" [ref=e236] [cursor=pointer]:
+          - /url: /projects/my-collection
+          - generic [ref=e237]:
+            - img "My Collection" [ref=e238]
+            - generic [ref=e240]:
+              - paragraph [ref=e241]: Personal
+              - heading "My Collection" [level=3] [ref=e242]
+              - paragraph [ref=e243]: Photography · Vector · Book Design
+            - img [ref=e244]
+          - generic [ref=e247]:
+            - paragraph [ref=e248]: These are my other projects besides UX designer. I love art, design and photography, especially "human interest" and Keith Haring's masterpiece. I believe that art can bring joy to people around the world, and I hope my art can bring joy to people as well.
+            - paragraph [ref=e249]: Result — A living personal portfolio that reflects artistic interests and creative range beyond UX work — available for those interested in collaboration or purchase.
+            - generic [ref=e250]:
+              - generic [ref=e251]: Photography
+              - generic [ref=e252]: Vector
+              - generic [ref=e253]: Book Design
+      - paragraph [ref=e254]:
+        - text: More visuals on
+        - link "Dribbble" [ref=e255] [cursor=pointer]:
+          - /url: https://dribbble.com/trian77
+        - text: .
+    - generic [ref=e257]:
+      - generic [ref=e258]:
+        - generic [ref=e259]:
+          - paragraph [ref=e260]: Profile
+          - heading "Hello, I'm Tri" [level=2] [ref=e261]
+        - generic:
+          - generic:
+            - img "Profile animation"
+      - generic [ref=e262]:
+        - generic [ref=e264]:
+          - generic [ref=e265]:
+            - img "Tri Anugerah Yusra" [ref=e267]
+            - link "Download CV" [ref=e268] [cursor=pointer]:
+              - /url: /cv.pdf
+              - img [ref=e269]
+              - text: Download CV
+            - link "Portfolio PDF" [ref=e272] [cursor=pointer]:
+              - /url: /portfolio.pdf
+              - img [ref=e273]
+              - text: Portfolio PDF
+          - generic [ref=e276]:
+            - paragraph [ref=e277]: Hi, I'm Tri Anugerah Yusra, feel free to call me "Tri." I hold a Bachelor's degree in Economics, specializing in Accounting (2018), and a Professional Certificate in Digital Design (2021).
+            - paragraph [ref=e278]: Based in South Jakarta, I'm passionate about UI/UX design and deeply committed to crafting user-centered experiences backed by real research. I thrive on understanding people, what they struggle with, what they need, and translating that into design that actually helps.
+            - paragraph [ref=e279]: My journey started as a Graphic Designer Intern at Sinarmas Land, grew through UI/UX roles at PasarMIKRO and Linkz Asia, and now continues as a freelance designer working on HRIS platforms, logistics features, ERP solutions, and brand identities.
+            - paragraph [ref=e280]: Looking ahead, I aspire to grow into an Interaction Designer role, working alongside diverse, innovative teams. In my spare time I enjoy badminton and football, art (especially Keith Haring), singing, and staying sharp through reading.
+        - generic [ref=e282]:
+          - heading "My Expertise" [level=3] [ref=e283]
+          - generic [ref=e284]:
+            - generic [ref=e285]: UI/UX Design
+            - generic [ref=e286]: Product Design
+            - generic [ref=e287]: Design System
+            - generic [ref=e288]: UX Research
+            - generic [ref=e289]: Wireframing
+            - generic [ref=e290]: Prototyping
+            - generic [ref=e291]: Branding Design
+            - generic [ref=e292]: Graphic Design
+            - generic [ref=e293]: AI Tools
+          - paragraph [ref=e294]: UI/UX Design, Wireframing, Prototyping, UX Research, Design Systems, Interaction Design, Graphic Design, and Branding, with tools including Figma, Adobe Creative Suite, Maze, Whimsical, Mixpanel, Dbeaver, and AI tools like Claude, Gemini, and Google AI Studio.
+    - generic [ref=e296]:
+      - generic [ref=e297]:
+        - generic [ref=e298]:
+          - paragraph [ref=e299]: My Experience
+          - heading "Where I've designed & grown" [level=2] [ref=e300]
+        - generic:
+          - generic:
+            - img "Experience animation"
+      - generic [ref=e301]:
+        - article [ref=e303]:
+          - generic [ref=e304]:
+            - paragraph [ref=e305]: August 2024 – Now
+            - paragraph [ref=e306]: UI/UX Designer and Graphic Design
+            - paragraph [ref=e307]: Freelance
+            - paragraph [ref=e308]: Jakarta – Indonesia
+          - list [ref=e310]:
+            - listitem [ref=e311]: Redesigned the user interface and streamlined end-to-end flows for an HRIS platform, improving usability and consistency across mobile and web.
+            - listitem [ref=e313]: Designed the "Angkot Cargo" feature for a logistics client, enabling customers to ship parcels via public minivans that follow predefined routes, expanding delivery options and improving accessibility.
+            - listitem [ref=e315]: Created a comprehensive ERP solution, integrating finance for journal entries, COA, and the result will be reports about Profit and Loss, Ledger, Financial Position (Balance Sheet), and Cash Flow (Indirect). Also included HRIS modules for streamlined operations.
+            - listitem [ref=e317]: Delivered a new brand identity for a logistics company by creating the logo, business cards, letterhead, brand guidelines manual, and employee ID cards.
+        - article [ref=e320]:
+          - generic [ref=e321]:
+            - paragraph [ref=e322]: June 2024 – August 2024
+            - paragraph [ref=e323]: UI/UX Designer
+            - paragraph [ref=e324]: Linkz Asia
+            - paragraph [ref=e325]: Jakarta – Indonesia
+          - list [ref=e327]:
+            - listitem [ref=e328]: Developed a Design System in Figma to serve as a component library for developers, ensuring adherence to Material Design guidelines.
+            - listitem [ref=e330]: Collaborated with stakeholders and developers to create various projects, ensuring they are user-friendly and meet the needs of end-users.
+            - listitem [ref=e332]: Developed the "Inventory" project, enabling users to manually input data directly into the Linkz application, which previously only allowed xls. file uploads.
+            - listitem [ref=e334]: Implemented calculations and formulas in the "Order Form" for accurate tax and discount computation, allowing real-time visibility of the final amounts upon input.
+            - listitem [ref=e336]: Conducted direct interviews with active users to gather feedback, holding online sessions where the application was demonstrated and user input was collected.
+            - listitem [ref=e338]: Used Figma to create high-fidelity mockups, collaborating closely with cross-functional teams to brainstorm solutions and improve user experience.
+            - listitem [ref=e340]: Developed a project that enables company owners to track their employees' activities during work hours.
+            - listitem [ref=e342]: Created tickets and managed Jira as a tool for handing off tasks to developers, providing detailed explanations of the work to be done.
+        - article [ref=e345]:
+          - generic [ref=e346]:
+            - paragraph [ref=e347]: 18 August 2021 – 23 August 2022
+            - paragraph [ref=e348]: UI/UX Designer
+            - paragraph [ref=e349]: PasarMIKRO
+            - paragraph [ref=e350]: Jakarta – Indonesia
+          - generic [ref=e351]:
+            - list [ref=e352]:
+              - listitem [ref=e353]: Collaborated directly with developers and stakeholders to design and deliver projects, actively engaging in discussions about flow and design to ensure alignment.
+              - listitem [ref=e355]: Conducted comprehensive desk research and field research, including site visits and direct conversations with users, to gather valid data. Listened to user feedback, identified pain points, and worked on solving their problems based on real-world experiences.
+              - listitem [ref=e357]: Managed the entire design process from concept to delivery, including assisting in platform testing to ensure that the design was accurately implemented.
+              - listitem [ref=e359]: Conducted user testing using moderated methods to obtain more reliable data and insights, refining the product based on these findings.
+              - listitem [ref=e361]: Designed intuitive user flows and mockups in Figma, ensuring a user-friendly navigation experience.
+              - listitem [ref=e363]: Used Figma to create high-fidelity mockups, collaborating closely with cross-functional teams to brainstorm solutions and improve user experience.
+              - listitem [ref=e365]: Played a key role in branding and website development, maintaining consistency across platforms.
+              - listitem [ref=e367]: Aligned design decisions with the company's business goals, contributing to the product's strategic direction.
+              - listitem [ref=e369]: Managed Jira ticketing and provided detailed design specifications for seamless implementation.
+            - generic [ref=e371]:
+              - paragraph [ref=e372]: Projects
+              - generic [ref=e373]:
+                - paragraph [ref=e374]: "Project 1: Area Tracking"
+                - paragraph [ref=e375]: The "Area Tracking" project addresses users' need to measure and record the size of their business area, including the type of business and commodities grown. The solution involves a "tracing steps" feature, where users walk or drive around their area to map it directly. This project allows users to get accurate measurements of their business land, which can also be used for traceability purposes when selling products. As a result, users who have not measured their business areas are now able to use this tool to manage their records effectively.
+              - generic [ref=e376]:
+                - paragraph [ref=e377]: "Project 2: Marketplace"
+                - paragraph [ref=e378]: The "Marketplace" project focuses on enhancing the B2B agricultural marketplace experience. Users prefer dealing with trusted partners but also seek new, reliable partners. This project provides each user with their own store to display commodities and a "success" indicator that shows transaction history. Users can save partner stores for quick access and use the marketplace directly or via WhatsApp, allowing transactions without app installation for new partners. The result is a more user-friendly marketplace that allows for flexible and secure transactions, improving user trust and satisfaction.
+              - generic [ref=e379]:
+                - paragraph [ref=e380]: "Project 3: Wallet 2 (Business Wallet)"
+                - paragraph [ref=e381]: The "Wallet 2" project solves users' challenges in managing sales and purchase funds in a single wallet by introducing a dedicated "Business Wallet" for storing sales proceeds. This separation allows users to clearly see their earnings and easily transfer or withdraw their funds. The implementation of this project resulted in increased user satisfaction as they could now manage their business finances more effectively without confusion.
+              - generic [ref=e382]:
+                - paragraph [ref=e383]: "Project 4: Financial Report (Cash Flow Record)"
+                - paragraph [ref=e384]: The "Financial Report" project was redesigned into a "Cash Flow Record" to offer users a clearer overview of their transaction history and financial activities on PasarMIKRO. The updated design uses bar charts for better visualization and allows users to manually input sales and other expenses. This change led to a significant increase in user engagement with the cash flow records, as users found the feature more intuitive and helpful for their financial tracking needs.
+        - article [ref=e386]:
+          - generic [ref=e387]:
+            - paragraph [ref=e388]: February 2021 – May 2021
+            - paragraph [ref=e389]: Graphic Designer Intern
+            - paragraph [ref=e390]: Sinarmas Land
+            - paragraph [ref=e391]: Tangerang – Indonesia
+          - list [ref=e393]:
+            - listitem [ref=e394]: Edited and shot videos for the e-learning section, collaborating with senior designers.
+            - listitem [ref=e396]: Created posters and certificates for the e-learning section, and assisted in UI design for the website.
+            - listitem [ref=e398]: Proposed a minimalist design approach for the website, ensuring a simple and effective user flow.
+        - article [ref=e401]:
+          - generic [ref=e402]:
+            - paragraph [ref=e403]: October 2020 – July 2022
+            - paragraph [ref=e404]: Lead Designer
+            - paragraph [ref=e405]: LitUp Indonesia (Community)
+            - paragraph [ref=e406]: Bandung – Indonesia
+          - list [ref=e408]:
+            - listitem [ref=e409]: Lead media team and created structure and flow for the social media content to reach people in social media.
+            - listitem [ref=e411]: Proposed content for social media for marketing.
+            - listitem [ref=e413]: Managed social media and created projects for impactful to society because we focused on education and helped students reach their goal in their lives. Focused on Instagram and TikTok to reach as many people as possible.
+    - generic [ref=e416]:
+      - generic [ref=e417]:
+        - generic [ref=e418]:
+          - paragraph [ref=e419]: My Skills and Design tools
+          - heading "Craft & toolkit" [level=2] [ref=e420]
+        - generic:
+          - generic:
+            - img "Skills animation"
+      - generic [ref=e421]:
+        - generic [ref=e422]:
+          - heading "Design Tools" [level=3] [ref=e423]
+          - generic [ref=e424]:
+            - generic [ref=e425]: Figma
+            - generic [ref=e426]: Whimsical
+            - generic [ref=e427]: Adobe Illustrator
+            - generic [ref=e428]: Adobe Photoshop
+            - generic [ref=e429]: Adobe After Effects
+            - generic [ref=e430]: Adobe Premiere Pro
+            - generic [ref=e431]: Adobe InDesign
+            - generic [ref=e432]: Adobe Lightroom
+            - generic [ref=e433]: Maze
+            - generic [ref=e434]: Dbeaver
+            - generic [ref=e435]: Mixpanel
+        - generic [ref=e436]:
+          - heading "UX Skills" [level=3] [ref=e437]
+          - generic [ref=e438]:
+            - generic [ref=e439]: Wireframing
+            - generic [ref=e440]: Prototyping
+            - generic [ref=e441]: UX Research
+            - generic [ref=e442]: Interaction Design
+            - generic [ref=e443]: Design System
+            - generic [ref=e444]: User Interviews
+            - generic [ref=e445]: PRD
+        - generic [ref=e446]:
+          - heading "Development" [level=3] [ref=e447]
+          - generic [ref=e448]:
+            - generic [ref=e449]: CSS
+            - generic [ref=e450]: HTML
+        - generic [ref=e451]:
+          - heading "AI Tools" [level=3] [ref=e452]
+          - generic [ref=e453]:
+            - generic [ref=e454]: Claude
+            - generic [ref=e455]: Claude Code
+            - generic [ref=e456]: Gemini
+            - generic [ref=e457]: Google Stitch
+            - generic [ref=e458]: Google AI Studio
+            - generic [ref=e459]: NotebookLM
+            - generic [ref=e460]: KlingsAI
+            - generic [ref=e461]: Seedance
+            - generic [ref=e462]: Notion AI
+        - generic [ref=e463]:
+          - heading "Project Management" [level=3] [ref=e464]
+          - generic [ref=e465]:
+            - generic [ref=e466]: Jira
+            - generic [ref=e467]: Notion
+            - generic [ref=e468]: Trello
+    - generic [ref=e470]:
+      - generic [ref=e471]:
+        - generic [ref=e472]:
+          - paragraph [ref=e473]: Contact
+          - heading "Get in touch" [level=2] [ref=e474]
+          - paragraph [ref=e475]: Currently seeking new opportunities!!!
+          - paragraph [ref=e476]: If you're interested in my work, please contact me or send a message for more information. I'm really excited for new challenges.
+        - generic:
+          - generic:
+            - img "Contact animation"
+      - generic [ref=e477]:
+        - link "WhatsApp +62 85280459492" [ref=e479] [cursor=pointer]:
+          - /url: https://wa.me/6285280459492
+          - img [ref=e481]
+          - generic [ref=e483]:
+            - paragraph [ref=e484]: WhatsApp
+            - paragraph [ref=e485]: +62 85280459492
+        - generic [ref=e487]:
+          - generic [ref=e488]:
+            - generic [ref=e489]: Your Name
+            - textbox "Your Name" [ref=e490]:
+              - /placeholder: Your name
+          - generic [ref=e491]:
+            - generic [ref=e492]: Leave me a message
+            - textbox "Leave me a message" [ref=e493]:
+              - /placeholder: Tell me about your project or opportunity...
+          - button "Submit" [ref=e494]:
+            - text: Submit
+            - img [ref=e495]
+  - contentinfo [ref=e498]:
+    - generic [ref=e499]:
+      - generic [ref=e500]:
+        - paragraph [ref=e501]: tri.
+        - paragraph [ref=e502]: © 2026 by Tri Anugerah Yusra_Portfolio
+      - generic [ref=e503]:
+        - link "LinkedIn" [ref=e504] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/tri-anugerah-yusra-14a204115/
+        - link "Dribbble" [ref=e505] [cursor=pointer]:
+          - /url: https://dribbble.com/trian77
+        - link "Behance" [ref=e506] [cursor=pointer]:
+          - /url: https://www.behance.net/trianugerah1
+  - alert [ref=e507]
