@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local working files (not part of the website)
+/.playwright-mcp/
+/CV/
+/CV_Tri Anugerah Yusra_low size.pdf
+/Foto/
+/PRD-Migrasi-Portfolio-Wix-ke-NextJS.md
+/Press_Start_2P 2/
+/aset gambar porto/
+/aset gif/
+/invoicing-full.jpeg
+/logo/
+/project.md
+/task.md
