@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { Download, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { SectionGif } from "@/components/ui/SectionGif";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import {
   aboutParagraphs,
   expertise,
@@ -19,19 +19,17 @@ const skillCategories = ["Design Tools", "Skills", "Development", "AI Tools", "P
 export function Profile() {
   return (
   <>
-    <section id="profile" className="scroll-mt-24 border-t border-border px-6 py-24 lg:px-10 lg:py-32">
+    <section id="profile" className="scroll-mt-24 px-6 py-28 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_160px] lg:items-start">
-          <FadeIn>
-            <p className="section-label">Profile</p>
-            <h2 className="pixel-heading mt-4 text-xl md:text-2xl">
-              Hello, I&apos;m Tri
-            </h2>
-          </FadeIn>
-          <SectionGif src="/gifs/g3.gif" label="Profile animation" />
-        </div>
+        <FadeIn>
+          <SectionHeading
+            eyebrow="Profile"
+            lines={["Hello,", "I'm Tri."]}
+            gif={{ src: "/gifs/g3.gif", label: "Profile animation" }}
+          />
+        </FadeIn>
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mt-16 grid gap-12 lg:mt-24 lg:grid-cols-[1.1fr_0.9fr]">
           <FadeIn delay={0.1}>
             <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
               {/* Profile photo */}
@@ -52,8 +50,8 @@ export function Profile() {
                   rel="noopener noreferrer"
                   className="mt-4 flex items-center justify-center gap-2 rounded-full bg-brand px-4 py-2.5 text-xs font-medium text-white transition hover:brightness-110"
                 >
-                  <Download size={13} />
-                  Download CV
+                  <FileText size={13} />
+                  View CV
                 </a>
                 <a
                   href={files.portfolioPdf}
@@ -95,10 +93,13 @@ export function Profile() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <div className="card-surface rounded-2xl p-8">
-              <h3 className="text-sm font-medium tracking-wide text-accent-2 uppercase">
-                My Expertise
-              </h3>
+            <div className="card-surface rounded-3xl p-8 lg:p-10">
+              <p className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-4 py-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent-3" />
+                <span className="font-pixel text-[0.6rem] uppercase tracking-[0.16em] text-brand">
+                  My expertise
+                </span>
+              </p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {expertise.map((item) => (
                   <span
@@ -118,19 +119,17 @@ export function Profile() {
       </div>
     </section>
 
-    <section className="border-t border-border px-6 py-24 lg:px-10 lg:py-32">
+    <section className="px-6 py-28 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_160px] lg:items-start">
-          <FadeIn>
-            <p className="section-label">My Experience</p>
-            <h2 className="pixel-heading mt-4 text-xl md:text-2xl">
-              Where I&apos;ve designed &amp; grown
-            </h2>
-          </FadeIn>
-          <SectionGif src="/gifs/g4.gif" label="Experience animation" />
-        </div>
+        <FadeIn>
+          <SectionHeading
+            eyebrow="My experience"
+            lines={["Where I've", "designed & grown."]}
+            gif={{ src: "/gifs/g4.gif", label: "Experience animation" }}
+          />
+        </FadeIn>
 
-        <div className="mt-16 space-y-0">
+        <div className="mt-16 space-y-0 lg:mt-24">
           {experience.map((job, index) => (
             <FadeIn key={job.company + job.period} delay={index * 0.06}>
               <article className="grid gap-6 border-t border-border py-10 md:grid-cols-[200px_1fr]">
@@ -150,7 +149,7 @@ export function Profile() {
                     ))}
                   </ul>
                   {"projects" in job && (
-                    <div className="mt-8 space-y-5 rounded-2xl border border-border bg-card p-6">
+                    <div className="mt-8 space-y-5 rounded-3xl border border-border bg-card p-6 lg:p-8">
                       <p className="text-xs font-semibold uppercase tracking-widest text-accent-2">
                         Projects
                       </p>
@@ -172,19 +171,17 @@ export function Profile() {
       </div>
     </section>
 
-    <section className="border-t border-border px-6 py-24 lg:px-10 lg:py-32">
+    <section className="px-6 py-28 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_160px] lg:items-start">
-          <FadeIn>
-            <p className="section-label">My Skills and Design tools</p>
-            <h2 className="pixel-heading mt-4 text-xl md:text-2xl">
-              Craft &amp; toolkit
-            </h2>
-          </FadeIn>
-          <SectionGif src="/gifs/g5.gif" label="Skills animation" />
-        </div>
+        <FadeIn>
+          <SectionHeading
+            eyebrow="My skills and design tools"
+            lines={["Craft &", "toolkit."]}
+            gif={{ src: "/gifs/g5.gif", label: "Skills animation" }}
+          />
+        </FadeIn>
 
-        <div className="mt-12 space-y-10">
+        <div className="mt-16 space-y-10 lg:mt-24">
           {skillCategories.map((category) => {
             const categorySkills = skills.filter((s) => s.category === category);
             if (categorySkills.length === 0) return null;

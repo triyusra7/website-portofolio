@@ -10,6 +10,7 @@ export const myCollection: Project = {
   category: "Photography · Vector · Book Design",
   year: "2021 – Now",
   cover: "/projects/collection-cover.jpg",
+  thumbnail: "/projects/collection-card.jpg",
   gradient: "from-rose-100 via-background to-card",
   tags: ["Photography", "Vector", "Book Design"],
   summary:

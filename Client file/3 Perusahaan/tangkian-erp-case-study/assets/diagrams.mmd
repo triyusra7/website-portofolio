@@ -1,0 +1,90 @@
+%% ============================================================
+%% Mermaid sources for the ERP case study diagrams.
+%% The shipped SVGs were hand-laid-out for print quality; these
+%% are the editable equivalents. Paste one block at a time into
+%% mermaid.live, Figma (FigJam), or a ```mermaid fence.
+%% ============================================================
+
+
+%% ------------------------------------------------------------
+%% 1. INFORMATION ARCHITECTURE
+%% ------------------------------------------------------------
+flowchart TB
+  L["Login<br/>username / e-mail + password"] --> R["Role & menu permissions<br/>Admin · Manager · Staff"]
+  R --> SW{{"Entity switcher (top bar)"}}
+
+  SW --> C1["PT. Tangkian Lintas Anugerah<br/><i>Cement distribution</i>"]
+  SW --> C2["PT. Tangkian Samudera Logistik<br/><i>Stevedoring & haulage (PBM)</i>"]
+  SW --> C3["Arobi<br/><i>Coffee shop</i>"]
+
+  subgraph E1[" "]
+    C1 --> C1a["Penjualan<br/>Invoice · Surat Jalan · Piutang Dagang"]
+    C1 --> C1b["Pembelian<br/>Purchase Order · Penerimaan Barang · Hutang Dagang"]
+    C1 --> C1c["Persediaan<br/>Kartu Stok · Stock Adjustment · Master Gudang"]
+    C1 --> C1d["Laporan operasional<br/>Penjualan · PO · Surat Jalan · Kartu Piutang"]
+  end
+
+  subgraph E2[" "]
+    C2 --> C2a["PBM & Ekspedisi<br/>Job Order · Invoice PBM/Dooring · Piutang Usaha"]
+    C2 --> C2b["Pembelian<br/>PO vendor · Vendor/Subkon · Hutang Usaha"]
+    C2 --> C2c["Laporan operasional<br/>Pendapatan · PO · Kartu Piutang/Hutang"]
+  end
+
+  subgraph E3[" "]
+    C3 --> C3a["Penjualan<br/>Invoice tunai/kredit · Piutang Usaha"]
+    C3 --> C3b["Pembelian<br/>PO bahan baku · Penerimaan · Hutang Usaha"]
+    C3 --> C3c["Master<br/>Produk/Menu · Supplier"]
+  end
+
+  E1 --> CORE
+  E2 --> CORE
+  E3 --> CORE
+
+  CORE["Accounting core (identical per entity)<br/>Jurnal · Buku Besar · Neraca Saldo · Laba Rugi · Neraca · Arus Kas · Key Stats"]
+  CORE --> SETUP["Setup<br/>Chart of Accounts · Master Kas & Bank · Saldo Awal · Periode Akuntansi · Profil · Pengguna · Hak Akses"]
+  CORE --> KONS["Laporan Konsolidasi (group level)<br/>Laba Rugi Konsolidasi · Neraca Konsolidasi · Ringkasan Entitas"]
+
+
+%% ------------------------------------------------------------
+%% 2. USER FLOW — SALES INVOICE TO AUTOMATIC JOURNAL
+%% ------------------------------------------------------------
+flowchart LR
+  A["Pilih customer<br/><i>limit kredit tampil</i>"] --> B["Isi item & qty<br/><i>harga incl. PPN, DPP dihitung mundur</i>"]
+  B --> C["Cek total<br/><i>DPP · PPN · Grand total</i>"]
+  C --> D["Post Invoice"]
+  D -.->|otomatis| J["Jurnal JRN-INV-xxx<br/>Dr Piutang Usaha 01-007<br/>Cr Penjualan 04-001<br/>Cr PPN Keluaran 02-003"]
+  J --> AR["Piutang Dagang + aging"]
+  J --> GL["Buku Besar"]
+  D --> SJ["Surat Jalan"] -.->|otomatis| HPP["Jurnal HPP<br/>Dr HPP · Cr Persediaan"]
+  HPP --> KS["Kartu Stok"]
+  GL --> LR["Laba Rugi"]
+  GL --> NR["Neraca"]
+  GL --> AK["Arus Kas"]
+  GL --> KST["Key Stats"]
+  GL --> KON["Laporan Konsolidasi"]
+
+
+%% ------------------------------------------------------------
+%% 3. USER FLOW — PURCHASE ORDER TO PAYABLE
+%% ------------------------------------------------------------
+flowchart LR
+  P1["Buat Purchase Order"] -.->|otomatis| JP1["Dr Pembelian Dlm Perjalanan<br/>Cr Hutang Usaha"]
+  P1 --> P2["Penerimaan Barang"] -.->|otomatis| JP2["Dr Persediaan<br/>Cr Pembelian Dlm Perjalanan"]
+  P2 --> P3["Catat tagihan vendor"] -.->|otomatis| JP3["Dr Persediaan / Beban<br/>Cr Hutang Usaha"]
+  P3 --> P4["Bayar hutang"] -.->|otomatis| JP4["Dr Hutang Usaha<br/>Cr Kas / Bank"]
+  JP1 --> AP["Hutang Dagang / Hutang Usaha"]
+  JP2 --> STK["Kartu Stok & nilai persediaan"]
+  JP4 --> FIN["Neraca · Laba Rugi · Arus Kas"]
+
+
+%% ------------------------------------------------------------
+%% 4. USER FLOW — OWNER REVIEWS GROUP PERFORMANCE
+%% ------------------------------------------------------------
+flowchart LR
+  O1["Login sebagai owner"] --> O2["Buka Laporan Konsolidasi<br/><i>pilih bulan & tahun</i>"]
+  O2 --> O3["Baca tiga tab<br/>Laba Rugi · Neraca · Ringkasan Entitas"]
+  O3 --> O4["Buka Key Stats per entitas<br/>ROE · ROA · ROIC · margin · growth"]
+  O4 --> O5["Cetak / Export Excel"]
+  S1["Jurnal PT. Tangkian Lintas Anugerah"] --> O2
+  S2["Jurnal PT. Tangkian Samudera Logistik"] --> O2
+  S3["Jurnal Arobi"] --> O2

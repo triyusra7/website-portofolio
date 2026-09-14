@@ -17,9 +17,22 @@ export async function generateMetadata({
   const { id } = await params;
   const project = projects.find((p) => p.id === id);
   if (!project) return {};
+  const socialImage = project.ogImage ?? project.cover ?? undefined;
   return {
     title: `${project.title} — ${project.company} | Tri Anugerah Yusra`,
     description: project.summary,
+    openGraph: {
+      title: `${project.title} — ${project.company}`,
+      description: project.summary,
+      type: "article",
+      images: socialImage ? [socialImage] : undefined,
+    },
+    twitter: {
+      card: socialImage ? "summary_large_image" : "summary",
+      title: `${project.title} — ${project.company}`,
+      description: project.summary,
+      images: socialImage ? [socialImage] : undefined,
+    },
   };
 }
 
@@ -77,7 +90,10 @@ export default async function ProjectPage({
 
       {/* Cover image */}
       {project.cover && (
-        <div className="mx-auto max-w-5xl px-6 lg:px-10">
+        <section
+          aria-label={`${project.title} cover image`}
+          className="mx-auto max-w-5xl px-6 lg:px-10"
+        >
           <div className="relative -mt-8 overflow-hidden rounded-2xl border border-border shadow-sm">
             <Image
               src={project.cover}
@@ -88,7 +104,7 @@ export default async function ProjectPage({
               priority
             />
           </div>
-        </div>
+        </section>
       )}
 
       <main className="mx-auto max-w-5xl px-6 py-16 lg:px-10">
@@ -132,41 +148,144 @@ export default async function ProjectPage({
                           {section.title}
                         </h2>
                       </div>
-                      <div className="space-y-6">
+                      <div className="min-w-0 space-y-6">
                         {section.body && (
                           <p className="whitespace-pre-line leading-relaxed text-muted">
                             {section.body}
                           </p>
                         )}
+
+                        {/* Numbered items — the titles are the scannable layer */}
+                        {section.items && section.items.length > 0 && (
+                          <ol className="space-y-7">
+                            {section.items.map((listItem, index) => (
+                              <li
+                                key={listItem.title}
+                                className="grid grid-cols-[2rem_1fr] gap-x-3 gap-y-1.5"
+                              >
+                                <span
+                                  aria-hidden
+                                  className="pixel-heading pt-0.5 text-[10px] text-accent-2/60"
+                                >
+                                  {String(index + 1).padStart(2, "0")}
+                                </span>
+                                <h3 className="font-medium text-foreground">
+                                  {listItem.title}
+                                </h3>
+                                <p className="col-start-2 leading-relaxed text-muted">
+                                  {listItem.body}
+                                </p>
+                              </li>
+                            ))}
+                          </ol>
+                        )}
+
+                        {section.table && (
+                          <figure className="space-y-3">
+                            <div className="overflow-x-auto rounded-2xl border border-border bg-card">
+                              <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
+                                <thead>
+                                  <tr className="border-b border-border bg-accent-soft/50">
+                                    {section.table.headers.map((header) => (
+                                      <th
+                                        key={header}
+                                        scope="col"
+                                        className="px-4 py-3 text-[11px] font-semibold uppercase tracking-widest text-brand"
+                                      >
+                                        {header}
+                                      </th>
+                                    ))}
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {section.table.rows.map((row) => (
+                                    <tr
+                                      key={row.join("|")}
+                                      className="border-b border-border last:border-b-0"
+                                    >
+                                      {row.map((cell, cellIndex) => (
+                                        <td
+                                          key={`${row[0]}-${cellIndex}`}
+                                          className={`px-4 py-3 align-top ${
+                                            cellIndex === 0
+                                              ? "font-medium text-foreground"
+                                              : "text-muted"
+                                          }`}
+                                        >
+                                          {cell}
+                                        </td>
+                                      ))}
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </div>
+                            {section.table.caption && (
+                              <figcaption className="text-sm text-muted">
+                                {section.table.caption}
+                              </figcaption>
+                            )}
+                          </figure>
+                        )}
+
+                        {section.note && (
+                          <p className="border-l-2 border-accent-2/40 pl-4 text-sm leading-relaxed text-muted">
+                            {section.note}
+                          </p>
+                        )}
+
                         {section.images && section.images.length > 0 && (
                           <div
-                            className={`grid gap-4 ${
-                              section.images.length === 1
-                                ? "grid-cols-1"
-                                : "sm:grid-cols-2"
+                            className={`grid ${
+                              section.imageColumns === 1 ? "gap-6" : "gap-4"
+                            } ${
+                              section.imageColumns === 1
+                                ? // wide product shots break out of the text column on desktop
+                                  "grid-cols-1 lg:-ml-[18.25rem]"
+                                : section.images.length === 1
+                                  ? "grid-cols-1"
+                                  : "sm:grid-cols-2"
                             }`}
                           >
                             {section.images.map((image) => (
-                              <div
+                              <figure
                                 key={`${section.title}-${image.label}`}
-                                className="overflow-hidden rounded-2xl border border-border bg-card"
+                                className="space-y-2.5"
                               >
-                                {image.src ? (
-                                  <Image
-                                    src={image.src}
-                                    alt={image.label}
-                                    width={1000}
-                                    height={700}
-                                    className="h-full min-h-64 w-full object-contain"
-                                  />
-                                ) : (
-                                  <div className="flex min-h-64 items-center justify-center bg-accent-soft px-6 text-center">
-                                    <p className="text-sm text-muted">
-                                      Gambar: {image.label}
-                                    </p>
-                                  </div>
+                                <div
+                                  className={`overflow-hidden rounded-2xl bg-card ${
+                                    image.frame === false
+                                      ? ""
+                                      : "border border-border shadow-sm"
+                                  }`}
+                                >
+                                  {image.src ? (
+                                    <Image
+                                      src={image.src}
+                                      alt={image.label}
+                                      width={image.width ?? 1000}
+                                      height={image.height ?? 700}
+                                      sizes="(max-width: 768px) 100vw, 1000px"
+                                      className={
+                                        image.width
+                                          ? "h-auto w-full"
+                                          : "h-full min-h-64 w-full object-contain"
+                                      }
+                                    />
+                                  ) : (
+                                    <div className="flex min-h-64 items-center justify-center bg-accent-soft px-6 text-center">
+                                      <p className="text-sm text-muted">
+                                        Gambar: {image.label}
+                                      </p>
+                                    </div>
+                                  )}
+                                </div>
+                                {image.caption && (
+                                  <figcaption className="text-sm leading-relaxed text-muted">
+                                    {image.caption}
+                                  </figcaption>
                                 )}
-                              </div>
+                              </figure>
                             ))}
                           </div>
                         )}
@@ -176,12 +295,32 @@ export default async function ProjectPage({
                 </section>
 
                 <section className="border-t border-border pt-12">
+                  {project.resultStats && project.resultStats.length > 0 && (
+                    <div className="mb-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                      {project.resultStats.map((stat) => (
+                        <div
+                          key={stat.label}
+                          className="card-surface rounded-2xl p-5"
+                        >
+                          <p className="pixel-heading text-base">{stat.value}</p>
+                          <p className="mt-2 text-sm leading-relaxed text-muted">
+                            {stat.label}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   <div className="card-surface rounded-2xl p-6">
-                    <p className="text-foreground/90 leading-relaxed">
+                    <p className="whitespace-pre-line text-foreground/90 leading-relaxed">
                       <span className="font-medium text-accent-4">Result — </span>
                       {project.outcome}
                     </p>
                   </div>
+                  {project.resultNote && (
+                    <p className="mt-4 text-sm leading-relaxed text-muted">
+                      {project.resultNote}
+                    </p>
+                  )}
                   <div className="mt-6 text-center">
                     <Link
                       href="/#contact"

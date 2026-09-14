@@ -4,167 +4,131 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { SectionGif } from "@/components/ui/SectionGif";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { projects, site } from "@/data/portfolio";
+import type { Project } from "@/data/portfolio";
 
 const MotionLink = motion.create(Link);
 
-const container = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.07 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 24 },
+const reveal = {
+  hidden: { opacity: 0, y: 28 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
-export function Projects() {
+/** Every card is the same 16:9 block — the covers carry the variety, not the layout. */
+function ProjectCard({
+  project,
+  priority,
+}: {
+  project: Project;
+  priority?: boolean;
+}) {
   const reduceMotion = useReducedMotion();
+  const src = project.thumbnail ?? project.cover;
 
   return (
-    <section
-      id="projects"
-      className="scroll-mt-24 border-t border-border px-6 py-24 lg:px-10 lg:py-32"
+    <MotionLink
+      href={`/projects/${project.id}`}
+      variants={reduceMotion ? undefined : reveal}
+      initial={reduceMotion ? false : "hidden"}
+      whileInView={reduceMotion ? undefined : "visible"}
+      viewport={{ once: true, amount: 0.15 }}
+      className="group block"
     >
+      <div
+        className={`relative aspect-[16/9] overflow-hidden rounded-3xl bg-gradient-to-br ${project.gradient}`}
+      >
+        {src ? (
+          <Image
+            src={src}
+            alt={project.title}
+            fill
+            sizes="(max-width: 1024px) 100vw, 45vw"
+            priority={priority}
+            className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-end p-8">
+            <p className="pixel-heading text-base leading-relaxed md:text-lg">
+              {project.title}
+            </p>
+          </div>
+        )}
+        <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/5" />
+      </div>
+
+      <div className="mt-6 flex items-start justify-between gap-6">
+        <div>
+          <p className="font-pixel text-[0.6rem] uppercase tracking-[0.16em] text-muted">
+            {project.company}
+          </p>
+          <h3 className="mt-3 text-2xl font-medium tracking-tight transition-colors group-hover:text-brand md:text-[1.75rem]">
+            {project.title}
+          </h3>
+          <p className="mt-2 text-muted">
+            {project.category} · {project.year}
+          </p>
+        </div>
+        <ArrowUpRight
+          size={22}
+          className="mt-1 shrink-0 text-muted transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent-2"
+        />
+      </div>
+    </MotionLink>
+  );
+}
+
+export function Projects() {
+  return (
+    <section id="projects" className="scroll-mt-24 px-6 py-28 lg:px-10 lg:py-40">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-14 grid gap-8 lg:grid-cols-[minmax(0,1fr)_160px] lg:items-start">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="section-label">Projects work</p>
-              <h2 className="pixel-heading mt-4 text-xl md:text-2xl">
-                Selected projects
-              </h2>
-              <p className="mt-4 max-w-xl text-muted">
+        <SectionHeading
+          eyebrow="Projects work"
+          lines={["Selected", "projects."]}
+          description={
+            <>
+              <p>
                 {projects.length} case studies from PasarMIKRO, Linkz Asia,
                 freelance work, school projects, and community design.
               </p>
-            </div>
-            <blockquote className="max-w-sm border-l-2 border-accent-2 pl-5 font-[family-name:var(--font-display)] text-lg italic text-muted md:text-xl">
-              &ldquo;{site.quote}&rdquo;
-            </blockquote>
-          </div>
-          <SectionGif src="/gifs/g8.gif" label="Projects animation" />
+              <blockquote className="mt-6 border-l-2 border-accent-2 pl-5 text-lg italic md:text-xl">
+                &ldquo;{site.quote}&rdquo;
+              </blockquote>
+            </>
+          }
+          gif={{ src: "/gifs/g8.gif", label: "Projects animation" }}
+        />
+
+        <div className="mt-20 grid gap-x-14 gap-y-20 lg:mt-28 lg:grid-cols-2 lg:gap-y-24">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              priority={index < 2}
+            />
+          ))}
         </div>
 
-        <motion.div
-          className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
-          variants={reduceMotion ? undefined : container}
-          initial={reduceMotion ? false : "hidden"}
-          whileInView={reduceMotion ? undefined : "visible"}
-          viewport={{ once: true, amount: 0.05 }}
-        >
-          {projects.map((project, index) => (
-            <MotionLink
-              key={project.id}
-              href={`/projects/${project.id}`}
-              variants={reduceMotion ? undefined : item}
-              whileHover={reduceMotion ? undefined : { y: -4 }}
-              className={`card-surface group flex flex-col overflow-hidden rounded-2xl ${
-                index === 0 ? "sm:col-span-2 lg:row-span-1" : ""
-              }`}
-            >
-              {/* Cover image or gradient header */}
-              {project.cover ? (
-                <div
-                  className={`relative overflow-hidden ${
-                    index === 0 ? "min-h-[220px]" : "min-h-[160px]"
-                  }`}
-                >
-                  <Image
-                    src={project.cover}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-5">
-                    <p className="text-[10px] font-medium tracking-[0.2em] text-white/80 uppercase">
-                      {project.company}
-                    </p>
-                    <h3 className={`pixel-heading mt-1 !text-white ${
-                      index === 0 ? "text-lg" : "text-sm"
-                    }`}>
-                      {project.title}
-                    </h3>
-                    <p className="mt-1 text-xs text-white/70">{project.category}</p>
-                  </div>
-                  <ArrowUpRight
-                    size={18}
-                    className="absolute top-4 right-4 text-white/60 transition group-hover:text-white"
-                  />
-                </div>
-              ) : (
-                <div
-                  className={`relative flex items-end bg-gradient-to-br p-5 ${project.gradient} ${
-                    index === 0 ? "min-h-[200px]" : "min-h-[140px]"
-                  }`}
-                >
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,0,0,0.04),transparent_60%)]" />
-                  <div className="relative">
-                    <p className="text-[10px] font-medium tracking-[0.2em] text-accent-2 uppercase">
-                      {project.company}
-                    </p>
-                    <h3 className={`pixel-heading mt-1 ${
-                      index === 0 ? "text-lg" : "text-sm"
-                    }`}>
-                      {project.title}
-                    </h3>
-                    <p className="mt-1 text-xs text-foreground/70">{project.category}</p>
-                  </div>
-                  <ArrowUpRight
-                    size={18}
-                    className="absolute top-4 right-4 text-foreground/40 transition group-hover:text-accent-2"
-                  />
-                </div>
-              )}
-
-              <div className="flex flex-1 flex-col p-5">
-                <p className="text-sm leading-relaxed text-muted">
-                  {project.summary}
-                </p>
-                <p className="mt-4 text-sm text-foreground/85">
-                  <span className="font-medium text-accent-4">Result — </span>
-                  {project.outcome}
-                </p>
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-border px-2.5 py-1 text-[11px] text-muted"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </MotionLink>
-          ))}
-        </motion.div>
-
-        <p className="mt-10 text-center text-sm text-muted">
+        <p className="mt-24 text-center text-muted lg:mt-32">
           More visuals on{" "}
           <a
             href="https://dribbble.com/trian77"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent-2 underline-offset-4 hover:underline"
+            className="text-brand underline underline-offset-4 transition-colors hover:text-accent-2"
           >
             Dribbble
-          </a>
-          {" "}and{" "}
+          </a>{" "}
+          and{" "}
           <a
             href="https://www.behance.net/trianugerah1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent-2 underline-offset-4 hover:underline"
+            className="text-brand underline underline-offset-4 transition-colors hover:text-accent-2"
           >
             Behance
           </a>

@@ -1,3 +1,4 @@
+import { FloatingNav } from "@/components/layout/FloatingNav";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { Contact } from "@/components/sections/Contact";
@@ -17,6 +18,7 @@ export default function Home() {
         <Contact />
       </main>
       <SiteFooter />
+      <FloatingNav />
     </>
   );
 }

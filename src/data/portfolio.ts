@@ -26,7 +26,7 @@ export const socialLinks = [
 ] as const;
 
 export const files = {
-  resume: "/cv.pdf",
+  resume: "/CV_Tri%20Anugerah%20Yusra.pdf",
   portfolioPdf: "/portfolio.pdf",
 } as const;
 
@@ -39,6 +39,9 @@ export const roles = [
 export type {
   Feature,
   CaseStudyImage,
+  CaseStudyListItem,
+  CaseStudyTable,
+  CaseStudyStat,
   CaseStudySection,
   Project,
 } from "./projects";

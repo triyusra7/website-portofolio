@@ -10,6 +10,7 @@ export const marketplace: Project = {
   category: "Product Design · Mobile App",
   year: "2021 – 2022",
   cover: "/projects/marketplace-cover.png",
+  thumbnail: "/projects/marketplace-card.jpg",
   gradient: "from-blue-100 via-background to-card",
   tags: ["B2B", "Agri-tech", "Mobile App"],
   summary:
