@@ -130,7 +130,7 @@ export function Hero() {
               auto
               loop
             />
-            , UX Designer, Product Designer &amp; Graphic Designer who{" "}
+            , Product Designer &amp; Graphic Designer who{" "}
             <RotatingText
               texts={["bridges", "connects", "empowers", "shapes"]}
               mainClassName="inline-flex px-2 py-0.5 bg-accent-3 text-white overflow-hidden rounded-md align-baseline whitespace-nowrap"

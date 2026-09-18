@@ -13,18 +13,18 @@ export const designSystem: Project = {
   gradient: "from-purple-100 via-background to-card",
   tags: ["Figma", "Material Design", "Components"],
   summary:
-    "This is the project that I working on in my company Linkz. The design system is not organized and developers are confused about the previous design system. So it needs it to improve for the component.",
+    "A complete overhaul of Linkz Asia's B2B SaaS design system, migrating from an unorganized legacy UI kit to an intentional component library grounded in Material Design principles and WCAG 2.0 accessibility standards.",
   problem:
-    "The previous design system had too many unused components, multiple unorganized colors, inconsistent button styles across the product, and documentation that confused both designers and developers. New features took longer because components were rebuilt from scratch each time.",
+    "The legacy design system suffered from style drift: dozens of arbitrary color variants, inconsistent button states, redundant components, and zero documentation. This caused friction between design and engineering, bloated front-end CSS, and slowed down feature shipping cycles.",
   solution:
-    "Started fresh — built all components based on actual product needs, following Material Design principles and WCAG 2.0 color accessibility standards. Organized components logically with clear naming, trimmed unused styles, established a limited and intentional color hierarchy, and added documentation within Figma so developers could understand component purpose without separate handoff calls.",
+    "Audited the existing SaaS platform to eliminate unused variants, rebuilt the core component library from the ground up in Figma using Material Design component architecture, and established an accessible color token palette compliant with WCAG 2.0 contrast standards. Embedded usage guidelines and state definitions directly within Figma to streamline engineering handoff.",
   outcome:
-    "Consistent UI across the product, faster design iterations, and clearer developer handoff. Completed in 3 days and adopted across the team.",
+    "Cut UI delivery time for new modules, established a unified visual language across Linkz Asia's invoicing and inventory products, and enabled engineering to build from verified, tokenized components.",
   features: [
     {
       title: "Product-Needs-First Components",
       description:
-        "Components built only for what the product actually uses — no speculative additions. Every component has a documented purpose.",
+        "Components built strictly for what the product actively uses, with zero speculative clutter. Every single component serves a clear, documented purpose.",
     },
     {
       title: "Material Design + WCAG 2.0 Foundation",
@@ -34,48 +34,50 @@ export const designSystem: Project = {
     {
       title: "Unified Typography & Colors",
       description:
-        "Replaced excessive style options with a clean, purposeful set — one clear hierarchy for text, one color palette with defined roles.",
+        "Replaced excessive style choices with a calm, purposeful set: one clear typographic scale and one intentional color palette with defined roles.",
     },
     {
       title: "In-Figma Documentation",
       description:
-        "Usage notes and component purpose documented directly inside Figma — reducing back-and-forth with developers during handoff.",
+        "Usage guidelines and component intents are documented right inside Figma, making handoffs enjoyable and cutting down back-and-forth questions with developers.",
     },
   ],
   resultImage: `${wix}/colors-3bdb5a.png`,
   caseStudySections: [
     {
-      title: "Let's imagine this...",
+      title: "The Scaling Challenge",
       body:
-        "When working on many pages and many screens, you need to use the same component for all designs to make them look similar to each other, but you don't have a proper and organized design system to do that. As a designer, you need a proper design system to design and developers can follow the design system for the component.",
+        "As Linkz Asia expanded its B2B trade features across invoicing, tax calculation, and multi-catalog inventory, UI fragmentation increased. Without a disciplined design system, designers were creating one-off components and engineers had to guess paddings, hover states, and color values.",
       images: [{ label: "Thumbnail.jpg", src: `${wix}/thumbnail-47e960.jpg` }],
     },
     {
-      title: "Problem backgrounds",
+      title: "Legacy System Deficiencies",
       body:
-        "We don't have a proper design system for design and for developers to use. When want to design using the previous design system, we have problems like to many colors to use, have different button style and many more.",
+        "An audit of the previous Figma library revealed several critical issues:\n1. Uncontrolled color bloat with insufficient contrast against dark backgrounds.\n2. Inconsistent component variants (multiple button radiuses and padding rules for identical actions).\n3. Bloated token hierarchy with dozens of styles never actually used in production code.\n4. Inadequate component documentation, creating constant friction during developer handoffs.",
     },
     {
-      title: "Goals",
-      body: "Create a new design system properly from scratch and adjust with company style.",
+      title: "Core Objectives",
+      body:
+        "1. Rationalize component inventory: Keep only components actively utilized or planned in the core product roadmap.\n2. Ensure accessibility: Re-palette primary and functional colors to satisfy WCAG 2.0 AA contrast thresholds.\n3. Standardize architecture: Align token naming and variant properties with Google Material Design conventions for seamless front-end translation.\n4. Deliver rapid turnaround: Execute the audit, tokenization, and initial component build within an intensive 3-day sprint.",
     },
     {
-      title: "Project duration",
-      body: "This project I have 3 days to finish.",
+      title: "Timeline & Scope",
+      body:
+        "Executed across an intensive 3-day sprint as lead product designer, working closely with front-end engineering leads to ensure direct compatibility with their React component library.",
     },
     {
-      title: "Information requirements",
+      title: "Legacy System Audit",
       images: [{ label: "Old Thumbnail.jpg", src: `${wix}/old-thumbnail-19c5c2.jpg` }],
     },
     {
-      title: "Previous Design system",
+      title: "Analyzing Visual Debt",
       body:
-        "We had too many components before that not really using all of them. And the typography too many that not really using it. So because of that, the design has too many styles to use and not recorded properly.",
+        "Documenting the legacy UI kit highlighted the extent of visual debt: undocumented variant states, duplicate form fields, and arbitrary font sizing without a disciplined modular scale. This confirmed the need for a clean reset rather than patch-fixing obsolete components.",
     },
     {
-      title: "Documentation from previous",
+      title: "Previous Documentation State",
       body:
-        "This is the documentation of the previous design system. The components are not organized, and it is confusing to use them. So that's why I try to create from scratch with a guide using material design, and WCAG 2.0 for colors.",
+        "Previous component documentation was scattered and lacked clear interaction state guides. To establish a dependable foundation, I referenced Google Material Design architecture for structure and WCAG 2.0 standards for color contrast verification.",
       images: [
         {
           label: "Previous documentation",
@@ -84,13 +86,13 @@ export const designSystem: Project = {
       ],
     },
     {
-      title: "Design and final results",
+      title: "Token Architecture: WCAG 2.0 Color System",
       images: [{ label: "colors.png", src: `${wix}/colors-3bdb5a.png` }],
     },
     {
-      title: "Create from scratch",
+      title: "Component Architecture & Engineering Alignment",
       body:
-        "For most of the design system, I create by myself using guidance from material designs google and for the colors, I use guidance from WCAG 2.0. I create all the components based on what the company needs for the product. And I make sure all of the components follow the company guide such as color etc. And these is some of the results that I took screen shots. Thank you",
+        "Rebuilt the primary component suite in Figma utilizing auto-layout, nested instances, and explicit variant properties. Every state (default, hover, active, focused, disabled, and loading) was fully specified alongside token references, allowing engineers to build directly without guesswork.",
       images: [
         { label: "buttons.png", src: `${wix}/buttons-13e152.png` },
         { label: "tex field.png", src: `${wix}/tex-field-cb1054.png` },

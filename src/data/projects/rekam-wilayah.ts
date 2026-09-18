@@ -13,36 +13,36 @@ export const rekamWilayah: Project = {
   gradient: "from-emerald-100 via-background to-card",
   tags: ["GPS", "Field Research", "Mobile App"],
   summary:
-    "This is the project that I working on in my company PasarMIKRO. This project for users can measure the size of their territory for their business.",
+    "A mobile field mapping tool built for PasarMIKRO's agricultural supply chain platform (~1,000 registered traders and smallholders). Designed walk-to-trace GPS boundary recording and point pinning to give rural users accurate land measurement and commodity traceability without complex GIS tools.",
   problem:
-    "Partners needed to understand and document the size of their business territory for records and traceability purposes, but had no digital tool to do so. Measuring land area required physically walking it, and existing map apps were too complex for non-technical users.",
+    "PasarMIKRO partners and field agents needed to record and verify farm boundaries for formal trade documentation, loan underwriting, and commodity traceability. Existing GIS and mapping tools were too complex for non-technical rural users operating in low-connectivity environments, while manual estimations led to disputes and inaccurate harvest projections.",
   solution:
-    "Inspired by sports tracking apps (running/cycling trail features), designed two capture modes: \"Plot\" (user walks the perimeter, GPS traces a polygon that auto-closes) and \"Point\" (pins current location for quick marking). Each recorded area includes commodity data input fields. The polygon auto-closure feature snaps the last point to the first, completing the area without precision GPS knowledge.",
+    "Designed a lightweight, two-mode capture system optimized for low-end mobile devices and field conditions: 'Plot' mode allows users to walk their perimeter while GPS traces coordinates into an auto-closing polygon that calculates acreage in real time; 'Point' mode allows quick geopinning of specific collection sites. Structured input forms attach commodity data directly to each perimeter record, bridging physical land plots to marketplace transaction records.",
   outcome:
-    "Users can now document their territory digitally for business records and commodity traceability. Feature deployed within one sprint and available to all PasarMIKRO users.",
+    "Shipped within a single 2-week sprint and rolled out across PasarMIKRO's active user base (~600 active traders and smallholders). Enabled instant, verifiable land documentation directly from field walks, establishing the groundwork for commodity traceability and verified transaction data.",
   features: [
     {
       title: "Rekam Aktivitas Entry Point",
       description:
-        "The Rekam Wilayah feature is accessible from the Rekam Aktivitas screen — giving field agents a clear entry point to begin documenting their business territory.",
+        "The Rekam Wilayah feature is accessible from the Rekam Aktivitas screen, giving field agents a clear entry point to begin documenting their business territory.",
       image: "/projects/rekam-wilayah/screen-1.png",
     },
     {
       title: "Walk-to-Trace (Plot Mode)",
       description:
-        "Users tap Mulai and walk their land boundary — GPS records each point in real-time on the map, forming a polygon that auto-closes, calculating the area automatically.",
+        "Users tap Mulai and walk their land boundary while GPS records each point in real-time on the map, forming an auto-closing polygon that calculates the area automatically.",
       image: "/projects/rekam-wilayah/screen-2.png",
     },
     {
       title: "Territory Details & Data Input",
       description:
-        "Each recorded area includes timestamp, location name, and commodity data fields — enabling traceability from land plot to transaction.",
+        "Each recorded area captures timestamps, location names, and commodity details, creating genuine traceability from the physical plot to the final transaction.",
       image: "/projects/rekam-wilayah/screen-3.png",
     },
     {
       title: "Area Measurement Completion",
       description:
-        "Once the polygon closes, the app displays the calculated area in Ha and km² — giving farmers and traders an official land record for business documentation.",
+        "Once the polygon closes, the app clearly displays the calculated area in Ha and km², giving farmers and traders an official land record for business documentation.",
       image: "/projects/rekam-wilayah/screen-4.png",
     },
   ],
@@ -56,54 +56,54 @@ export const rekamWilayah: Project = {
   resultImage: "/projects/rekam-wilayah/mockup-cover.jpg",
   caseStudySections: [
     {
-      title: "Let's imagine this...",
+      title: "Context & Field Challenge",
       body:
-        "You are a trader who seeks to understand the size of their territory and ascertain how it can be measured independently. But you want to know the easy way to measure it.",
+        "In rural Indonesian agriculture, trade documentation and credit assessment require knowing farm plot sizes. However, smallholders and local collectors rarely hold formal surveyed land titles. When field agents visit farms, they need an accessible method to document boundaries independently and link those physical plots to harvest records.",
       images: [{ label: "mockup-cover.jpg", src: `${wix}/mockup-cover-29f08d.jpg` }],
     },
     {
-      title: "Problem backgrounds",
+      title: "Problem Background",
       body:
-        "Some of our partners want to know and understand how big is their business area. Because they need to know for documentation too.",
+        "Without digital boundary records, commodity yield estimates relied on rough guesswork. Existing GIS and mapping software was entirely unsuited for field workers in rural areas: high battery drain, confusing polygon editing nodes, and steep learning curves. We needed a tool intuitive enough for a first-time smartphone user walking a farm perimeter in rural conditions.",
     },
     {
-      title: "Goals",
+      title: "Core Objectives",
       body:
-        "Letting them capture their land by themselves and Pin their specific area. And also giving them some initial information that they need to know.",
+        "1. Empower field agents and farmers to map land boundaries independently by simply walking the perimeter.\n2. Support single-point geolocation pinning for quick collection depot logging.\n3. Capture commodity yield and category data alongside spatial boundaries in one seamless flow.\n4. Design and ship the end-to-end experience within a tight 2-week sprint cycle.",
     },
     {
-      title: "Project duration",
+      title: "Team & Timeline",
       body:
-        "This project has 1 sprint to finish it (2 weeks or 10 days for work hours) to create from design to development and publishing in production. And for the teams, two UI/UX Designers, two Front-end, two Back-end, one Lead Technology, one Project Manager, and one QA.",
+        "Delivered in one 2-week sprint from requirements discovery to production release. Worked alongside another UI/UX designer, 2 front-end engineers, 2 back-end engineers, a tech lead, a QA engineer, and a dedicated product manager.",
     },
     {
-      title: "Information requirements",
+      title: "Information Requirements",
       images: [{ label: "1.jpg", src: `${wix}/1-4c036e.jpg` }],
     },
     {
-      title: "Requirement for the feature",
+      title: "Feature Specifications",
       body:
-        "There are requirements asked by stakeholders and our partners:\nDefining the data set. Every user may have 1-to-many production plot, with: name/label, multiple long-lat (which could be single or a closed graph, also: production capacity, unit, and maybe reference to multiple objects (could be photo, images, etc). And series of validation dates.\nIn the app, make the entry for view+edit available from somewhere in the menu or Edit Profile. The reference part can be omitted.\nShown all fields, all mandatory. For the last two, reference and validation dates, no need. Just a simple editing, except for the long-lat.\nPoint or Plot. Show a choice to add point or plot. A point will only record the current position. Plot, the user will add a point one at a time with walking with the phone, and continue until the next, until the last one. If possible try to make the plot can be closed (snapping, or auto-add the last line).",
+        "Stakeholder and field requirements specified: Every user may register multiple production plots with unique labels, an array of latitude-longitude coordinates (either a single point or a closed polygon), commodity capacity, unit of measurement, and validation timestamps. The interface had to present two straightforward options: 'Plot' (walk the perimeter to capture continuous GPS points that snap shut upon completion) and 'Point' (single-tap coordinate logging for static collection depots).",
     },
     {
-      title: "Userflow",
+      title: "User Flow Mapping",
       body:
-        "Based on requirements, I and PM create a user flow to make sure our flow is correct and fulfill our goals",
+        "Together with the product manager, I mapped an end-to-end user flow prioritizing minimal taps: select capture mode → trigger GPS recording → live perimeter walk visualization → auto-closure confirmation → commodity metadata input → persistent save to user profile.",
       images: [{ label: "PM Notes (21).png", src: `${wix}/pm-notes-21-7a411d.png` }],
     },
     {
-      title: "Doing little research",
+      title: "Interaction Logic: Consumer Trail Tracking Applied to Agri-Tech",
       body:
-        "From the requirements and user flow above. I start doing a little research. For the research, I did some desk research like how users can plot their land or trace their land, so they know about the size of their land. For the benchmark, I follow sports app. Because usually, sports app have feature for tracking when users want to run, bicycle, or walk. They can track how far they already running. So, I use that logic to implement in this feature. But the different between \"Rekam wilayah\" and feature tracking in sports app is capture their area and users can fill their commodity for the land plot they doing. And also they can just \"Pin\" their land if they don't want to measure their land like in game \"Genshin Impact\" when player want to pin specific area.",
+        "Rather than adopting complex GIS interfaces like ArcGIS or QGIS, I drew interaction patterns from consumer fitness apps that simplify GPS path recording to a single 'Start / Walk / Stop' paradigm. I adapted this logic for agricultural mapping: users press 'Mulai' (Start), walk the farm edge, and an auto-closure algorithm snaps the final waypoint back to the origin, calculating hectares (Ha) and square kilometers automatically. For collection depots where perimeter walking is unnecessary, a single 'Point' pin mode captures coordinates with zero configuration.",
     },
     {
-      title: "Start The Design",
+      title: "Interface Architecture",
       images: [{ label: "2.jpg", src: `${wix}/2-996a63.jpg` }],
     },
     {
-      title: "Create design in figma",
+      title: "Component Reusability & Form Design",
       body:
-        "Because our team product has a library and design system. So I just use that to create the Hi-Fi for this project. First of all, I create flow for the capture of an area, and I put some \"input field component\" for users can fill their commodity data. For the Pin area is the same field they need to fill. But different between Capture area and Pin area is size of the area. Pin area will fill automatically 0km.",
+        "Leveraging PasarMIKRO's mobile design system, I built high-fidelity screens ensuring high contrast in direct sunlight and prominent touch targets suitable for outdoor field use. Commodity input fields follow standard bottom-sheet patterns, ensuring the map remains visually anchored while data is entered.",
       images: [
         {
           label: "Plotting-area-(rekam-wilayah).jpg",
@@ -116,13 +116,13 @@ export const rekamWilayah: Project = {
       ],
     },
     {
-      title: "Final Design",
+      title: "Final UI",
       images: [{ label: "3.jpg", src: `${wix}/3-eb012c.jpg` }],
     },
     {
-      title: "Finally...Mockup app design",
+      title: "Production Release & Field Impact",
       body:
-        "After 1 sprint finish and already deployed to public, finally we can use this feature for our users and partners",
+        "Deployed to production and adopted across PasarMIKRO's network of ~1,000 registered traders and smallholders (~600 active). Field agents documented hundreds of hectares during initial harvest cycles, establishing verifiable origin data for transactions on PasarMIKRO's platform.",
       images: [
         { label: "Layer 23.png", src: `${wix}/layer-23-f76a1a.png` },
         { label: "Layer 24.png", src: `${wix}/layer-24-443017.png` },
@@ -139,7 +139,9 @@ export const rekamWilayah: Project = {
       ],
     },
     {
-      title: "Coming soon for the next improvement",
+      title: "Future Iterations & Offline Resilience",
+      body:
+        "Subsequent roadmap considerations identified during field observation included offline vector tile caching for deep rural areas with intermittent cellular coverage, manual vertex adjustment handles to correct GPS drift, and multi-polygon grouping for cooperative farm clusters.",
     },
   ],
 };

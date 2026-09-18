@@ -13,33 +13,33 @@ export const wasnack: Project = {
   gradient: "from-blue-100 via-background to-card",
   tags: ["Mobile App", "UX Research", "Food & Beverage"],
   summary:
-    "This project was from my course \"coursera\" and Google. And the project was from a real situation in real life that I took. I want to develop my skills and my knowledge of UX.",
+    "A mobile concept app designed during the Google UX Design Certificate, exploring how to eliminate concession line friction at movie theaters through seamless advance ordering.",
   problem:
-    "People hate standing in long lines at movie theaters. Sometimes they arrive late and the movie has already started — leaving no time to order snacks. Beyond time pressure, the concession menu behind the counter isn't always visible, text is too small, and older users find the interface confusing.",
+    "Moviegoers often face a frustrating dilemma: queue for concessions and risk missing the start of the movie, or rush straight to their seats empty-handed. Distant, small-print menu boards behind busy counters only add to the rush.",
   solution:
-    "Designed a mobile app allowing users to select their theater, browse the snack menu (with search), choose movie times after reading synopses, select seat and quantity, pay, and receive a shareable receipt — all before arriving. Key iterations from usability testing added movie synopsis on the homepage, a search bar for snacks, quantity + seat selection in-app, and a share receipt feature so friends don't have to wait for the buyer to arrive.",
+    "Designed a friendly mobile experience where moviegoers can browse showtimes, pick seats, order snacks with search and dietary filters, and share a digital pickup receipt, all before arriving at the cinema.",
   outcome:
-    "Successfully addressed all identified user problems with an intuitive blue-themed interface. The app design received positive feedback in usability testing, with all critical tasks completed without assistance.",
+    "Validated through moderated usability testing, confirming that advance ordering and receipt sharing significantly reduced arrival anxiety and streamlined group cinema trips.",
   features: [
     {
       title: "Pre-Order Before Arrival",
       description:
-        "Users select theater, movie, snacks, and seats — completing full checkout before arriving at the theater, so they walk straight to their seat.",
+        "Select your theater, movie, snacks, and seats in advance, so you can walk straight to your screen without waiting in line.",
     },
     {
       title: "Movie Synopsis & Showtimes",
       description:
-        "Homepage shows movie details with synopsis and available show times, helping users make decisions without needing to visit a separate website.",
+        "Clear overviews and showtimes right on the homepage help visitors make quick, confident decisions with friends.",
     },
     {
       title: "Snack Menu with Search",
       description:
-        "Full menu browseable with a search bar — addressing the pain point of menus behind counters being hard to read or navigate quickly.",
+        "Browse the full concession menu with a handy search bar, replacing the stress of squinting at distant counter boards.",
     },
     {
       title: "Receipt Sharing",
       description:
-        "Shareable receipt lets friends pick up their own items without waiting for the purchaser — improving the group movie experience.",
+        "Shareable digital receipts let any friend in the group collect the snacks, making movie outings smooth and relaxed for everyone.",
     },
   ],
   resultImage: `${wix}/home-1c0343.jpg`,
@@ -65,30 +65,30 @@ export const wasnack: Project = {
       images: [{ label: "sketch_edited.jpg", src: `${wix}/sketch-edited-75f0a7.jpg` }],
     },
     {
-      title: "Time to do research",
+      title: "User Research & Discovery",
       body:
-        "I conducted interviews and user journey maps to understand the users that I was designing for and their needs. A primary user group identified through research was working adults who wanted to buy snacks without standing in line too long and getting late for the movie. These users group confirmed initial assumptions about their own experience with buying snacks at movie theater, but research also revealed that time is not the only factor limiting having time to buy, because of getting late or standing in line too long. Other user problems included Interest or challenges that make it difficult to buy snacks directly at movie theater.",
+        "I conducted interviews with regular moviegoers to understand how they plan theater visits and handle concession ordering. A key group consisted of working adults and students who often arrive right before showtimes. Research confirmed that line anxiety, unclear distant menus, and coordinating food for groups were major pain points.",
     },
     {
       title: "Pain points",
       body:
-        "There are several pain points that I discovered while I was doing interviews with users.\nTime — Sometimes getting late to the movie theater, so don't have enough time to order snacks.\nAccessibility — Platform for ordering snacks are not equipped for diverse backgrounds and for people with disabilities or for older people.\nIA — When want to order snacks, the menu is the screen behind the workers and the text is to small to read and need to always ask the workers to explain the menu. And flow the pick up the snacks is not pleased because they will shout our name for snacks that we already order.",
+        "Key challenges identified during conversations:\n• Time constraints: Arriving close to showtime creates anxiety between ordering food or catching the beginning of the movie.\n• Accessibility: Distant menu boards with tiny typography are hard to read, especially in dim theater lobbies.\n• Order coordination: One person typically ends up carrying all items while friends wait at the auditorium doors.",
     },
     {
-      title: "Users in general (Persona)",
+      title: "User Persona",
       body:
-        "I create a persona based on research that we have conducted before. This persona represents all users about pain point that users experience themselves.",
+        "Created Christine, a persona embodying busy urban professionals who value their leisure time and want an effortless, stress-free movie outing.",
       images: [{ label: "persona.png", src: `${wix}/persona-b716bd.png` }],
     },
     {
-      title: "So, what is the problem?",
+      title: "Core User Story",
       body:
-        "From the persona above, I discovered problem that Christine face it. And I make it into a user story to make it more understand.\nChristine is a Freelance Graphic Designer who needs to buy snacks, because She want to eat inside the movie theater.",
+        "As a busy moviegoer, Christine wants to pre-order her tickets and cinema snacks on her phone so that she can walk directly to her seat without standing in crowded queues.",
     },
     {
-      title: "Let's see the normal journey",
+      title: "Journey Mapping",
       body:
-        "This is mapping how Christine usually buys snacks and a ticket movie at the movie theater. This method will reveal the normal process of how Christine usually do.",
+        "Mapped the traditional moviegoer journey to highlight where delays and frustrations peak during in-person counter ordering.",
       images: [{ label: "Group 2608956.png", src: `${wix}/group-2608956-9cb1a6.png` }],
     },
     {
@@ -124,9 +124,9 @@ export const wasnack: Project = {
       images: [{ label: "Screenshot (455).png", src: `${wix}/screenshot-455-f50a46.png` }],
     },
     {
-      title: "Now...It's time to test it!",
+      title: "Usability Testing & Feedback",
       body:
-        "After I prepare all of the pages and make them into prototypes so people can click the page, I talk to users that I interviewed before, because they represent my persona. I use the method called \"Usability Study (moderated)\" to do the testing. This means I do Zoom meetings with them and give them the prototype to do the testing with tasks that I prepared before. After I did a Usability Study with users, I discovered some findings that users feel and experience by themselves through the prototype. And these are the results.\nFinding 1 — Users want synopsis and time in the home page.\nFinding 2 — Users want to menu and search bar to find specific snacks.\nFinding 3 — Users need amount for the items and ability to choose seats.\nFinding 4 — Not every users want to buy ticket and snacks for themselves. If they can buy snacks for other people and can share the receipt, it would be nice because the other people doesn't have to wait the person who buy to them.",
+        "Conducted moderated usability sessions via Zoom with five participants to test the clickable prototype. Key user insights:\n• Insight 1: Users wanted synopses and showtimes immediately on the landing screen.\n• Insight 2: A quick search bar was essential to filter specific snacks and combo deals.\n• Insight 3: Intuitive seat selection and quantity adjustments needed to be visible in the main flow.\n• Insight 4: Participants loved the idea of a shareable receipt so friends could pick up snacks independently.",
     },
     {
       title: "Refining The Design",

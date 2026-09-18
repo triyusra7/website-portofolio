@@ -1,10 +1,11 @@
 import type { Project } from "./types";
-import { marketplace } from "./marketplace";
-import { repo } from "./repo";
 import { tangkianErp } from "./tangkian-erp";
-import { rekamWilayah } from "./rekam-wilayah";
+import { tangkianLogistics } from "./tangkian-logistics";
+import { repo } from "./repo";
+import { marketplace } from "./marketplace";
 import { invoicing } from "./invoicing";
 import { designSystem } from "./design-system";
+import { rekamWilayah } from "./rekam-wilayah";
 import { lampuKuning } from "./lampu-kuning";
 import { wasnack } from "./wasnack";
 import { hylo } from "./hylo";
@@ -23,13 +24,18 @@ export type {
   Project,
 } from "./types";
 
-export const projects: readonly Project[] = [
-  marketplace,
+/** Top 6 core product design case studies featured on the home page. */
+export const featuredProjects: readonly Project[] = [
   tangkianErp,
   repo,
-  rekamWilayah,
+  marketplace,
   invoicing,
   designSystem,
+  rekamWilayah,
+];
+
+/** Secondary work (branding, visual design, social media, early projects) moved to /other-work. */
+export const otherProjects: readonly Project[] = [
   lampuKuning,
   wasnack,
   hylo,
@@ -38,3 +44,22 @@ export const projects: readonly Project[] = [
   pcc,
   myCollection,
 ];
+
+/** All projects for routing, static paths, and full archive lookup. */
+export const projects: readonly Project[] = [
+  tangkianErp,
+  repo,
+  marketplace,
+  invoicing,
+  designSystem,
+  rekamWilayah,
+  tangkianLogistics,
+  lampuKuning,
+  wasnack,
+  hylo,
+  litup,
+  biotalk,
+  pcc,
+  myCollection,
+];
+

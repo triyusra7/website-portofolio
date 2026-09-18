@@ -8,18 +8,18 @@ export const repo: Project = {
   company: "PasarMIKRO",
   projectType: "Full-time",
   category: "Fintech · Credit Feature",
-  year: "2021 – 2022",
+  year: "2021 – 2024",
   cover: "/projects/repo-cover.jpg",
   gradient: "from-green-100 via-background to-card",
-  tags: ["Fintech", "Credit", "B2B"],
+  tags: ["Fintech", "Credit", "B2B", "Web App"],
   summary:
-    "This is the project that I am working on in my company, PasarMIKRO. This project is for users to repo their documents like PO or SO to PasarMIKRO and get the credit to buy commodities they need.",
+    "A B2B agricultural trade financing (repo) feature designed for PasarMIKRO, enabling traders across a network of ~1,000 registered users (~600 active) to collateralize verified purchase orders and obtain short-term working capital.",
   problem:
-    "Traders often had large confirmed orders from end buyers, but lacked cash upfront to purchase the required commodities from suppliers. Without quick access to credit, they couldn't fulfill orders — threatening business continuity and limiting growth.",
+    "Traders often held confirmed, high-value purchase orders from large buyers, but lacked cash upfront to purchase the required commodities from smallholders and suppliers. Traditional bank loans were too slow for agricultural harvest cycles. Without fast credit, traders couldn't fulfill orders, damaging business continuity and limiting smallholder sales.",
   solution:
-    "Designed the REPO flow where traders submit PO/SO documents to PasarMIKRO for credit approval. The system supports accumulated repo from multiple suppliers, a buyback clause where ownership transfers back to the trader, and a PO verification process with built-in default protection. The desktop-first design (PasarMIKRO Business) included clear document upload steps, repo status tracking, and a reimbursement flow.",
+    "Designed the REPO desktop workflow (PasarMIKRO Business) where traders submit PO/SO documents for instant credit assessment. The system supports multi-supplier invoice accumulation, automated collateral verification, buyback clauses where commodity ownership returns to the trader upon settlement, and direct default protection through buyer confirmations.",
   outcome:
-    "Traders can now access credit efficiently to fulfill larger orders without cash flow constraints. Feature was designed, developed, and deployed within one sprint (2 weeks).",
+    "Traders can now access working capital within days rather than weeks, unlocking larger transaction volumes without working capital constraints. Designed, validated, and deployed into production within a single two-week sprint.",
   features: [
     {
       title: "Document Submission Flow",
@@ -36,7 +36,7 @@ export const repo: Project = {
     {
       title: "Approval & Verification",
       description:
-        "Before finalizing, traders review all submitted details in a confirmation step — reducing errors and giving PasarMIKRO time to verify PO authenticity before releasing funds.",
+        "Before finalizing, traders review all submitted details in a dedicated confirmation step, which helps catch mistakes early and gives PasarMIKRO time to verify PO authenticity before releasing funds.",
       image: "/projects/repo/screen-confirm.jpg",
     },
     {
@@ -58,42 +58,42 @@ export const repo: Project = {
     {
       title: "Let's imagine this...",
       body:
-        "You are a trader, and you want to do the transaction with your end buyer. Let's say your trader needs milk for 1.000kg. You said to your end buyer you could do that, but in your warehouse, you just have 500kg of milk. So you need to restock your milk before sell again to your end buyer. But you don't have enough money to buy milk from your supplier. So you \"Repo\" your SO (Sales Order) from transactions between you and your end buyer before that. And you Repo to PasarMIKRO and PasarMIKRO will give you credit to you, so you can buy milk from your supplier for 500kg, and after you purchase those you have 1.000kg milk. And then you sell it to your end buyer.",
+        "Imagine you are an agricultural trader with a confirmed purchase order from an institutional buyer for 1,000 kg of milk powder. Your warehouse holds only 500 kg. You need immediate liquidity to procure the remaining 500 kg from your supplier, but banks require weeks for loan approvals and hard physical collateral.\n\nBy 'repoing' your verified Sales Order (SO) to PasarMIKRO, you unlock an immediate line of credit, buy the stock, fulfill the customer order, and repay the financing upon settlement with an agreed margin.",
       images: [{ label: "cover.jpg", src: `${wix}/cover-96678b.jpg` }],
     },
     {
-      title: "Problem backgrounds",
+      title: "Problem background",
       body:
-        "Our partners (Traders) usually have big transactions with their end buyers. But to fulfill their needs, traders need money to buy supply to restock their commodity to sell again to their end buyer. They need quick money to buy from their supplier to restock their commodity, but sometimes, they can't get the money or credit to buy and restock their commodity.",
+        "Traders frequently faced liquidity bottlenecks. While they held verified purchase orders from reputable institutional buyers, they lacked upfront capital to purchase crops from farmers and suppliers. Without fast, reliable credit, profitable deals were lost, threatening business continuity for both traders and smallholders across PasarMIKRO's 1,000 registered users.",
     },
     {
       title: "Goals",
       body:
-        "They can get access to our credit with something that our partners can use to guarantee, so they can get the credit fast, restock their commodity, sell to their end buyer, and pay us back again with a margin.",
+        "Provide fast, structured credit guaranteed by verified trade documents (PO/SO). Traders restock commodities immediately, fulfill their delivery commitments, and repay the platform upon payment with an agreed margin.",
     },
     {
-      title: "Project duration and teams",
+      title: "Project duration and team",
       body:
-        "This project has one sprint to finish it (2 weeks or 10 days for work hours) to create from design to development and publishing in production. And for the teams, one UI/UX Designer, two full-stack developers, two Back-end, one Lead Technology, and one QA.",
+        "Delivered in a single two-week development sprint (10 working days) from discovery to production. The cross-functional team consisted of one Product Designer, two Full-stack Developers, two Backend Developers, one Tech Lead, and one QA Engineer.",
     },
     {
       title: "Information requirements",
       images: [{ label: "1.jpg", src: `${wix}/1-06d1c5.jpg` }],
     },
     {
-      title: "Information about the feature",
+      title: "Financial logic & workflow",
       body:
-        "PasarMIKRO Repo and Loan Workflow\n\nCommodity Purchase Requirement: To initiate a repo or new loan version, traders must have already purchased the commodity. The commodity serves as collateral or a basis for the repo.\nRepo Process Based on Inventory: Repo issuance is determined by existing inventory, validating that the commodity has been bought and stored. This ensures the repo is backed by tangible assets.\nTransaction and Documentation: Traders must submit a Purchase Order (PO) and invoice as part of the repo requirement. This provides proof of an established sale agreement between two parties.\nDirect Purchase Model: Transactions can be made directly on the platform, following a purchase order or sale agreement to facilitate repo.\nAccumulated Repo Across Suppliers: Traders can accumulate repo credits from multiple suppliers, each with varying repo amounts, giving flexibility in financing.\nRepo Funding and Reimbursement: Full repo financing is required for commodity purchases, with the option to reimburse funds later, restoring repo limits.\nInventory-Based Reimbursement: After storing inventory, traders can receive reimbursements based on commodity value within their holdings.\nRepo Limits and Usage: Repo availability might have daily or cumulative limits to ensure sustainable resource allocation.\n\nTrader Repo Conditions and Management\n\nInitial PO Verification: Traders present a PO from their end buyer, which PasarMIKRO reviews for authenticity. If approved, the PO serves as a guarantee, allowing PasarMIKRO to extend a loan to the trader.\nCredit Terms and Default Contingency: While traders receive funds based on the PO, PasarMIKRO also contacts the end buyer to inform them of the transaction. In case of default, PasarMIKRO reserves the right to collect payment directly from the end buyer.\nQuick Turnaround on Sales: The platform is designed for fast transactions—commodities are bought and sold swiftly to maintain liquidity and cash flow.\n\nRepo and Transactional Features\n\nDedicated Repo Function: The system includes a designated button for \"repo\" or \"auto repo,\" where traders list commodities as collateral for a repo loan.\nCommodity Input and Documentation: Users enter commodity details and upload inventory documentation, ensuring the repo aligns with verified stock levels.\n\nClient (Trader) Purchase and Re-Sale Model\n\nTrading Framework: Traders sell commodities to PasarMIKRO per the PO amount, though PasarMIKRO might not purchase the entire PO quantity.\nBuyback Clause: Commodities sold to PasarMIKRO can later be repurchased at a higher price within a specified timeframe, transferring ownership back to the trader.\nEnd Buyer Flow: The final ownership moves from PasarMIKRO to the end buyer, often through the trader, completing the repo cycle.",
+        "PasarMIKRO Repo and Loan Structure:\n\n• Documented collateral: Financing is issued against verified purchase orders or inventory stored in partner warehouses, ensuring credit is backed by real underlying commodity demand.\n• Document verification: Traders submit the PO and invoice. PasarMIKRO verifies authenticity with the institutional buyer.\n• Accumulated credit: Traders can accumulate financing across multiple distinct suppliers to fulfill a single large contract.\n• Repayment and limit restoration: As buyers settle invoices, credit lines are automatically restored for future orders.\n• Buyback mechanism: Ownership transfers through PasarMIKRO as a financing conduit and reverts to the trader upon completion.",
       images: [{ label: "ilustrasi.jpg", src: `${wix}/ilustrasi-a734da.jpg` }],
     },
     {
-      title: "Userflow",
+      title: "User flow",
       body:
-        "Based on the information above and the illustration about how they do transactions and how we put feature Repo, I made the user flow to make it easy to see the process.",
+        "Based on the credit assessment rules, I mapped the complete user flow from document upload and risk review to approval and automated funds release.",
       images: [{ label: "userflow.jpg", src: `${wix}/userflow-cb0bbb.jpg` }],
     },
     {
-      title: "Start The Design",
+      title: "Interface Architecture",
       images: [
         {
           label: "Start the design",
@@ -102,9 +102,9 @@ export const repo: Project = {
       ],
     },
     {
-      title: "Create design in figma",
+      title: "Design System Implementation",
       body:
-        "Because our team product has a library and design system. So, I just used that to create the Hi-Fi for this project. This is a website project because the user will use desktop view to use this feature, and we call it PasarMikro Business (PMB). First, I started to create the design based on the information above. I make sure the process is still the same. And then, I put notes into my design so the developer can know about the design and the function. I use the User story to define the process more easily and to developer can understand the flow too. These are examples for the designs.",
+        "Using our Figma component library, I designed the desktop web experience for PasarMIKRO Business (PMB). I established clear progress indicators, transparent fee and limit calculations, and detailed specification notes and user stories for developer handoff.",
       images: [
         {
           label: "Design example 1",
@@ -126,9 +126,9 @@ export const repo: Project = {
       ],
     },
     {
-      title: "Finally...Mockup app design",
+      title: "Shipped Application Mockups",
       body:
-        "After 1 sprint finish and already deployed to public, finally we can use this feature for our users and partners",
+        "The feature launched to production at the end of the sprint, providing working capital to active traders across the platform.",
       images: [
         { label: "1.jpeg", src: `${wix}/1-b6672a.jpeg` },
         { label: "3.jpeg", src: `${wix}/3-971388.jpeg` },

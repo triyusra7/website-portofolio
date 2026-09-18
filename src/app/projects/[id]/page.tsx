@@ -1,9 +1,12 @@
 import { ArrowLeft, Calendar, Briefcase, Tag } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/portfolio";
 import type { Metadata } from "next";
+import {
+  ImageLightboxProvider,
+  ExpandableImage,
+} from "@/components/ui/ImageLightbox";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ id: p.id }));
@@ -19,17 +22,17 @@ export async function generateMetadata({
   if (!project) return {};
   const socialImage = project.ogImage ?? project.cover ?? undefined;
   return {
-    title: `${project.title} — ${project.company} | Tri Anugerah Yusra`,
+    title: `${project.title} · ${project.company} | Tri Anugerah Yusra`,
     description: project.summary,
     openGraph: {
-      title: `${project.title} — ${project.company}`,
+      title: `${project.title} · ${project.company}`,
       description: project.summary,
       type: "article",
       images: socialImage ? [socialImage] : undefined,
     },
     twitter: {
       card: socialImage ? "summary_large_image" : "summary",
-      title: `${project.title} — ${project.company}`,
+      title: `${project.title} · ${project.company}`,
       description: project.summary,
       images: socialImage ? [socialImage] : undefined,
     },
@@ -54,58 +57,60 @@ export default async function ProjectPage({
   const isRich = !!(project.flowImage || project.resultImage || hasCaseStudySections);
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Top nav */}
-      <nav className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-          <Link
-            href="/#projects"
-            className="flex items-center gap-2 text-sm text-muted transition hover:text-foreground"
-          >
-            <ArrowLeft size={16} />
-            Back to portfolio
-          </Link>
-          <span className="text-xs text-muted">
-            {currentIndex + 1} / {projects.length}
-          </span>
-        </div>
-      </nav>
-
-      {/* Hero */}
-      <header
-        className={`relative overflow-hidden bg-gradient-to-br ${project.gradient} px-6 py-20 lg:px-10 lg:py-28`}
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,0,0,0.04),transparent_60%)]" />
-        <div className="relative mx-auto max-w-5xl">
-          <p className="section-label">{project.company}</p>
-          <h1 className="pixel-heading mt-4 text-2xl leading-tight md:text-3xl">
-            {project.title}
-          </h1>
-          <p className="mt-3 text-sm text-foreground/60">{project.category}</p>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed/80">
-            {project.summary}
-          </p>
-        </div>
-      </header>
-
-      {/* Cover image */}
-      {project.cover && (
-        <section
-          aria-label={`${project.title} cover image`}
-          className="mx-auto max-w-5xl px-6 lg:px-10"
-        >
-          <div className="relative -mt-8 overflow-hidden rounded-2xl border border-border shadow-sm">
-            <Image
-              src={project.cover}
-              alt={`${project.title} cover`}
-              width={1200}
-              height={600}
-              className="w-full object-cover"
-              priority
-            />
+    <ImageLightboxProvider>
+      <div className="min-h-screen bg-background">
+        {/* Top nav */}
+        <nav className="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-md">
+          <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+            <Link
+              href="/#projects"
+              className="flex items-center gap-2 text-sm text-muted transition hover:text-foreground"
+            >
+              <ArrowLeft size={16} />
+              Back to portfolio
+            </Link>
+            <span className="text-xs text-muted">
+              {currentIndex + 1} / {projects.length}
+            </span>
           </div>
-        </section>
-      )}
+        </nav>
+
+        {/* Hero */}
+        <header
+          className={`relative overflow-hidden bg-gradient-to-br ${project.gradient} px-6 py-20 lg:px-10 lg:py-28`}
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,0,0,0.04),transparent_60%)]" />
+          <div className="relative mx-auto max-w-5xl">
+            <p className="section-label">{project.company}</p>
+            <h1 className="pixel-heading mt-4 text-2xl leading-tight md:text-3xl">
+              {project.title}
+            </h1>
+            <p className="mt-3 text-sm text-foreground/60">{project.category}</p>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed/80">
+              {project.summary}
+            </p>
+          </div>
+        </header>
+
+        {/* Cover image */}
+        {project.cover && (
+          <section
+            aria-label={`${project.title} cover image`}
+            className="mx-auto max-w-5xl px-6 lg:px-10"
+          >
+            <div className="relative -mt-8 overflow-hidden rounded-2xl border border-border shadow-sm">
+              <ExpandableImage
+                src={project.cover}
+                alt={`${project.title} cover`}
+                caption={`${project.title} cover`}
+                width={1200}
+                height={600}
+                className="w-full object-cover"
+                priority
+              />
+            </div>
+          </section>
+        )}
 
       <main className="mx-auto max-w-5xl px-6 py-16 lg:px-10">
 
@@ -155,7 +160,7 @@ export default async function ProjectPage({
                           </p>
                         )}
 
-                        {/* Numbered items — the titles are the scannable layer */}
+                        {/* Numbered items: the titles are the scannable layer */}
                         {section.items && section.items.length > 0 && (
                           <ol className="space-y-7">
                             {section.items.map((listItem, index) => (
@@ -260,12 +265,16 @@ export default async function ProjectPage({
                                   }`}
                                 >
                                   {image.src ? (
-                                    <Image
+                                    <ExpandableImage
                                       src={image.src}
                                       alt={image.label}
+                                      caption={image.caption ?? image.label}
                                       width={image.width ?? 1000}
                                       height={image.height ?? 700}
                                       sizes="(max-width: 768px) 100vw, 1000px"
+                                      containerClassName={
+                                        image.width ? "w-full" : "h-full min-h-64 w-full"
+                                      }
                                       className={
                                         image.width
                                           ? "h-auto w-full"
@@ -312,7 +321,7 @@ export default async function ProjectPage({
                   )}
                   <div className="card-surface rounded-2xl p-6">
                     <p className="whitespace-pre-line text-foreground/90 leading-relaxed">
-                      <span className="font-medium text-accent-4">Result — </span>
+                      <span className="font-medium text-accent-4">Result: </span>
                       {project.outcome}
                     </p>
                   </div>
@@ -345,12 +354,13 @@ export default async function ProjectPage({
               </div>
             </section>
 
-            {/* Bridging banner 1 — before flow section */}
+            {/* Bridging banner 1: before flow section */}
             {project.bannerImages?.[0] && (
               <div className="overflow-hidden rounded-2xl border border-border">
-                <Image
+                <ExpandableImage
                   src={project.bannerImages[0]}
                   alt="Information requirements"
+                  caption="Information requirements"
                   width={1200}
                   height={400}
                   className="w-full object-cover"
@@ -365,9 +375,10 @@ export default async function ProjectPage({
                   Think about the flow
                 </h2>
                 <div className="overflow-hidden rounded-2xl border border-border bg-white">
-                  <Image
+                  <ExpandableImage
                     src={project.flowImage}
                     alt="User flow diagram"
+                    caption="User flow diagram"
                     width={1200}
                     height={600}
                     className="w-full object-contain"
@@ -381,9 +392,10 @@ export default async function ProjectPage({
                         key={i}
                         className="overflow-hidden rounded-xl border border-border"
                       >
-                        <Image
+                        <ExpandableImage
                           src={img}
                           alt={`Design process ${i + 1}`}
+                          caption={`Design process ${i + 1}`}
                           width={400}
                           height={300}
                           className="w-full object-cover aspect-[4/3]"
@@ -395,12 +407,13 @@ export default async function ProjectPage({
               </section>
             )}
 
-            {/* Bridging banner 2 — design section divider (replaces text heading when present) */}
+            {/* Bridging banner 2: design section divider (replaces text heading when present) */}
             {project.bannerImages?.[1] ? (
               <div className="overflow-hidden rounded-2xl border border-border">
-                <Image
+                <ExpandableImage
                   src={project.bannerImages[1]}
                   alt="Start the Design"
+                  caption="Start the Design"
                   width={1200}
                   height={400}
                   className="w-full object-cover"
@@ -414,7 +427,7 @@ export default async function ProjectPage({
               </section>
             )}
 
-            {/* Let's take a look — feature showcases */}
+            {/* Feature showcases */}
             <section>
               <h2 className="pixel-heading text-lg mb-12">
                 Let&apos;s take a look
@@ -436,14 +449,15 @@ export default async function ProjectPage({
                         {feature.description}
                       </p>
                     </div>
-                    {/* Image — phone frame for mobile, plain card for desktop */}
+                    {/* Image: phone frame for mobile, plain card for desktop */}
                     {feature.image && (
                       project.desktopFeatures ? (
                         <div className={`lg:[direction:ltr] ${i % 2 === 1 ? "lg:justify-start" : "lg:justify-end"}`}>
                           <div className="overflow-hidden rounded-xl border border-border shadow-sm">
-                            <Image
+                            <ExpandableImage
                               src={feature.image}
                               alt={feature.title}
+                              caption={feature.title}
                               width={800}
                               height={500}
                               className="w-full object-cover"
@@ -457,9 +471,10 @@ export default async function ProjectPage({
                           }`}
                         >
                           <div className="w-56 overflow-hidden rounded-[2rem] border-4 border-border shadow-lg">
-                            <Image
+                            <ExpandableImage
                               src={feature.image}
                               alt={feature.title}
+                              caption={feature.title}
                               width={390}
                               height={844}
                               className="w-full object-cover"
@@ -473,12 +488,13 @@ export default async function ProjectPage({
               </div>
             </section>
 
-            {/* Bridging banner 3 — before final result */}
+            {/* Bridging banner 3: before final result */}
             {project.bannerImages?.[2] && (
               <div className="overflow-hidden rounded-2xl border border-border">
-                <Image
+                <ExpandableImage
                   src={project.bannerImages[2]}
                   alt="Final Design"
+                  caption="Final Design"
                   width={1200}
                   height={400}
                   className="w-full object-cover"
@@ -495,9 +511,10 @@ export default async function ProjectPage({
                   </h2>
                 )}
                 <div className="overflow-hidden rounded-2xl border border-border">
-                  <Image
+                  <ExpandableImage
                     src={project.resultImage}
                     alt="Final result mockup"
+                    caption="Final result mockup"
                     width={1200}
                     height={700}
                     className="w-full object-cover"
@@ -510,7 +527,7 @@ export default async function ProjectPage({
             <section className="border-t border-border pt-12">
               <div className="card-surface rounded-2xl p-6">
                 <p className="text-foreground/90 leading-relaxed">
-                  <span className="font-medium text-accent-4">Result — </span>
+                  <span className="font-medium text-accent-4">Result: </span>
                   {project.outcome}
                 </p>
               </div>
@@ -556,7 +573,7 @@ export default async function ProjectPage({
                 <h2 className="section-label mb-4">Outcome</h2>
                 <div className="card-surface rounded-2xl p-6">
                   <p className="text-foreground/90 leading-relaxed">
-                    <span className="font-medium text-accent-4">Result — </span>
+                    <span className="font-medium text-accent-4">Result: </span>
                     {project.outcome}
                   </p>
                 </div>
@@ -640,5 +657,6 @@ export default async function ProjectPage({
         </div>
       </main>
     </div>
-  );
+  </ImageLightboxProvider>
+);
 }

@@ -45,7 +45,7 @@ export function SiteHeader() {
         </a>
 
         <p className="hidden text-sm text-muted sm:block">
-          UX &amp; Product Designer · Jakarta
+          Product Designer · Jakarta
         </p>
       </motion.div>
     </header>

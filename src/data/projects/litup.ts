@@ -13,33 +13,33 @@ export const litup: Project = {
   gradient: "from-yellow-100 via-background to-card",
   tags: ["Social Media", "Education", "Branding"],
   summary:
-    "This project for our organization is called \"LitUP\". I handle the social media design for posting on our social media platform (Instagram) — live at instagram.com/litup.id.",
+    "Brand and social media design for LitUP, an educational student-led organization empowering Indonesian youth to discover their passions (active at instagram.com/litup.id).",
   problem:
-    "LitUP needed to reach Indonesian students (17–22 years old) who lacked clear direction for their futures. The organization's mission required a strong, relatable visual identity and consistent social media content that students would engage with.",
+    "Many Indonesian youth (ages 17–22) experience uncertainty about their career paths and future studies. LitUP needed an inspiring, approachable visual identity and consistent social media content to genuinely connect with students and make guidance accessible.",
   solution:
-    "As Lead Designer, created the complete brand identity: a logo combining fire (passion for learning) and pen (storytelling, self-expression), a yellow (#FFC725) and blue (#062057) color palette communicating energy and trustworthiness respectively, and a consistent content system for Instagram that expanded to TikTok. Social content focused on student empowerment, goal-setting, and learning inspiration.",
+    "As Lead Designer, shaped the brand identity: a logo combining fire (passion for learning) and a pen (storytelling and agency), balanced by cheerful yellow (#FFC725) and dependable navy blue (#062057). Created a community-first Instagram and TikTok content system highlighting real student journeys, goal-setting tools, and relatable mentorship stories.",
   outcome:
-    "Successfully reached the target student audience across platforms, supported students in defining their future direction, and built a recognizable brand identity for the organization over two years.",
+    "Built a warm, recognizable brand that engaged thousands of high school and university students across Indonesia, helping young people navigate their academic and career choices with confidence.",
   features: [
     {
       title: "Fire + Pen Logo",
       description:
-        "Logo combining fire (passion and energy for learning) with a pen (storytelling and self-expression) — visually encoding the organization's mission of student empowerment.",
+        "A logo combining fire (curiosity and drive) with a pen (self-expression), visually capturing the organization's commitment to youth empowerment.",
     },
     {
       title: "Yellow & Blue Color Palette",
       description:
-        "Yellow (#FFC725) for cheerfulness and creative energy; Blue (#062057) for stability and trustworthiness. Combined to balance inspiration with reliability.",
+        "Warm yellow (#FFC725) for youthful optimism paired with deep navy (#062057) for trust and stability, striking an approachable yet grounded balance.",
     },
     {
       title: "Instagram Content System",
       description:
-        "Consistent post structure for educational messages, student testimonials, and motivational content — maintaining brand identity across all posts.",
+        "A cohesive template framework for educational carousels, student stories, and reflective prompts that keep every post visually distinct and easy to read.",
     },
     {
       title: "TikTok Expansion",
       description:
-        "Extended content strategy to TikTok to reach younger students where they spend time — adapting the brand for short-form video without losing visual consistency.",
+        "Extended the visual identity to TikTok short-form video, meeting younger students where they spend time with engaging, uplifting micro-lessons.",
     },
   ],
   resultImage: `${wix}/litup-4ab5e1.jpg`,

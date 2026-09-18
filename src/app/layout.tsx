@@ -11,9 +11,9 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Tri Anugerah Yusra | Portfolio",
+  title: "Tri Anugerah Yusra | Product Designer",
   description:
-    "UX Designer, Product Designer, and Graphic Designer who bridges people with design and bring happiness.",
+    "Product Designer specializing in accounting, ERP, fintech, and B2B systems where the hard part is the logic underneath.",
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
   },

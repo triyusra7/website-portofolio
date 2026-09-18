@@ -1,9 +1,10 @@
 export const site = {
   name: "Tri Anugerah Yusra",
   nickname: "Tri",
-  title: "UX Designer, Product Designer & Graphic Designer",
-  tagline: "who bridges people with design and bring happiness",
+  title: "Product Designer",
+  tagline: "I design software where the hard part is the logic underneath, not the screen on top.",
   location: "Central of Jakarta, Indonesia",
+  relocationNote: "Based in Jakarta, open to relocation. Available for remote contract work worldwide, and open to roles with visa sponsorship in Finland, the Netherlands, Germany and Australia.",
   whatsapp: "+62 85280459492",
   whatsappUrl: "https://wa.me/6285280459492",
   quote: "Find your happiness and success at the same time",
@@ -26,14 +27,12 @@ export const socialLinks = [
 ] as const;
 
 export const files = {
-  resume: "/CV_Tri%20Anugerah%20Yusra.pdf",
+  resume: "/Tri%20Anugerah%20Yusra%20-%20Product%20Designer%20Resume.pdf",
   portfolioPdf: "/portfolio.pdf",
 } as const;
 
 export const roles = [
-  "UX Designer",
   "Product Designer",
-  "Graphic Designer",
 ] as const;
 
 export type {
@@ -45,31 +44,33 @@ export type {
   CaseStudySection,
   Project,
 } from "./projects";
-export { projects } from "./projects";
+export { projects, featuredProjects, otherProjects } from "./projects";
 
 export const expertise = [
-  "UI/UX Design",
   "Product Design",
-  "Design System",
+  "UI/UX Design",
+  "Design Systems",
   "UX Research",
+  "Information Architecture",
+  "Accounting & ERP",
+  "Fintech",
   "Wireframing",
   "Prototyping",
-  "Branding Design",
-  "Graphic Design",
-  "AI Tools"
+  "AI Tools",
 ] as const;
 
 export const aboutParagraphs = [
-  "Hi, I'm Tri Anugerah Yusra, feel free to call me \"Tri.\" I hold a Bachelor's degree in Economics, specializing in Accounting (2018), and a Professional Certificate in Digital Design (2021).",
-  "Based in South Jakarta, I'm passionate about UI/UX design and deeply committed to crafting user-centered experiences backed by real research. I thrive on understanding people, what they struggle with, what they need, and translating that into design that actually helps.",
-  "My journey started as a Graphic Designer Intern at Sinarmas Land, grew through UI/UX roles at PasarMIKRO and Linkz Asia, and now continues as a freelance designer working on HRIS platforms, logistics features, ERP solutions, and brand identities.",
-  "Looking ahead, I aspire to grow into an Interaction Designer role, working alongside diverse, innovative teams. In my spare time I enjoy badminton and football, art (especially Keith Haring), singing, and staying sharp through reading.",
+  "Hi, I'm Tri Anugerah Yusra. I design software where the hard part is the logic underneath, not the screen on top: accounting systems, digital wallets, inventory tools and B2B marketplaces.",
+  "My first degree was in accounting, so when a product involves journals, balances or cash flow, I already understand what the numbers are supposed to do before anyone explains it to me. That has shaped most of the work on this site.",
+  "I spent almost three years as the only designer at PasarMIKRO, an agritech platform used by around a thousand traders and smallholder farmers in Indonesia, where I did the field research myself and sat with users who were not confident with smartphones. Since then I have worked independently on ERP, HRIS and logistics products.",
+  "I work closely with engineers, write my own HTML and CSS when it helps, and I would rather sit with a user in the field than guess what they need.",
+  "In my spare time I enjoy badminton and football, art (especially Keith Haring), singing, and staying sharp through reading.",
 ] as const;
 
 export const experience = [
   {
     period: "August 2024 – Now",
-    role: "UI/UX Designer and Graphic Design",
+    role: "Product Designer",
     company: "Freelance",
     location: "Jakarta – Indonesia",
     highlights: [
@@ -81,7 +82,7 @@ export const experience = [
   },
   {
     period: "June 2024 – August 2024",
-    role: "UI/UX Designer",
+    role: "Product Designer",
     company: "Linkz Asia",
     location: "Jakarta – Indonesia",
     highlights: [
@@ -96,11 +97,12 @@ export const experience = [
     ],
   },
   {
-    period: "18 August 2021 – 23 August 2022",
-    role: "UI/UX Designer",
+    period: "August 2021 – June 2024",
+    role: "Product Designer",
     company: "PasarMIKRO",
     location: "Jakarta – Indonesia",
     highlights: [
+      "Sole designer leading product design across mobile and web for an agritech platform serving ~1,000 registered traders and smallholder farmers (~600 active).",
       "Collaborated directly with developers and stakeholders to design and deliver projects, actively engaging in discussions about flow and design to ensure alignment.",
       "Conducted comprehensive desk research and field research, including site visits and direct conversations with users, to gather valid data. Listened to user feedback, identified pain points, and worked on solving their problems based on real-world experiences.",
       "Managed the entire design process from concept to delivery, including assisting in platform testing to ensure that the design was accurately implemented.",
@@ -113,24 +115,24 @@ export const experience = [
     ],
     projects: [
       {
-        label: "Project 1: Area Tracking",
+        label: "Project 1: Area Tracking (Rekam Wilayah)",
         description:
           "The \"Area Tracking\" project addresses users' need to measure and record the size of their business area, including the type of business and commodities grown. The solution involves a \"tracing steps\" feature, where users walk or drive around their area to map it directly. This project allows users to get accurate measurements of their business land, which can also be used for traceability purposes when selling products. As a result, users who have not measured their business areas are now able to use this tool to manage their records effectively.",
       },
       {
         label: "Project 2: Marketplace",
         description:
-          "The \"Marketplace\" project focuses on enhancing the B2B agricultural marketplace experience. Users prefer dealing with trusted partners but also seek new, reliable partners. This project provides each user with their own store to display commodities and a \"success\" indicator that shows transaction history. Users can save partner stores for quick access and use the marketplace directly or via WhatsApp, allowing transactions without app installation for new partners. The result is a more user-friendly marketplace that allows for flexible and secure transactions, improving user trust and satisfaction.",
+          "The \"Marketplace\" project focuses on enhancing the B2B agricultural marketplace experience. Serving around 1,000 registered traders and farmers, this project provides each user with their own store to display commodities and a \"success\" indicator that shows transaction history as a trust signal. Users can save partner stores for quick access and use the marketplace directly or via WhatsApp, allowing transactions without app installation for new partners.",
       },
       {
         label: "Project 3: Wallet 2 (Business Wallet)",
         description:
-          "The \"Wallet 2\" project solves users' challenges in managing sales and purchase funds in a single wallet by introducing a dedicated \"Business Wallet\" for storing sales proceeds. This separation allows users to clearly see their earnings and easily transfer or withdraw their funds. The implementation of this project resulted in increased user satisfaction as they could now manage their business finances more effectively without confusion.",
+          "The \"Wallet 2\" project solves users' challenges in managing sales and purchase funds in a single wallet by introducing a dedicated \"Business Wallet\" for storing sales proceeds, adopted by almost every active user on the platform. This separation allows users to clearly see their earnings and easily transfer or withdraw their funds.",
       },
       {
         label: "Project 4: Financial Report (Cash Flow Record)",
         description:
-          "The \"Financial Report\" project was redesigned into a \"Cash Flow Record\" to offer users a clearer overview of their transaction history and financial activities on PasarMIKRO. The updated design uses bar charts for better visualization and allows users to manually input sales and other expenses. This change led to a significant increase in user engagement with the cash flow records, as users found the feature more intuitive and helpful for their financial tracking needs.",
+          "The \"Financial Report\" project was redesigned into a \"Cash Flow Record\" to offer users a clearer overview of their transaction history and financial activities on PasarMIKRO. The updated design uses bar charts for better visualization and allows users to manually input sales and other expenses. This change led to a significant increase in user engagement with the cash flow records.",
       },
     ],
   },
@@ -175,24 +177,21 @@ export const skills = [
   { name: "Affinity Photo", category: "Design Tools" },
   { name: "Affinity Publisher", category: "Design Tools" },
   { name: "Capcut", category: "Design Tools" },
+  { name: "Product Design", category: "Skills" },
+  { name: "UI/UX Design", category: "Skills" },
+  { name: "Design System", category: "Skills" },
+  { name: "UX Research", category: "Skills" },
   { name: "Wireframing", category: "Skills" },
   { name: "Prototyping", category: "Skills" },
-  { name: "UX Research", category: "Skills" },
   { name: "Interaction Design", category: "Skills" },
-  { name: "Design System", category: "Skills" },
+  { name: "Information Architecture", category: "Skills" },
   { name: "User Interviews", category: "Skills" },
-  { name: "Graphic Design", category: "Skills" },
-  { name: "Branding", category: "Skills" },
-  { name: "UI/UX Design", category: "Skills" },
-  { name: "Product Digital Design", category: "Skills" },
+  { name: "B2B SaaS Design", category: "Skills" },
   { name: "Marketplace Design", category: "Skills" },
-  { name: "B2B Design", category: "Skills" },
-  { name: "Consumer Tech Design", category: "Skills" },
-  { name: "Logistic", category: "Skills" },
-  { name: "Fintech", category: "Skills" },
-  { name: "ERP Design", category: "Skills" },
-  { name: "PRD", category: "Skills" },
-  { name: "BRD", category: "Skills" },
+  { name: "Fintech & Accounting", category: "Skills" },
+  { name: "ERP Systems", category: "Skills" },
+  { name: "Logistics", category: "Skills" },
+  { name: "PRD & BRD", category: "Skills" },
   { name: "CSS", category: "Development" },
   { name: "HTML", category: "Development" },
   { name: "Slicing Design", category: "Development" },
@@ -219,4 +218,5 @@ export const skills = [
 ] as const;
 
 export const skillSummary =
-  "UI/UX Design, Wireframing, Prototyping, UX Research, Design Systems, Interaction Design, Graphic Design, and Branding, with tools including Figma, Adobe Creative Suite, Maze, Whimsical, Mixpanel, Dbeaver, and AI tools like Claude, Gemini, and Google AI Studio.";
+  "Product Design, UX Research, Design Systems, Information Architecture, and Prototyping across Fintech, Accounting/ERP, and B2B platforms, using Figma, Maze, Whimsical, Mixpanel, and AI tooling (Claude, Gemini, Google AI Studio).";
+

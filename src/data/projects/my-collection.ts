@@ -14,33 +14,33 @@ export const myCollection: Project = {
   gradient: "from-rose-100 via-background to-card",
   tags: ["Photography", "Vector", "Book Design"],
   summary:
-    "These are my other projects besides UX designer. I love art, design and photography, especially \"human interest\" and Keith Haring's masterpiece. I believe that art can bring joy to people around the world, and I hope my art can bring joy to people as well.",
+    "A personal creative playground outside product design. I have a deep love for visual arts, photography, and illustrative storytelling, especially human interest subjects and the vibrant spirit of Keith Haring. I believe art has an innate ability to bring warmth and joy to people everywhere, and I hope these personal creations share that feeling with you.",
   problem:
-    "Beyond UX and product design, creativity also lives in photography, illustration, and book design — disciplines that bring joy and artistic expression that structured project work doesn't always allow.",
+    "Beyond digital product design, creativity thrives through photography, illustration, and book layout, creative disciplines that nurture the imagination and offer artistic expression that structured project roadmaps rarely accommodate.",
   solution:
-    "Built an ongoing personal collection across three disciplines: book design exploring layout and typographic composition; vector illustration inspired by Keith Haring's bold, joyful style; and human interest photography capturing authentic moments and emotional depth in everyday people and scenes.",
+    "Curated a living personal archive across three creative mediums: book design exploring editorial rhythm and typography, vector illustration inspired by Keith Haring's playful energy, and documentary-style photography capturing genuine emotions in everyday scenes.",
   outcome:
-    "A living personal portfolio that reflects artistic interests and creative range beyond UX work — available for those interested in collaboration or purchase.",
+    "A personal creative sanctuary that showcases visual versatility and a passion for craft outside software interfaces, open for print inquiries, exhibition showcases, or creative partnerships.",
   features: [
     {
       title: "Book Design",
       description:
-        "Layout and typographic compositions exploring the relationship between text, space, and image — bringing editorial thinking to physical and digital book formats.",
+        "Thoughtful layout and typography compositions exploring the dialogue between text, negative space, and imagery, bringing editorial craftsmanship to both physical and digital formats.",
     },
     {
       title: "Vector Illustration",
       description:
-        "Bold, flat vector work inspired by Keith Haring's joyful aesthetic — using simplified forms and vibrant color to create work that is immediately accessible and expressive.",
+        "Bold, expressive vector illustrations inspired by Keith Haring's uplifting aesthetic, using simplified shapes and vibrant palettes to evoke immediate joy and connection.",
     },
     {
       title: "Human Interest Photography",
       description:
-        "Documentary-style photography focused on people, emotion, and authentic moments — capturing stories that statistics and design briefs miss.",
+        "Documentary-style frames focused on everyday people, quiet emotions, and honest moments, preserving stories that data sheets and design briefs inevitably miss.",
     },
     {
       title: "Open for Collaboration",
       description:
-        "All pieces in this collection are available for discussion — whether for purchase, exhibition, or collaboration on creative projects.",
+        "All pieces in this collection are warmly open for conversation, whether you are interested in prints, gallery showcases, or exploring unique creative collaborations.",
     },
   ],
   resultImage: `${wix}/9-b69829.jpg`,
@@ -48,7 +48,7 @@ export const myCollection: Project = {
     {
       title: "My collection",
       body:
-        "These are my other projects besides UX designer. I love art, design and photography, especially \"human interest\" and Keith Haring's masterpiece. I believe that art can bring joy to people around the world, and I hope my art can bring joy to people as well. Please enjoy my art and my other design. Let me know if you are interested in something that I created. Thank you!",
+        "A collection of passion projects created alongside my design career. I have always been deeply drawn to visual arts, street photography, and Keith Haring's uplifting artistic voice. To me, art is about sharing joy and honest human connection with people around the world. Please take your time exploring these pieces, and feel free to reach out if any of them resonate with you!",
       images: [{ label: "9.jpg", src: `${wix}/9-b69829.jpg` }],
     },
     {

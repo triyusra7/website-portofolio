@@ -13,8 +13,9 @@ export function Contact() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    const signoff = name ? `\n\nWarm regards,\n${name}` : "";
     const body = encodeURIComponent(
-      `Hi Tri,\n\n${message}\n\n— ${name || "Portfolio visitor"}`,
+      `Hi Tri,\n\n${message}${signoff}`,
     );
     window.open(
       `${site.whatsappUrl}?text=${body}`,
@@ -33,13 +34,15 @@ export function Contact() {
             lines={["Let's get", "in touch."]}
             description={
               <>
-                <p className="text-lg font-medium text-accent-3">
-                  Currently seeking new opportunities!!!
+                <p className="text-lg font-medium text-brand">
+                  Currently open to new opportunities.
+                </p>
+                <p className="mt-2 text-sm font-medium text-accent-4">
+                  Available for remote contract work and open to relocation.
                 </p>
                 <p className="mt-4 leading-relaxed">
-                  If you&apos;re interested in my work, please contact me or send
-                  a message for more information. I&apos;m really excited for new
-                  challenges.
+                  If you&apos;re interested in working together or discussing an
+                  opportunity, feel free to reach out via WhatsApp or send a message below.
                 </p>
               </>
             }

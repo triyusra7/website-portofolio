@@ -13,33 +13,33 @@ export const biotalk: Project = {
   gradient: "from-stone-100 via-background to-card",
   tags: ["Social Media", "Skincare", "Branding"],
   summary:
-    "This is my project when I work as an intern in graphic design. This is one of the project that I worked on when I working for one of the local digital agency — live on Instagram at instagram.com/biotalk.id.",
+    "Brand and social media visual design for Biotalk, an artisanal natural skincare brand crafted for sensitive skin (active on Instagram at instagram.com/biotalk.id).",
   problem:
-    "Biotalk, a natural skincare brand since 2015, needed consistent social media content to communicate their core values — natural ingredients, sensitive skin safety, and affordability — to a broad target market across multiple skin concerns.",
+    "Biotalk needed consistent, educational social media content to communicate its core philosophy: gentle natural ingredients, sensitive skin safety, and honest pricing across diverse skin types.",
   solution:
-    "Designed social media content following Biotalk's brand: a monochromatic palette matched to the tones of Biotalk's existing Instagram feed, ensuring a cohesive look between new and existing posts. Content highlighted specific ingredients, product benefits for sensitive skin, and affordability messaging — targeting users aged 17–40 across socioeconomic levels C to A.",
+    "Designed social media editorial content honoring Biotalk's calm aesthetic: a soft monochromatic palette matched to existing tones, ingredient breakdowns, and sensitive skin care routines crafted for customers across diverse lifestyles.",
   outcome:
-    "Cohesive brand communication across social media that reinforced Biotalk's natural, skin-safe positioning and connected with their diverse target audience.",
+    "Established a serene, trustworthy social media presence that reinforced Biotalk's reputation for gentle, effective natural skincare.",
   features: [
     {
       title: "Monochromatic Color Palette",
       description:
-        "Colors (#010101, #e4e3eb, #ffffff) adjusted to match the tones of Biotalk's existing Instagram feed — keeping new content cohesive with what came before.",
+        "Soft neutral tones (#010101, #e4e3eb, #ffffff) matching Biotalk's organic aesthetic, keeping new visual stories harmoniously connected with existing posts.",
     },
     {
       title: "Ingredient-Focused Content",
       description:
-        "Posts highlighting specific natural ingredients and their skin benefits — educating the audience while reinforcing the brand's transparency value.",
+        "Educational posts spotlighting clean botanical ingredients and their benefits, empowering customers with transparent knowledge.",
     },
     {
       title: "Sensitive Skin Messaging",
       description:
-        "Content specifically addressing sensitive skin concerns, building trust with users who struggle to find safe, effective products.",
+        "Thoughtful routines specifically addressing sensitive skin concerns, building empathy and trust with customers who struggle to find safe solutions.",
     },
     {
       title: "Natural Texture Imagery",
       description:
-        "Visual variation through textures and natural elements (flowers, leaves), ample negative space, and images combined with visual shapes — not just graphics.",
+        "Tactile botanical imagery, generous breathing space, and clean typography that celebrate authentic, healthy skin.",
     },
   ],
   resultImage: `${wix}/biotalk-f29c3d.jpg`,

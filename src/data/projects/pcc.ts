@@ -5,7 +5,7 @@ const wix = "/projects/pcc/wix";
 export const pcc: Project = {
   id: "pcc",
   title: "PCC Branding",
-  company: "IDS — School Project",
+  company: "IDS (School Project)",
   projectType: "School Project",
   category: "Branding · Packaging",
   year: "2021",
@@ -13,33 +13,33 @@ export const pcc: Project = {
   gradient: "from-gray-100 via-background to-card",
   tags: ["Branding", "Typography", "Packaging"],
   summary:
-    "This project was from my design school \"International Design School\". This is a group project with my friend. For this project, we must use only \"typography\" to make the brand.",
+    "A creative branding and packaging design project developed at the International Design School, exploring the boundary of typography-only visual identity.",
   problem:
-    "The design challenge: create a complete brand for a power-boosting chocolate called \"PCC\" using ONLY typography as the design element — no illustrations, no icons, no decorative imagery. The brand needed to feel scientific and futuristic while remaining commercial.",
+    "The creative challenge: develop a complete brand identity for an energy-boosting chocolate called PCC using ONLY typography as the visual element (no illustrations, no icons, and no decorative imagery) while keeping the product modern and commercially appealing.",
   solution:
-    "Designed a hexagonal logotype (the hexagon already carries futuristic connotations in people's minds) built purely from typography. Packaging followed a minimalist approach with circuit board patterns and heavy typographic treatment, targeting teenagers and young adults (17–25, SES B-A) who grew up with technology and value simplicity and speed. The brand tagline emphasized power and energy for an active day.",
+    "Designed a hexagonal logotype constructed entirely through custom letterforms. Developed minimalist packaging using repeating typographic characters to evoke circuit-board precision, appealing to tech-native young adults who appreciate clean, bold design.",
   outcome:
-    "A complete brand identity — logo concepts, packaging mockups, and product applications — delivered within 2 weeks. Successfully communicated a futuristic, science-inspired chocolate brand using only typographic design elements.",
+    "Delivered a comprehensive identity package (logo mark, typography hierarchy, and packaging mockups) demonstrating how strict creative constraints can produce striking, memorable branding.",
   features: [
     {
       title: "Typography-Only Constraint",
       description:
-        "Every visual element — including the logo mark and packaging graphics — was built from typefaces and typographic forms, with zero use of illustrations or icons.",
+        "Every visual element, including the logotype and packaging patterns, was crafted purely from typefaces and glyphs without illustrations.",
     },
     {
       title: "Hexagonal Logotype",
       description:
-        "The hexagon shape (associated with science, structure, and futurism) formed through letterforms — giving the logotype instant tech-forward recognition.",
+        "Letterforms arranged into a balanced hexagon, giving the identity an immediate structural and forward-looking presence.",
     },
     {
       title: "Circuit Board Packaging",
       description:
-        "Minimalist packaging featuring circuit board line patterns — referencing technology and precision through geometric repetition rather than literal imagery.",
+        "Minimalist packaging featuring typographic line patterns, referencing precision through geometric repetition.",
     },
     {
-      title: "Target Market Alignment",
+      title: "Youthful Appeal",
       description:
-        "Design system oriented toward 17–25 year olds who grew up with technology — valuing speed, simplicity, and a modern aesthetic over traditional chocolate branding.",
+        "Visual language tailored for young adults and students who value speed, simplicity, and a fresh modern aesthetic over traditional chocolate branding.",
     },
   ],
   resultImage: `${wix}/4-9c76cc.jpg`,
@@ -53,7 +53,7 @@ export const pcc: Project = {
     {
       title: "Problem backgrounds",
       body:
-        "PCC is a chocolate with \"power\" — a snack that makes you strong enough to face your day. The challenge came from the brief itself: we had to build the whole brand using ONLY typography, with no illustrations or decorative imagery allowed. On top of that constraint, the brand needed to communicate a scientific, futuristic look while still appealing to our target market — young people with tight schedules who love chocolate and want everything simple and fast.",
+        "PCC is a conceptual power-boosting chocolate crafted for active, busy days. The creative challenge came from the brief itself: build the entire brand using ONLY typography without illustrations or photos, while remaining appealing to tech-savvy young adults who value speed and simplicity.",
     },
     {
       title: "Target market and team",

@@ -51,7 +51,7 @@ export function Profile() {
                   className="mt-4 flex items-center justify-center gap-2 rounded-full bg-brand px-4 py-2.5 text-xs font-medium text-white transition hover:brightness-110"
                 >
                   <FileText size={13} />
-                  View CV
+                  View Resume
                 </a>
                 <a
                   href={files.portfolioPdf}
@@ -181,29 +181,31 @@ export function Profile() {
           />
         </FadeIn>
 
-        <div className="mt-16 space-y-10 lg:mt-24">
-          {skillCategories.map((category) => {
-            const categorySkills = skills.filter((s) => s.category === category);
-            if (categorySkills.length === 0) return null;
-            return (
-              <FadeIn key={category}>
-                <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-muted">
-                  {category}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {categorySkills.map((skill) => (
-                    <span
-                      key={skill.name}
-                      className="card-surface rounded-full px-4 py-2 text-sm"
-                    >
-                      {skill.name}
-                    </span>
-                  ))}
+        <FadeIn delay={0.1}>
+          <div className="mt-16 space-y-10 lg:mt-24">
+            {skillCategories.map((category) => {
+              const categorySkills = skills.filter((s) => s.category === category);
+              if (categorySkills.length === 0) return null;
+              return (
+                <div key={category} className="space-y-4">
+                  <h3 className="font-pixel text-[0.65rem] uppercase tracking-[0.16em] text-brand">
+                    {category}
+                  </h3>
+                  <div className="flex flex-wrap gap-2.5">
+                    {categorySkills.map((skill) => (
+                      <span
+                        key={skill.name}
+                        className="rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground shadow-xs transition hover:border-accent-2/40 hover:text-brand"
+                      >
+                        {skill.name}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </FadeIn>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </FadeIn>
       </div>
     </section>
   </>

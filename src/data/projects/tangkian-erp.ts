@@ -2,7 +2,7 @@ import type { Project } from "./types";
 
 const base = "/projects/tangkian-erp";
 
-/** Every product screenshot was captured at 2× — 3360×2000. */
+/** Every product screenshot was captured at 2× (3360×2000). */
 const SHOT = { width: 3360, height: 2000 } as const;
 
 const DISCLAIMER =
@@ -11,7 +11,7 @@ const DISCLAIMER =
 export const tangkianErp: Project = {
   id: "tangkian-erp",
   title: "Tangkian ERP",
-  company: "Freelance — group of three companies",
+  company: "Freelance (Group of three companies)",
   projectType: "Freelance",
   category: "Accounting ERP · Multi-entity consolidation",
   year: "2026",
@@ -21,13 +21,13 @@ export const tangkianErp: Project = {
   gradient: "from-blue-100 via-background to-card",
   tags: ["ERP", "Accounting", "Web App"],
   summary:
-    "A web-based accounting system that runs three companies — cement distribution, port logistics, and a coffee shop — inside one program, writes every journal entry automatically from the source document, and produces a consolidated group report on demand.",
+    "A web-based accounting system that runs three businesses (cement distribution, port logistics, and a coffee shop) inside one unified program, creating every journal entry automatically from source documents and generating consolidated group reports on demand.",
   problem:
     "Recording one transaction meant typing the same number into the profit and loss, the balance sheet and the supporting ledgers. Consolidation was rebuilt by hand in a spreadsheet at every month end, and ratios like ROE or ROA did not exist in the system at all.",
   solution:
-    "The document is the input and the journal is the by-product: staff record an invoice or a purchase order, and the system writes the double entry. One login gives three entity workspaces — each with only the operational modules its business has — over an identical accounting core, with the consolidated report and Key Stats reading all three.",
+    "The document is the input and the journal is the natural by-product: staff simply record an invoice or purchase order, and the system creates the double entry. One login provides three dedicated entity workspaces, each with only the operational modules its business needs, all running on a shared accounting core where consolidated reports and Key Stats seamlessly read from all three.",
   outcome:
-    "The three companies now run on one program. Invoices and purchase orders write their own journals, so the finance staff record a document once instead of keying the same figure into three places. The consolidated report — profit and loss, balance sheet, and each entity's contribution to group revenue and profit — is a page the owner opens himself, for any month, instead of a spreadsheet someone assembles at month end. Key Stats puts ROE, ROA, ROIC, margins, free cash flow and turnover days on the same screen, calculated from the same journals as everything else.\n\nDelivered in 1 month and 15 days, by two people.",
+    "The three companies now run smoothly on one program. Invoices and purchase orders generate their own journals, allowing finance staff to record a document once instead of keying the same figures across multiple screens. The consolidated report (including profit and loss, balance sheet, and each entity's revenue contribution) is now a page the owner opens directly at any time, replacing the old routine of assembling spreadsheets at month-end. Key Stats puts ROE, ROA, ROIC, margins, free cash flow, and turnover days in one clear view, calculated directly from the same ledger entries.\n\nDelivered in 1 month and 15 days by two people.",
   resultStats: [
     { value: "3", label: "entities in one program" },
     { value: "0", label: "journals typed by hand for a normal sale or purchase" },
@@ -41,12 +41,12 @@ export const tangkianErp: Project = {
     {
       title: "Let's imagine this...",
       body:
-        "It is the first week of May. One owner holds three businesses: a cement distributor, a port stevedoring and haulage company, and a coffee shop. He wants one answer — which of them made money last month, and which one is quietly eating cash?\n\nTo get it, someone has to open the old system for each company, read the numbers off the screen, and rebuild a consolidated report in a spreadsheet by hand. Every transaction behind those numbers was already typed more than once: once into the profit and loss, once into the balance sheet, once more wherever else it belonged. Ratios like ROE or ROA are not in the system at all — they get calculated on a calculator, if anyone bothers.\n\nThe answer arrives a week later. Nobody is completely sure it is right.",
+        "It is the first week of May. One owner manages three distinct businesses: a cement distributor, a port stevedoring and haulage company, and a coffee shop. He wants one straightforward answer: which of them made money last month, and which one is quietly eating cash?\n\nTo get it, someone had to open the legacy system for each company, read the numbers off the screen, and piece together a consolidated report in a spreadsheet by hand. Every transaction behind those numbers was already typed more than once: once into the profit and loss, once into the balance sheet, and once more wherever else it belonged. Key performance ratios like ROE or ROA were nowhere in the system; they had to be calculated on a desk calculator, if anyone found the time.\n\nThe answer would arrive a week later, and even then, nobody felt completely sure it was right.",
     },
     {
       title: "Problem backgrounds",
       body:
-        "I spent the first week sitting with the people who actually use the system — the finance staff who input every day, and the owner who only ever looks at the result. Five problems came up in every conversation.",
+        "I spent the first week sitting alongside the people who actually use the system every day: the finance staff recording routine entries, and the owner who relies on the final numbers. Five recurring themes emerged in our conversations.",
       items: [
         {
           title: "Journals are typed by hand, more than once.",
@@ -66,7 +66,7 @@ export const tangkianErp: Project = {
         },
         {
           title: "No ratios, anywhere.",
-          body: "ROE, ROA, ROIC, margins, receivable days, inventory days — none of it existed in the system. The owner was making decisions on revenue and bank balance alone.",
+          body: "ROE, ROA, ROIC, margins, receivable days, and inventory days: none of these existed in the old software. The owner was forced to make critical business decisions relying only on top-line revenue and current bank balances.",
         },
       ],
     },
@@ -81,7 +81,7 @@ export const tangkianErp: Project = {
         },
         {
           title: "Give every company the modules its business actually has, without splitting the program.",
-          body: "One login, one program, three workspaces — a cement distributor needs warehouses and delivery orders; a stevedoring company needs job orders and subcontractors; a coffee shop needs a menu.",
+          body: "One login, one program, three workspaces: a cement distributor needs warehouses and delivery orders, a stevedoring company needs job orders and subcontractors, and a coffee shop needs an intuitive menu.",
         },
         {
           title: "Make the consolidated report a page, not a project.",
@@ -89,14 +89,14 @@ export const tangkianErp: Project = {
         },
         {
           title: "Put the ratios the owner needs on a screen he can open himself.",
-          body: "ROE, ROA, ROIC, margins, free cash flow, receivable and inventory days — calculated from the same journals, not from a separate spreadsheet.",
+          body: "ROE, ROA, ROIC, margins, free cash flow, receivable days, and inventory days: calculated directly from the same journals, without relying on separate spreadsheets.",
         },
       ],
     },
     {
       title: "Project duration and teams",
       body:
-        "The project ran for 1 month and 15 days, from client discovery to a working system in the client's hands. We were two people.\n\nI led the project: I ran the discovery sessions with the client, translated accounting requirements into a product structure, designed the information architecture, user flows and every screen, and stayed on as the client's consultant through delivery — including the part where you have to tell a client that the thing they asked for is not the thing they need.\n\nMuhammad Jihad Robbani built it.\n\nWorking in a pair this small meant design decisions had to survive contact with implementation immediately. A flow that could not be built in the time we had was not a good flow, and I redrew several of them for that reason.",
+        "The project ran for 1 month and 15 days, from initial client discovery to a working system in their hands. We were a lean team of two.\n\nI led the project: I ran discovery sessions with the team, translated intricate accounting rules into clear product structure, designed the information architecture and every screen, and served as the client's strategic advisor throughout delivery, including those honest moments when you have to guide a client away from what they thought they wanted toward what truly solves their problem.\n\nMuhammad Jihad Robbani built the system.\n\nWorking in such a close pair meant design choices met technical reality immediately. If a flow couldn't be built reliably in the time we had, it wasn't a good flow, and I iterated several screens on the spot to keep the experience clean and feasible.",
       table: {
         headers: ["Phase", "Length", "What happened"],
         rows: [
@@ -109,7 +109,7 @@ export const tangkianErp: Project = {
     {
       title: "Information requirements",
       body:
-        "Before drawing anything I had to settle what the system needed to know, because accounting is unforgiving about this. Three decisions shaped everything after.\n\nEach entity keeps its own books. Separate chart of accounts, separate master data, separate documents, separate journals. The consolidation reads all three — it never merges them into one set of books. That is what makes the group report correct rather than just a sum.\n\nEvery posted document must name its accounts. An invoice knows it debits receivables and credits revenue and output VAT. A purchase order knows it debits goods-in-transit and credits payables. Those rules had to be written down, per document type, per entity, before anything was built — see the journal rules table below.\n\nReports are derived, never stored. Profit and loss, balance sheet, cash flow, key stats and the consolidated report are all computed from the journals at the moment you open them. There is no second place where a number can be wrong.",
+        "Before drawing anything, I had to understand what the system truly needed to know, because accounting logic is completely unforgiving. Three core decisions shaped everything that followed.\n\nEach entity keeps its own books. Separate chart of accounts, separate master data, separate documents, and separate journals. The consolidation reads from all three and never merges them into one tangled set of books. That is what keeps the group report legally accurate rather than just a rough estimate.\n\nEvery posted document must name its accounts. An invoice knows it debits receivables and credits revenue and output VAT. A purchase order knows it debits goods-in-transit and credits payables. Those rules had to be written down clearly per document type and entity before building anything (detailed in the journal rules table below).\n\nReports are derived live, never stored. Profit and loss, balance sheet, cash flow, key stats, and consolidated summaries are all computed from the journals the moment you open them. There is no second place where numbers can drift or fall out of sync.",
       table: {
         headers: ["Document", "Entity", "Debit", "Credit"],
         rows: [
@@ -128,7 +128,7 @@ export const tangkianErp: Project = {
     {
       title: "Information architecture",
       body:
-        "The hardest structural question was how three different businesses share one program without turning into three disconnected apps.\n\nThe answer was to split the navigation into three layers. Access and the entity switcher sit above everything. The middle layer is the part that differs — each entity gets only the operational modules its business has. Underneath, every entity runs an identical accounting core: journal, general ledger, trial balance, profit and loss, balance sheet, cash flow, key stats. Group reporting sits on top of all three and reads them.\n\nThat split is why the coffee shop's sidebar is short and the cement company's is long, and why the owner still gets one number at the end.",
+        "The hardest structural question was how three very different businesses could share one software system without feeling like three disjointed apps.\n\nThe solution was to organize the navigation into three clean layers. Access and the entity switcher sit at the top. The middle layer is tailored to each business: each company sees only the operational tools it actually needs. Underneath, every company shares an identical, robust accounting core: journal, general ledger, trial balance, profit and loss, balance sheet, cash flow, and key stats. Group consolidation sits comfortably on top of all three, reading their data automatically.\n\nThat thoughtful split is why the coffee shop's sidebar is delightfully short while the cement company's is comprehensive, yet the owner still gets one clear overview at the end.",
       imageColumns: 1,
       images: [
         {
@@ -136,7 +136,7 @@ export const tangkianErp: Project = {
             "Information architecture diagram: login and entity switcher above three entity workspaces, a shared accounting core below, and the consolidation layer at the bottom",
           src: `${base}/ia-information-architecture.svg`,
           caption:
-            "Information architecture — one login, three entity workspaces, one shared accounting core, one consolidation layer on top.",
+            "Information architecture: one login, three entity workspaces, one shared accounting core, and an automatic consolidation layer on top.",
           frame: false,
           width: 1600,
           height: 1100,
@@ -146,17 +146,18 @@ export const tangkianErp: Project = {
     {
       title: "Userflow",
       body:
-        "Three flows carried the whole product. I drew them before any screen, and they are the reason the interface ended up as small as it did.\n\nThe first is the one that removed the double entry: a staff member fills in a sales invoice and posts it, and the journal writes itself. The journal screen still exists — an accountant needs it for adjustments — but nobody has to open it to record a sale.\n\nThe second does the same thing for purchasing, across three documents: purchase order, goods receipt, vendor bill, payment. Each one posts its own entry, so the payable balance and the stock value can never drift apart from the ledger.\n\nThe third is the owner's flow, and it is short on purpose. Log in, open the consolidated report, pick a month, read three tabs. What used to take a week now takes four clicks.",
+        "Three core flows shaped the entire product. I mapped them out before designing any screens, which is why the resulting interface ended up so calm and uncluttered.\n\nThe first flow eliminates manual double entry: when staff complete and post a sales invoice, the journal entry writes itself. The journal view still exists for adjustments when an accountant needs it, but everyday sales never require manual ledger entries.\n\nThe second flow brings the same simplicity to purchasing across four stages: purchase order, goods receipt, vendor bill, and payment. Each step posts its own verified entry, ensuring payable balances and physical stock values remain perfectly aligned with the general ledger.\n\nThe third flow is designed specifically for the owner: log in, open the consolidated report, select a month, and review the three tabs. A task that once took a full week of manual spreadsheet assembly now takes just four clicks.",
       imageColumns: 1,
       images: [
         {
           label:
             "User flow: selecting a customer, entering items, checking totals, posting the invoice, and the automatic journal that results",
           src: `${base}/userflow-invoice-to-journal.svg`,
-          caption: "Sales invoice → automatic journal. The operator never opens the journal screen.",
+          caption:
+            "Sales invoice: automatic journal. The operator never opens the journal screen.",
           frame: false,
-          width: 1600,
-          height: 900,
+          width: 1720,
+          height: 760,
         },
         {
           label:
@@ -164,17 +165,17 @@ export const tangkianErp: Project = {
           src: `${base}/userflow-po-to-payable.svg`,
           caption: "Purchasing, across three documents and four automatic entries.",
           frame: false,
-          width: 1600,
-          height: 900,
+          width: 1720,
+          height: 620,
         },
         {
           label:
             "User flow: the owner logs in, opens the consolidated report, reads three tabs, opens key stats, and exports",
           src: `${base}/userflow-owner-consolidation.svg`,
-          caption: "The owner's flow. Four clicks to a group-level answer.",
+          caption: "The owner's path: four clicks to a group-level answer.",
           frame: false,
-          width: 1600,
-          height: 900,
+          width: 1720,
+          height: 620,
         },
       ],
     },
@@ -188,7 +189,7 @@ export const tangkianErp: Project = {
         },
         {
           title: "Mark what the system wrote.",
-          body: "Every automatic entry carries an \"Otomatis\" badge in the journal list. Staff can tell at a glance which lines came from a document and which were typed by a human — which matters enormously when something needs correcting.",
+          body: "Every automatic entry carries an \"Otomatis\" badge in the journal list. Staff can tell at a glance which lines came from a verified document and which were entered manually, which saves tremendous time during audits or corrections.",
         },
         {
           title: "Change the sidebar, not the app, when you change company.",
@@ -196,7 +197,7 @@ export const tangkianErp: Project = {
         },
         {
           title: "Give the owner a screen he does not need help to read.",
-          body: "Key Stats is one page, grouped into four blocks — achievement, profitability, return and efficiency, growth — with the formula printed under every figure. \"ROE — Laba Bersih / Ekuitas\" sitting under the number is the difference between a report he trusts and one he asks someone else about.",
+          body: "Key Stats presents an executive summary organized into four clean blocks (achievement, profitability, return and efficiency, and growth) with the exact formula printed beneath each number. Having 'ROE: Laba Bersih / Ekuitas' right beneath the metric gives the owner genuine confidence in what he's reading without having to ask for explanations.",
         },
       ],
     },
@@ -249,27 +250,27 @@ export const tangkianErp: Project = {
           label: "Cement distribution dashboard with sales, receivables ageing, stock per warehouse and recent postings",
           src: `${base}/02-c1-dashboard.webp`,
           caption:
-            "PT. Tangkian Lintas Anugerah — cement distribution. Sales, receivables ageing, stock per warehouse, and recent postings.",
+            "PT. Tangkian Lintas Anugerah (cement distribution): sales, receivables ageing, stock per warehouse, and recent postings.",
           ...SHOT,
         },
         {
           label: "Port logistics dashboard using the same layout with a different sidebar",
           src: `${base}/20-c2-dashboard.webp`,
           caption:
-            "PT. Tangkian Samudera Logistik — port logistics. The same layout, a different set of modules in the sidebar.",
+            "PT. Tangkian Samudera Logistik (port logistics): the same layout tailored with dedicated operational modules in the sidebar.",
           ...SHOT,
         },
         {
           label: "Job order list keyed to bill of lading, vessel and voyage",
           src: `${base}/21-c2-jobs.webp`,
           caption:
-            "Job orders keyed to bill of lading, vessel and voyage — the operational record a logistics invoice is built from.",
+            "Job orders linked to bill of lading, vessel, and voyage: the operational foundation from which logistics invoices are generated.",
           ...SHOT,
         },
         {
           label: "Coffee shop dashboard with the shortest sidebar of the three entities",
           src: `${base}/30-c3-dashboard.webp`,
-          caption: "Arobi — coffee shop. The smallest of the three, and the sidebar shows it.",
+          caption: "Arobi (coffee shop): the most compact entity of the three, reflected in its focused, minimal sidebar.",
           ...SHOT,
         },
         {
@@ -291,6 +292,11 @@ export const tangkianErp: Project = {
           ...SHOT,
         },
       ],
+    },
+    {
+      title: "Beyond the first system",
+      body:
+        "The client partnered with us twice more after this initial release. I went on to design two additional dedicated systems for them, expanding both their cement distribution and port logistics operations beyond what a general accounting core could cover. In total: one client, four companies, and three specialized systems designed over six months.\n\nCollaborating with the same client across multiple platforms deepened my understanding of their daily workflow. Lessons learned in the first release informed the next two, allowing us to build upon proven patterns rather than reinventing from scratch.\n\nFor the port logistics operation (handling vessel berthing, voyages, bills of lading, and stevedoring job orders), you can explore the dedicated case study: [Tangkian Port Logistics](/projects/tangkian-logistics).",
     },
   ],
 };

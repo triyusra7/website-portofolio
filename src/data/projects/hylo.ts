@@ -7,24 +7,24 @@ export const hylo: Project = {
   title: "Hylo Social Media",
   company: "Freelance",
   projectType: "Freelance",
-  category: "Social Media · Graphic Design",
+  category: "Social Media · Visual Identity",
   year: "2024",
   cover: "/projects/hylo-cover.jpg",
   gradient: "from-orange-100 via-background to-card",
   tags: ["Social Media", "Interior Design", "Branding"],
   summary:
-    "This is my project when I work as a freelance graphic designer. This project is about construction and interior design for building — live on Instagram at instagram.com/hylo.id.",
+    "Brand identity and social media design for Hylo, an interior architecture and construction studio (active on Instagram at instagram.com/hylo.id).",
   problem:
-    "Hylo needed a compelling social media presence to attract clients for interior design projects. Their target market (age 30–50, SES B-A) expects a premium, professional visual experience that communicates quality and expertise.",
+    "Hylo needed a compelling social media presence to attract clients for interior design projects. Their target audience expects a warm, polished visual experience that communicates craftsmanship and reliability.",
   solution:
-    "Developed a video-first content strategy using Hylo's established brand colors (#EF9A52 warm orange, #231F20 dark charcoal, #ffffff white) and Work Sans typography. Content focused on before/after transformations, design process documentation, material showcases, and completed project walkthroughs — leveraging video for higher engagement and stronger demonstration of design quality.",
+    "Developed a video-first content strategy using Hylo's established brand colors (#EF9A52 warm orange, #231F20 dark charcoal, #ffffff white) and Work Sans typography. Content focused on before/after transformations, design process documentation, material showcases, and completed project walkthroughs, using video formats to drive engagement and demonstrate the tactile quality of interior craft.",
   outcome:
-    "Cohesive, premium social media presence that communicates Hylo's expertise to their target market through engaging video content and consistent brand application.",
+    "Established an engaging, cohesive social media presence that communicates Hylo's architectural expertise through relatable video content and disciplined brand application.",
   features: [
     {
       title: "Video-First Content Strategy",
       description:
-        "Prioritized video over static images to show design transformations in motion — more engaging for target audience and better at demonstrating the quality of interior work.",
+        "Prioritized video over static photography to showcase spatial transformations in motion, connecting more emotionally with potential clients.",
     },
     {
       title: "Brand Color Adherence",
@@ -34,12 +34,12 @@ export const hylo: Project = {
     {
       title: "Before & After Transformations",
       description:
-        "Side-by-side reveals of spaces before and after Hylo's work — one of the most effective content formats for showcasing interior design value.",
+        "Side-by-side reveals of spaces before and after Hylo's work, providing undeniable visual proof of their spatial expertise.",
     },
     {
       title: "Work Sans Typography",
       description:
-        "Professional, modern sans-serif with an extensive typeface family — applied consistently across all content types for a polished, unified look.",
+        "A clean, modern sans-serif typeface applied consistently across all media to maintain an elegant, welcoming tone.",
     },
   ],
   resultImage: `${wix}/hylo-c80f4b.jpg`,

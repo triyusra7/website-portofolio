@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { projects, site } from "@/data/portfolio";
+import { featuredProjects, site } from "@/data/portfolio";
 import type { Project } from "@/data/portfolio";
 
 const MotionLink = motion.create(Link);
@@ -19,7 +19,7 @@ const reveal = {
   },
 };
 
-/** Every card is the same 16:9 block — the covers carry the variety, not the layout. */
+/** Every card is the same 16:9 block; the covers carry the variety, not the layout. */
 function ProjectCard({
   project,
   priority,
@@ -92,8 +92,8 @@ export function Projects() {
           description={
             <>
               <p>
-                {projects.length} case studies from PasarMIKRO, Linkz Asia,
-                freelance work, school projects, and community design.
+                Selected case studies from PasarMIKRO, Linkz Asia and independent
+                client work, covering fintech, ERP, B2B marketplaces and design systems.
               </p>
               <blockquote className="mt-6 border-l-2 border-accent-2 pl-5 text-lg italic md:text-xl">
                 &ldquo;{site.quote}&rdquo;
@@ -104,7 +104,7 @@ export function Projects() {
         />
 
         <div className="mt-20 grid gap-x-14 gap-y-20 lg:mt-28 lg:grid-cols-2 lg:gap-y-24">
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}
               project={project}
@@ -113,7 +113,29 @@ export function Projects() {
           ))}
         </div>
 
-        <p className="mt-24 text-center text-muted lg:mt-32">
+        {/* Other Work Callout */}
+        <div className="card-surface mt-24 rounded-3xl p-8 text-center lg:mt-32 sm:p-10">
+          <p className="font-pixel text-[0.65rem] uppercase tracking-[0.16em] text-accent-2">
+            Archive &amp; Visual Design
+          </p>
+          <h3 className="mt-3 text-xl font-medium tracking-tight md:text-2xl">
+            Branding, social media &amp; early work
+          </h3>
+          <p className="mx-auto mt-2 max-w-lg text-sm leading-relaxed text-muted">
+            Seven secondary projects including Lampu Kuning, Wasnack, Hylo, LitUP, Biotalk, and PCC have been archived to keep the main view focused on core product design.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/other-work"
+              className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-medium text-white transition hover:brightness-110"
+            >
+              Explore Other Work (7 projects)
+              <ArrowUpRight size={16} />
+            </Link>
+          </div>
+        </div>
+
+        <p className="mt-16 text-center text-muted">
           More visuals on{" "}
           <a
             href="https://dribbble.com/trian77"

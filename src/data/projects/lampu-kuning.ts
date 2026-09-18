@@ -5,7 +5,7 @@ const wix = "/projects/lampu-kuning/wix";
 export const lampuKuning: Project = {
   id: "lampu-kuning",
   title: "Lampu Kuning",
-  company: "IDS — Studio Production",
+  company: "IDS (Studio Production)",
   projectType: "School Project",
   category: "Web Design · WordPress",
   year: "2020",
@@ -13,33 +13,33 @@ export const lampuKuning: Project = {
   gradient: "from-yellow-100 via-background to-card",
   tags: ["Web Design", "WordPress", "Collaborative"],
   summary:
-    "Students from the three departments of the International Design School (IDS), Digital Design, Digital Animation, and Digital Film and Multimedia, come together for the \"Lampu Kuning\" event/campaign to create a piece of art/product that the public may enjoy.",
+    "An interactive virtual exhibition website created during COVID-19 to showcase creative graduation projects from Digital Design, Animation, and Film students at the International Design School.",
   problem:
-    "COVID-19 cancelled the end-of-term cinema screening that would have showcased the studio production. The team — 9 design students across three disciplines — had to find a new way to present a short film, interactive games, and design work to the public without a physical venue.",
+    "COVID-19 lockdowns cancelled our scheduled cinema screening and physical showcase. Our team of 9 students across three disciplines needed a digital venue to present a short film, interactive games, and creative design work to the public.",
   solution:
-    "As Website Director, led the technical implementation on WordPress using Slider Revolution plugin (chosen for its drag-and-drop interactivity and familiarity). Designed a 5-section sitemap: Homepage, Film Pendek, Game, Talkshow, and Gallery. The Gallery section featured audio narration triggered by scroll — like a tour guide — guiding visitors through the content. The brand \"Lampu Kuning\" (Yellow Light) used traffic light colors (red, green, yellow) to symbolize the dilemma of being at a crossroads, matching the project theme \"Dilema.\"",
+    "As Website Director, led the technical implementation on WordPress with interactive multimedia. Designed an intuitive five-section experience (Homepage, Short Film, Game, Talkshow, and Gallery) featuring scroll-triggered audio narration to guide visitors like an exhibition docent.",
   outcome:
-    "Successfully merged three disciplines (design, animation, film) into one cohesive interactive experience, published on the International Design School official website. Proved team resilience under COVID constraints.",
+    "Successfully brought three creative disciplines together into a memorable interactive showcase hosted on the International Design School platform, demonstrating adaptability under tight lockdown constraints.",
   features: [
     {
       title: "Interactive Gallery with Audio",
       description:
-        "Gallery section plays voice narration as users scroll — functioning like a tour guide, explaining each piece and creating an immersive experience without a physical space.",
+        "Scroll-triggered audio narration guides visitors through the gallery, creating an immersive exhibition atmosphere in an online space.",
     },
     {
       title: "Traffic Light Brand Identity",
       description:
-        "Logo using three colored balls (red, green, yellow) inspired by traffic lights and cartoon dizzy symbols — visually communicating the dilemma theme of the project.",
+        "Visual identity inspired by traffic lights and crossroads, reflecting the emotional dilemma theme of the graduating class.",
     },
     {
       title: "5-Section Sitemap",
       description:
-        "Clear content structure: Homepage (overview), Film Pendek, Game, Talkshow, and Gallery — each section serving a distinct discipline from the three-team collaboration.",
+        "Thoughtfully structured navigation (Homepage, Short Film, Game, Talkshow, and Gallery) giving each creative team its own spotlight.",
     },
     {
-      title: "WordPress + Slider Revolution",
+      title: "WordPress + Interactive Sliders",
       description:
-        "Built with WordPress for ease of maintenance, using Slider Revolution plugin for the drag-and-drop interactive elements that defined the site's engaging feel.",
+        "Engineered with accessible CMS workflows to allow student filmmakers and animators to upload and curate their own media effortlessly.",
     },
   ],
   resultImage: `${wix}/2-7e6223.jpg`,

@@ -9,7 +9,7 @@ export type CaseStudyImage = {
   src?: string;
   /** Rendered as a <figcaption> under the image. */
   caption?: string;
-  /** Intrinsic size of the source file — keeps layout shift at zero. */
+  /** Intrinsic size of the source file, keeping layout shift at zero. */
   width?: number;
   height?: number;
   /** Diagrams carry their own background; skip the screenshot frame. */
@@ -41,7 +41,7 @@ export type CaseStudySection = {
   /** Small muted line (disclaimers, source notes) shown before the images. */
   note?: string;
   images?: readonly CaseStudyImage[];
-  /** Force one image per row — use for wide screenshots. Defaults to 2 when there are several. */
+  /** Force one image per row: use for wide screenshots. Defaults to 2 when there are several. */
   imageColumns?: 1 | 2;
 };
 

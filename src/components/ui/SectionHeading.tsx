@@ -5,7 +5,7 @@ import { SectionGif } from "@/components/ui/SectionGif";
 type SectionHeadingProps = {
   /** Small pixel-font label above the heading. */
   eyebrow: string;
-  /** Two display lines — the second one renders muted, editorial style. */
+  /** Two display lines: the second one renders muted, editorial style. */
   lines: readonly [string, string];
   /** Supporting copy on the right side of the heading. */
   description?: ReactNode;

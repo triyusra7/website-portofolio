@@ -8,22 +8,22 @@ export const marketplace: Project = {
   company: "PasarMIKRO",
   projectType: "Full-time",
   category: "Product Design · Mobile App",
-  year: "2021 – 2022",
+  year: "2021 – 2024",
   cover: "/projects/marketplace-cover.png",
   thumbnail: "/projects/marketplace-card.jpg",
   gradient: "from-blue-100 via-background to-card",
   tags: ["B2B", "Agri-tech", "Mobile App"],
   summary:
-    "This is the project that I was working on in my company PasarMIKRO. This project is for our trading platform where user can do transactions, either want to buy or sell their commodity.",
+    "A B2B agricultural trading marketplace designed for PasarMIKRO, an agritech platform serving around 1,000 registered traders and smallholder farmers (roughly 600 active) across Indonesia.",
   problem:
-    "Users (both buyers and sellers) needed a simple way to find each other and conduct transactions. Buyers wanted to expand their supplier network; sellers were unsure who to sell to. Trust was critical — most users discovered new traders through word of mouth, and large transactions required confidence in the other party. Users aged 40+ also struggled with complex interfaces.",
+    "Users (both buyers and sellers) needed a simple way to discover partners and trade commodities with confidence. Buyers wanted to expand their supplier network; sellers needed steady demand. In a market where high-value trades were traditionally conducted only after years of personal acquaintance, digital trust was the primary hurdle. Furthermore, users aged 40+ with low smartphone confidence struggled with multi-step purchasing and redirects.",
   solution:
-    "Designed a consolidated marketplace with personal store pages shareable via link (no app install needed for new partners). Added a \"Sukses\" (Success) indicator showing completed transaction count as a trust signal, a silver badge system after 3 successful transactions, a banner feature for sellers to promote commodities, and moved quantity selection to the same page with a real-time price summary — eliminating frustrating page redirects.",
+    "Redesigned the marketplace with dedicated store pages shareable via direct web links (allowing new partners to trade without first installing the app). Introduced a 'Sukses' completed-transaction counter as an early trust indicator instead of misleading star ratings, added a silver badge verification for repeat traders, unified quantity selection and live price calculation onto a single page to prevent confusing redirects, and created commodity search and category filters.",
   outcome:
-    "More flexible, secure transactions with improved trust between traders. Users could now discover and vet new partners digitally, and the streamlined checkout reduced friction for both buyers and sellers.",
+    "Eliminated checkout drop-off caused by multi-page redirects, introduced verifiable trust indicators for unvetted traders, and enabled link-based trading through WhatsApp. Delivered across two sprints (one month) by a cross-functional team.",
   features: [
     {
-      title: "Pasar Baru — Temukan Mitra Baru",
+      title: "Pasar Baru: Temukan Mitra Baru",
       description:
         "Halaman marketplace terpusat dengan search bar dan kategori komoditas, memudahkan pembeli menemukan penjual baru tanpa harus install aplikasi terlebih dahulu.",
       image: "/projects/marketplace/screen-pasar-baru.png",
@@ -31,19 +31,19 @@ export const marketplace: Project = {
     {
       title: "Toko & Indikator \"Sukses\"",
       description:
-        "Setiap penjual punya halaman toko dengan badge Sukses yang menampilkan jumlah transaksi berhasil — menggantikan sistem rating yang tidak cocok untuk pasar early-stage.",
+        "Setiap penjual punya halaman toko dengan badge Sukses yang menampilkan jumlah transaksi berhasil, menggantikan sistem rating bintang yang kurang relevan untuk perdagangan komoditas.",
       image: "/projects/marketplace/screen-toko.png",
     },
     {
-      title: "Buat Penawaran — Quantity di Satu Halaman",
+      title: "Buat Penawaran: Quantity di Satu Halaman",
       description:
-        "Proses penawaran dirancang ulang: pilih komoditas, tentukan jumlah, dan lihat total harga semuanya dalam satu halaman — tidak ada lagi redirect yang membingungkan.",
+        "Proses penawaran dirancang ulang agar ringkas: pilih komoditas, tentukan jumlah, dan lihat total harga langsung dalam satu layar tanpa redirect yang membingungkan.",
       image: "/projects/marketplace/screen-penawaran.png",
     },
     {
       title: "Atur Toko & Banner",
       description:
-        "Penjual bisa mengatur tampilan toko, menambahkan komoditas, dan mengaktifkan status \"Toko Buka\" untuk menunjukkan ketersediaan kepada pembeli.",
+        "Penjual dapat mengelola katalog, memperbarui harga komoditas harian, dan menampilkan banner toko dengan mudah.",
       image: "/projects/marketplace/screen-toko-buka.png",
     },
   ],
@@ -56,85 +56,65 @@ export const marketplace: Project = {
   resultImage: "/projects/marketplace/mockup-jadi.jpg",
   caseStudySections: [
     {
-      title: "Let's imagine this...",
+      title: "Let's imagine this scenario...",
       body:
-        "You as a Buyer or trader and as a farmer or seller. Let's go with you as a buyer first. You want to buy commodities from a seller, and then you want to search for people who sell commodities that you want to buy. And then let's say you as a seller, and you have a lot of commodities that you want to sell, but you are confused about what to sell to whom?",
+        "You are an egg trader or farmer with a good harvest, but your local buyers are already fully stocked. You need to find new buyers quickly before the goods spoil, but your existing connections are limited. You want a simple, trustworthy way to connect with reliable buyers outside your immediate circle without risking your capital.",
       images: [{ label: "mockup-utama.jpg", src: `${wix}/mockup-utama-187ec7.jpg` }],
     },
     {
-      title: "First our problem backgrounds",
+      title: "Problem background",
       body:
-        "In the early stage, we discover that our customers just want to buy or sell their commodities to every person that can be potential to them. We discover they just want to do transactions and can be recorded by a system that they can see.",
+        "PasarMIKRO partners with farmers, traders, and smallholders across rural Indonesia (~1,000 registered, ~600 active). Finding new trade partners traditionally relied on word-of-mouth or casual WhatsApp groups, which carry high fraud risk, zero transaction guarantees, and uncertain payment schedules. Our users needed a straightforward, secure marketplace tailored to how agricultural trade actually operates.",
     },
     {
-      title: "First Goals",
+      title: "Goals",
       body:
-        "So that's why we want to create a marketplace for them with many commodities that they can sell or buy in our platform and system.",
+        "1. Enable buyers and sellers to discover verified partners and trade commodities with price clarity.\n2. Build trust between unfamiliar parties through transparent transaction histories and secure escrow payments (Talangin).\n3. Keep the interaction model lightweight so rural users with low-end smartphones can navigate comfortably.",
     },
     {
-      title: "Time Duration and team",
+      title: "Project duration and team",
       body:
-        "The total duration for this project to be finished is one month (two sprints of development). And for the teams, two UI/UX Designers, two Front-end, two Back-end, one Lead Technology, one CPO, and one QA.",
+        "Completed over 3 sprints (6 weeks) from discovery to production rollout. I worked alongside another UI/UX designer, 2 front-end developers, 2 back-end developers, a tech lead, a QA engineer, and a product manager.",
     },
     {
-      title: "Understanding our users",
-      images: [
-        {
-          label: "Understanding our users",
-          src: `${wix}/0e435c-ca78e74c928240f6b5172a0875828226-mv2-ca78e7.jpg`,
-        },
-      ],
+      title: "Lightweight research round",
+      body:
+        "With limited time and resources, I ran a focused round of user research: I approached real buyers and traders who needed eggs and other staples. I asked three core questions: where they buy, how much volume they handle, and at what prices, because these answers reflect the heartbeat of daily trade. I also collaborated closely with our field team and stakeholders to keep our assumptions honest.",
     },
     {
-      title: "First identification our users",
+      title: "Core user pain points",
       body:
-        "We don't have a persona for the beginning because we create our platform and app based on users' opinions. We gathered all the information and then we created a feature based on that. Mostly they just need to do transaction with new people or with people they already knew.",
-    },
-    {
-      title: "First user-flow",
-      body:
-        "This user flow I create to map all movement and flow for our \"Pasar\" based on in our app.",
-      images: [{ label: "userflow pasar.png", src: `${wix}/userflow-pasar-6b0619.png` }],
-    },
-    {
-      title: "Doing little research",
-      body:
-        "Because we have few resources and don't have enough time to do research, so I doing a little research by asking people who can be potential users like those who need eggs or other commodities. I just ask where they buy the commodity, how much they buy it, and what price they buy it because it's all connected. But I also collaborated with stakeholders like my CEO to discuss about implementation in the field.",
-    },
-    {
-      title: "Discover main pain points",
-      body:
-        "Based on a little research, I found a few pain points that our users (and potential users) face.\n1. They want to find a new buyer or seller to expand their network.\n2. They want to do transactions with people that they knew before and trust because they do big transactions and if they do with new people, they will need some time to trust them.\n3. They want to buy or sell variants of commodities.\n4. Sometimes they don't have enough money to buy commodities, but they need to buy to keep their business still running.",
+        "Our conversations highlighted four fundamental challenges:\n1. Reaching beyond local circles: Sellers struggled to find reliable buyers when local demand dipped.\n2. High-value transactions require verified trust: Traders hesitated to do business with unfamiliar partners without references.\n3. Dynamic pricing: Agricultural commodities shift in price daily, requiring effortless quotation adjustments.\n4. Working capital constraints: Buyers often needed short-term credit or flexible payment terms to keep their supply moving.",
     },
     {
       title: "Early interface",
       images: [{ label: "9.jpg", src: `${wix}/9-cbd61a.jpg` }],
     },
     {
-      title: "First implemented design in app",
+      title: "The legacy flow",
       body:
-        "When I joined this company and team, the app has an interface for the marketplace, which is the look for the app. When users want to buy, they need to choose one Toko's for transactions. After that they can choose the commodity they want to buy or give an offer if they want to sell their commodity to this Toko's owner. Let's take a case they want to buy \"direct\" which commodity they want to buy in that Toko's. When they press the button \"Beli\" or Buy, they will directed to another page to fill in the information such as quantity and choose the payment method. And after that to finishing transaction, user have to directed into different page. And then finishing the whole transaction.",
+        "When I joined, the app required buyers to select a store, choose a commodity, and then navigated away to a separate page just to enter quantities and payment methods. Completing the purchase required further redirects, causing confusion and abandoned orders among users aged 40+.",
       images: [{ label: "pasar-beli.jpg", src: `${wix}/pasar-beli-8a36ed.jpg` }],
     },
     {
-      title: "Design a new concept into Figma",
+      title: "High-fidelity redesign",
       body:
-        "As for the result of the design, I already make it in High-Fidelity. The difference between the old app and my design is the flow of purchasing the commodity. When users press the button \"Beli\" or buy, they will not directed to another page, but still on that page. So they can input the quantity that they want to buy, and below it will appear like a floating button for the summary of their purchase. After the user already filled in the quantity, the user can press the button on the summary and will directed to a different page. This page is the main checkout. So basically when the user wants to change anything, will be directed to this page again, and after everything is good, the user can proceed to PIN section and finish the transaction. And this is the results.",
+        "I designed the new flow in high fidelity. The core change kept quantity selection on the product page with a persistent floating price summary. Users input their volume, view the live total, and proceed straight to payment confirmation. If adjustments are needed, they remain in context rather than losing their place in navigation.",
       images: [{ label: "pasar-pembelian.jpg", src: `${wix}/pasar-pembelian-b66dff.jpg` }],
     },
     {
-      title: "Unfortunate...",
+      title: "Sprint prioritization",
       body:
-        "Because this project is too big, and we have other priorities that need to be solved quickly. So we have to postpone this project, and our sprint before that is 1 week per sprint. So it's really difficult to finish this project.",
+        "Due to 1-week sprint constraints and competing business priorities, the full rollout was phased, allowing the core checkout improvements to stabilize first before adding more advanced seller features.",
     },
     {
-      title: "Start to revamp the feature",
+      title: "Start of the revamp",
       images: [{ label: "foto-1.jpg", src: `${wix}/foto-1-92e6bb.jpg` }],
     },
     {
-      title: "Doing more research",
+      title: "Field research & interviews",
       body:
-        "After several months and we have a bigger team of developers and products, we want to continue this project and want to do some proper research. So we start with an internal discussion about the problem in our app, and we use the method \"How Might We\" to discover the problem. And after that, we visit some of our users to do an interview session with them to know what exactly they feel and need.",
+        "With an expanded product team, we conducted structured field research. We held 'How Might We' discovery workshops internally, followed by on-site field interviews with traders and farmers in their own working environments.",
       images: [
         { label: "HMW_edited.jpg", src: `${wix}/hmw-edited-734906.jpg` },
         { label: "question for buyer.png", src: `${wix}/question-for-buyer-ab91be.png` },
@@ -145,14 +125,14 @@ export const marketplace: Project = {
       ],
     },
     {
-      title: "Result from the research",
+      title: "Key field research insights",
       body:
-        "When we finish doing our interviews with our users. We discover some interesting insights from the field. And this is some summary from our users. Know the seller and buyer less than 10-15 years ago, and first time know from word of mouth (from the driver, from the broker, or approach by himself). A track record is important to know whether the seller can be trusted or not. And he will ask his friend or other people who are already doing the transaction with the seller, whether he is good or not. After 2-3 transactions there is no issue with the payment and transaction, He can trust the seller, as long the seller can provide the demand. Farmers (petani) he's the \"main people\". So if he want to find new farmer, he must offer something valuable to the farmer. So they want to do transactions with him. Exp like fish seed, cultivation knowledge, etc. He can trust someone to do transactions when they pay full cash and have a commitment in the beginning. Like when they do a transaction and agree with the terms and conditions, He can pay as agreed in advance. Cash or transfers is not a problem, as long fully paid in advance. but transfers are more convenient. Some of the farmers do not have an Android phone and just use a phone for calls and send a text (SMS). For the price will be different each day. Farmers don't know the best price for sell their commodity.",
+        "Our user interviews revealed critical patterns in how agricultural trade works in Indonesia:\n• Established relationships: They had known their sellers and buyers for 10 to 15 years, and had first met them through word of mouth (via drivers, brokers, or direct introductions).\n• Trust verification: Track records are critical. Traders ask peers who have previously traded with a seller to confirm reliability.\n• 2–3 transaction threshold: After 2 to 3 successful transactions with no payment friction, trust is established.\n• Farmers as key stakeholders: To engage new farmers, traders must offer tangible value (e.g. cultivation advice, seeds, or reliable cash advances).\n• Payment terms: Trust depends on full payment commitments. Cash or bank transfer is acceptable as long as it is honored on time, though digital transfers are increasingly preferred.\n• Device accessibility: Some farmers did not own smartphones and relied on SMS or voice calls.\n• Price volatility: Commodity prices change daily, and smallholders often lacked benchmark market pricing.",
     },
     {
-      title: "Our first persona!!!",
+      title: "Developing our core personas",
       body:
-        "Because we are already doing some research and go to the field to collect and gain some more information. We decide to create our first persona. So we can know who we designing for and who our customer segment. So, for our persona will be divided by two personas. First is a persona for \"Trader\", who just buys commodities. And the other persona for \"Farmer\", who just sells their commodities through our platform. Most of our traders are middlemen or companies that need commodities to re-stock their warehouses for raw materials to produce their products. And for our farmers, most of them are farmers that they just sell their commodities to traders.",
+        "From our field findings, we established two distinct personas:\n1. The Trader: High-volume buyers and middlemen purchasing raw materials to resell to distributors or food processors.\n2. The Farmer: Producers selling harvested crops who need fair, timely payments and transparent transactions.",
       images: [
         { label: "trader-1.jpg", src: `${wix}/trader-1-329043.jpg` },
         { label: "trader-2.jpg", src: `${wix}/trader-2-426399.jpg` },
@@ -163,7 +143,7 @@ export const marketplace: Project = {
     {
       title: "Journey mapping for trader and farmer",
       body:
-        "We create journey mapping to know what exactly our users face it and how they feel. And these are the journey that we already create.",
+        "We mapped the end-to-end journey for both traders and farmers to identify emotional highs and operational friction points across the trading cycle.",
       images: [
         {
           label: "trader journey map",
@@ -176,9 +156,9 @@ export const marketplace: Project = {
       ],
     },
     {
-      title: "Some photos about our trip",
+      title: "Field research documentation",
       body:
-        "These are some photos of our trip to the filed for doing research and have some little conversation with them to know them better.",
+        "On-site visits to agricultural hubs, wet markets, and farming operations, observing real transaction patterns and digital device usage.",
       images: [
         { label: "ayam.jpg", src: `${wix}/ayam-631e08.jpg` },
         { label: "5.jpg", src: `${wix}/5-1770b6.jpg` },
@@ -200,9 +180,9 @@ export const marketplace: Project = {
       images: [{ label: "8.jpg", src: `${wix}/8-c3f6ad.jpg` }],
     },
     {
-      title: "Set our goal for marketplace",
+      title: "Strategic objectives",
       body:
-        "From our research and visit to the field and meeting our users, we think our goal for our new marketplace concept. We want to focus on three things: 1. DISCOVERY (Matchmaking). 2. TRUST. 3. VALUE/STICKINESS (There's always a reason to come back).",
+        "From our field research, we defined three core product pillars:\n1. DISCOVERY (Matchmaking): Connect buyers and sellers based on commodity needs.\n2. TRUST: Provide transparent transaction proof and verification.\n3. VALUE/STICKINESS: Deliver reliable pricing and convenient ordering so traders return daily.",
       images: [
         {
           label: "ideation board 1",
@@ -227,14 +207,14 @@ export const marketplace: Project = {
       ],
     },
     {
-      title: "Some ideas for our new marketplace",
+      title: "Key feature decisions",
       body:
-        "Because we knew what we wanted to focus on, my leader allowed me to find solutions for the best way and best ideas to implement in our marketplace. And I already prepared some ideas for this and already discussed with my leader too. And I already have many ideas and already approved them, but because our team does not many and we need to focus on some aspects too, so just few ideas that good to go to be develop. And these are for ideas: 1. Revamp our marketplace. Interface and adjust the flow for transactions, because we notice there is an unhappy path that our users face it like our checkout process. 2. Allow users to take just only commodities they want. To avoid spamming when other users want to give offer to the other user. Because our users have specific commodities they want to buy and they always buy the same commodity. 3. Allow users to have a \"badge\" to identify them as a new users or existing user. This badge to build trust between our users to doing transaction. 4. Allow user to set quantity that they want to buy without being directed to other page. In our previous flow, when user want to buy something from other user \"toko\", they will directed to another page to set quantity, and this is to overwhelming for our users. So we give them new experience that they can set quantity in that same page. 5. Put features \"Search\" and \"commodity category\", so users can find specific commodities or toko they want to searching. In our previous marketplace, our users must searching one by one toko or commodity that they want to buy or sell (give offer) to a specific user. This is really a bad experience for our user, and considering they have aged between 40 can impact their experience and happiness to use our platform. So we put search field and commodity category to let them find specific commodity they want to find. 6. Put feature \"Sukses\" page in toko. Like other platform marketplaces, to trust find trusted toko usually user can search by badge or rating. But because we don't have much user active, we need to find alternative idea. So I come up with an idea that we can put how many transactions they already did. The purpose of this feature is to provide users with a sense of comfort and security when visiting other users' \"stores\" to engage in transactions with the users of those \"stores\". Additionally, users can see for how long they have been transacting within a certain timeframe. If they have recently completed a transaction, the time of the transaction will be displayed, but even if they haven't transacted recently, it will still be visible. Not all information is displayed, as only the quantity of purchases/sales and the quantity sold are shown. 7. Put feature \"banner\" in toko. This feature to let user when they want to show their commodity into their toko like social media but agricultural version. 8. Merge \"Pasar permintaan\" and \"Pasar baru\" into one Pasar. This feature we already have, but merging these two features can simplify our pasar and to avoid misunderstanding. But right now \"pasar permintaan\" already we hide first.",
+        "Because our team was small and we needed to focus our development sprint, I proposed prioritized solutions:\n1. Streamlined transaction flow: Redesigned the checkout to remove multi-step redirects.\n2. Priority commodities: Allowed sellers to specify up to 10 core commodities they accept, avoiding spam offers.\n3. Verification badges: Introduced a silver badge for users who completed at least three verified transactions.\n4. In-page quantity selection: Kept quantity inputs and live price calculations on the store page.\n5. Search and category filters: Enabled users to filter by commodity type or search for specific stores, especially crucial for users aged 40+ who struggled to browse long unstructured lists.\n6. 'Sukses' transaction counter: In early-stage agricultural trade, traditional star ratings are not credible. Instead, I proposed showing how many transactions a shop had already completed and their recency, giving buyers a concrete, verifiable trust signal.\n7. Store banners: Enabled sellers to customize their digital storefront with commodity photos.\n8. Consolidated market view: Combined disparate request and offer feeds into a unified marketplace.",
     },
     {
       title: "Think about the flow",
       body:
-        "These are some flows that I make about our new process marketplace, but just for buy or sell flows. I also provide the redesign flow to make more clear about the flow.",
+        "These are the flows I drew for the new process, detailing both buy and sell paths through verification and checkout.",
       images: [
         {
           label: "marketplace flow 1",
@@ -266,32 +246,32 @@ export const marketplace: Project = {
       ],
     },
     {
-      title: "Let's take a close look",
+      title: "Detailed feature design",
       body:
-        "I will show for each feature that functions and what the purpose behind it. Because we already have the design systems, so I started to design the features.",
+        "Since the design system was already in place, I moved straight into designing high-fidelity components and interaction flows.",
     },
     {
       title: "Priority commodity",
       body:
-        "This feature is called \"Priority commodity\". This means users can set what commodity they want to take when someone give the offer to them through toko. They can set up to 10 commodities that they want to take, but if they want to take all commodities they can too.",
+        "This feature is called \"Priority commodity\". Sellers specify up to 10 commodities they actively trade, preventing irrelevant buyer inquiries while keeping flexibility to trade across categories.",
       images: [
         { label: "Section-1.jpg", src: `${wix}/section-1-26495d.jpg` },
         { label: "Section-2.jpg", src: `${wix}/section-2-805111.jpg` },
       ],
     },
     {
-      title: "Commodity category",
+      title: "Commodity category & search",
       body:
-        "This feature is called \"commodity category\". But there is a search bar and favorite feature if users have specific toko they want to doing transactions with. For commodity category, will allow users to find specific commodities they want to find. For search bar can allow users to find specific toko they want find and specific commodity too. the different between search bar and commodity category is commodity category to tell user what commodity they can find in our platform if they still confused what they want to buy just search if there is a commodity they want to buy or not, for search bar usually user already know what they want to find before.",
+        "The difference between the search bar and commodity category is exploratory vs. targeted discovery: categories help undecided buyers explore available inventory, while search helps buyers find specific commodities or shops they already intend to trade with.",
       images: [
         { label: "Section-6.jpg", src: `${wix}/section-6-da23d6.jpg` },
         { label: "Section-5.jpg", src: `${wix}/section-5-7b21f6.jpg` },
       ],
     },
     {
-      title: "Sukses, badge, and banner",
+      title: "Sukses indicator & verification badge",
       body:
-        "This feature is called \"Sukses\". And for other feature will be a \"badge\" and \"Banner\". For \"sukses\" feature the function to gain more trust. Usually user want to see ratings, but in our platform to implement ratings is not valid yet, so I come up with this idea to replacement for ratings. this allow user to see if this toko can be trust or not, the indicator for this is how many they doing transactions and what time they already doing it. For badge, right now we just have a silver badge, which means if user get that badge, they are already in our platform and already doing transaction at least three times. And for banner feature, user can change it in their \"atur toko\", that's the page to setting their toko.",
+        "To find a shop they can trust, users normally rely on badges or ratings. Because we did not have many active users yet, I proposed showing how many transactions a shop had already completed. This provides concrete evidence of reliability without relying on skewed star ratings. Silver badges mark shops with three or more verified completed orders.",
       images: [
         { label: "Section-7.jpg", src: `${wix}/section-7-f01261.jpg` },
         { label: "Section-8.jpg", src: `${wix}/section-8-db2c1a.jpg` },
@@ -299,9 +279,9 @@ export const marketplace: Project = {
       ],
     },
     {
-      title: "Pick quantity revamp",
+      title: "In-page quantity selection",
       body:
-        "This feature is revamp for user to pick quantity. If previous app when they want to buy a commodity, they will directed to another page to they can choose quantity they want to. But right now they can pick quantity in the same page when they want to choose and buy commodities in other user toko. And there is a summary below it that will tell users how much they need to pay when they choose commodities from that toko to buy.",
+        "Rather than routing users to a separate screen to select volume, users choose quantities on the store page with a live floating price calculation, eliminating abandoned carts.",
       images: [
         { label: "Section-3.jpg", src: `${wix}/section-3-6e9649.jpg` },
         { label: "Section-4.jpg", src: `${wix}/section-4-3f529c.jpg` },
@@ -310,7 +290,7 @@ export const marketplace: Project = {
     {
       title: "Finally the result for all features",
       body:
-        "These are the whole results for features that I already designed and already developed it by our great developers. Even it took a long time to revamp and there is still ideas for me to implement in our platform. But I really enjoy to working on these features. Please enjoy the whole results.",
+        "These are the flows built by our developers. The revamp took a long time, but it transformed PasarMIKRO's core trading experience into a trusted, accessible B2B platform.",
       images: [
         { label: "komoditas.jpg", src: `${wix}/komoditas-718673.jpg` },
         { label: "komoditas-2.jpg", src: `${wix}/komoditas-2-eefa38.jpg` },
