@@ -27,7 +27,7 @@ export const socialLinks = [
 ] as const;
 
 export const files = {
-  resume: "/Tri%20Anugerah%20Yusra%20-%20Product%20Designer%20Resume.pdf",
+  cv: "/CV_Tri_Anugerah_Yusra.pdf",
   portfolioPdf: "/portfolio.pdf",
 } as const;
 

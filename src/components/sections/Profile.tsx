@@ -45,13 +45,13 @@ export function Profile() {
                   />
                 </div>
                 <a
-                  href={files.resume}
+                  href={files.cv}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 flex items-center justify-center gap-2 rounded-full bg-brand px-4 py-2.5 text-xs font-medium text-white transition hover:brightness-110"
                 >
                   <FileText size={13} />
-                  View Resume
+                  View CV
                 </a>
                 <a
                   href={files.portfolioPdf}
