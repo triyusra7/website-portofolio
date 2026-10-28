@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import { createAnimatable, utils } from "animejs";
 import RotatingText from "@/components/ui/RotatingText";

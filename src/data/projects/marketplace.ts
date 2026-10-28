@@ -12,6 +12,22 @@ export const marketplace: Project = {
   cover: "/projects/marketplace-cover.png",
   thumbnail: "/projects/marketplace-card.jpg",
   gradient: "from-blue-100 via-background to-card",
+  prominence: "featured",
+  caseStudyType: "featured",
+  problemSummary:
+    "Rural agricultural trade relied on personal connections; digital transactions lacked trust indicators and confused older users with multi-step redirects.",
+  roleSummary:
+    "Product Designer — Discovery, Trust Architecture, Storefronts & Single-page Checkout",
+  atAGlance: {
+    targetAudience:
+      "Smallholder farmers and commodity traders (often aged 40+ with entry-level smartphones)",
+    role: "UI/UX Designer",
+    team: "2 UI/UX Designers, 4 Developers (2 Frontend, 2 Backend), 1 Tech Lead, 1 QA, 1 PM",
+    timeline: "3 sprints (6 weeks)",
+    scope:
+      "Lightweight Research, Web-shareable Storefronts, 'Sukses' Trust Indicator, One-page Order Quotation",
+    status: "Shipped to production in PasarMIKRO mobile app",
+  },
   tags: ["B2B", "Agri-tech", "Mobile App"],
   summary:
     "A B2B agricultural trading marketplace designed for PasarMIKRO, an agritech platform serving around 1,000 registered traders and smallholder farmers (roughly 600 active) across Indonesia.",
@@ -21,6 +37,75 @@ export const marketplace: Project = {
     "Redesigned the marketplace with dedicated store pages shareable via direct web links (allowing new partners to trade without first installing the app). Introduced a 'Sukses' completed-transaction counter as an early trust indicator instead of misleading star ratings, added a silver badge verification for repeat traders, unified quantity selection and live price calculation onto a single page to prevent confusing redirects, and created commodity search and category filters.",
   outcome:
     "Eliminated checkout drop-off caused by multi-page redirects, introduced verifiable trust indicators for unvetted traders, and enabled link-based trading through WhatsApp. Delivered across two sprints (one month) by a cross-functional team.",
+  walkthrough: {
+    title: "Guided Marketplace Workflow",
+    subtitle:
+      "Four steps demonstrating how agricultural buyers and sellers discover partners, verify trust, and complete orders without redirects",
+    disclaimer:
+      "All listings and transaction numbers reflect sample data on the PasarMIKRO marketplace.",
+    steps: [
+      {
+        id: "mkt-step-1",
+        stepNumber: "01",
+        title: "Explore the marketplace (Pasar Baru)",
+        description:
+          "Buyers browse commodities by category or search directly for specific suppliers and crops, accessible via shareable web links without requiring initial app installation.",
+        image: {
+          src: "/projects/marketplace/screen-pasar-baru.png",
+          alt: "Pasar Baru commodity marketplace discovery screen",
+          caption:
+            "Pasar Baru: centralized commodity discovery with category filters and search.",
+          width: 390,
+          height: 844,
+        },
+      },
+      {
+        id: "mkt-step-2",
+        stepNumber: "02",
+        title: "Inspect verified seller storefront",
+        description:
+          "Buyers review the seller's digital storefront, where verified completed transaction counts ('Sukses' badge) replace misleading star ratings as a concrete trust signal.",
+        image: {
+          src: "/projects/marketplace/screen-toko.png",
+          alt: "Seller storefront showing Sukses transaction count badge",
+          caption:
+            "Storefront view: the 'Sukses' badge displays verified completed transactions to build immediate trade confidence.",
+          width: 390,
+          height: 844,
+        },
+      },
+      {
+        id: "mkt-step-3",
+        stepNumber: "03",
+        title: "Single-page offer quotation",
+        description:
+          "Buyers input commodity volume and inspect real-time total prices on a single screen with persistent floating price summaries, removing confusing checkout redirects.",
+        image: {
+          src: "/projects/marketplace/screen-penawaran.png",
+          alt: "Single-page offer creation with live price calculation",
+          caption:
+            "One-page offer: quantity selection and live price quotation without confusing navigation redirects.",
+          width: 390,
+          height: 844,
+        },
+      },
+      {
+        id: "mkt-step-4",
+        stepNumber: "04",
+        title: "Seller store & catalog management",
+        description:
+          "Sellers manage priority commodities, update daily pricing, and monitor incoming buyer purchase requests across distinct fulfillment stages.",
+        image: {
+          src: "/projects/marketplace/screen-toko-buka.png",
+          alt: "Seller store and commodity catalog management",
+          caption:
+            "Store management: effortless catalog updates and incoming transaction monitoring.",
+          width: 390,
+          height: 844,
+        },
+      },
+    ],
+  },
   features: [
     {
       title: "Pasar Baru: Temukan Mitra Baru",

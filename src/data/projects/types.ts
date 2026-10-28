@@ -33,6 +33,45 @@ export type CaseStudyStat = {
   label: string;
 };
 
+export type ProjectAtAGlance = {
+  targetAudience?: string;
+  role?: string;
+  team?: string;
+  timeline?: string;
+  scope?: string;
+  status?: string;
+};
+
+export type WalkthroughStep = {
+  id: string;
+  stepNumber: string;
+  title: string;
+  description: string;
+  image: {
+    src: string;
+    alt: string;
+    caption: string;
+    width?: number;
+    height?: number;
+  };
+};
+
+export type Walkthrough = {
+  title: string;
+  subtitle?: string;
+  disclaimer?: string;
+  steps: readonly WalkthroughStep[];
+};
+
+export type KeyDecision = {
+  title: string;
+  problem: string;
+  decision: string;
+  reasoning: string;
+  outcome?: string;
+  image?: CaseStudyImage;
+};
+
 export type CaseStudySection = {
   title: string;
   body?: string;
@@ -60,6 +99,14 @@ export type Project = {
   solution: string;
   outcome: string;
   features: readonly Feature[];
+  // Enhanced PRD fields
+  prominence?: "lead" | "featured" | "standard" | "archive";
+  caseStudyType?: "featured" | "standard" | "visual";
+  problemSummary?: string;
+  roleSummary?: string;
+  atAGlance?: ProjectAtAGlance;
+  walkthrough?: Walkthrough;
+  keyDecisions?: readonly KeyDecision[];
   // Optional rich case study fields
   flowImage?: string;
   flowProcessImages?: readonly string[];

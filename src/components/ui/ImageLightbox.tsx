@@ -6,6 +6,7 @@ import React, {
   useContext,
   useEffect,
   useState,
+  useSyncExternalStore,
 } from "react";
 import { createPortal } from "react-dom";
 import Image, { type ImageProps } from "next/image";
@@ -40,11 +41,11 @@ export function ImageLightboxProvider({
   children: React.ReactNode;
 }) {
   const [activeImage, setActiveImage] = useState<LightboxImage | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
   const openLightbox = useCallback((image: LightboxImage) => {
     setActiveImage(image);

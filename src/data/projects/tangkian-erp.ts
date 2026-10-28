@@ -34,7 +34,164 @@ export const tangkianErp: Project = {
     { value: "4 clicks", label: "from login to a consolidated group report" },
     { value: "45 days", label: "discovery to delivery" },
   ],
-  resultNote: DISCLAIMER,
+  prominence: "lead",
+  caseStudyType: "featured",
+  problemSummary:
+    "Recording one transaction required triple entry across ledgers, while month-end group consolidation took a full week of manual spreadsheet assembly.",
+  roleSummary:
+    "Lead Product Designer — Discovery, Accounting Logic, IA, UI Design & Strategic Delivery",
+  atAGlance: {
+    targetAudience:
+      "Business owner & multi-company finance operators managing cement distribution, port logistics, and a coffee shop",
+    role: "Lead Product Designer & Strategic Consultant",
+    team: "2 people (Tri Anugerah Yusra: Discovery, IA, UI; Muhammad Jihad Robbani: Full-stack Development)",
+    timeline: "1 month 15 days (45 days) — Discovery to Delivery",
+    scope:
+      "Discovery, Accounting Rules Mapping, IA, Desktop UI, Design System, Handover",
+    status: "Shipped to production across 3 companies (sample data shown)",
+  },
+  walkthrough: {
+    title: "Guided Product Walkthrough",
+    subtitle:
+      "Four core steps demonstrating how everyday commercial documents flow into verified multi-entity financial statements",
+    disclaimer: DISCLAIMER,
+    steps: [
+      {
+        id: "switch-context",
+        stepNumber: "01",
+        title: "Switch the business context",
+        description:
+          "One login provides dedicated workspaces for each of the three businesses. Switching companies swaps the operational tools in the sidebar while keeping the accounting core, table patterns, and mental model identical.",
+        image: {
+          src: `${base}/02-c1-dashboard.webp`,
+          alt: "PT. Tangkian Lintas Anugerah cement distribution dashboard",
+          caption:
+            "Entity workspace: operational modules adapt per business while sharing one unified accounting core.",
+          width: 3360,
+          height: 2000,
+        },
+      },
+      {
+        id: "record-document",
+        stepNumber: "02",
+        title: "Record the source document",
+        description:
+          "Staff record commercial documents rather than ledger debits. The sales invoice form verifies customer credit limits and calculates DPP and VAT backwards from tax-inclusive prices in real time.",
+        image: {
+          src: `${base}/07-c1-invoice-form.webp`,
+          alt: "Sales invoice form with live credit limit validation and VAT calculation",
+          caption:
+            "Sales invoice form: DPP and VAT are computed backwards with live credit limit verification before saving.",
+          width: 3360,
+          height: 2000,
+        },
+      },
+      {
+        id: "review-automatic-entry",
+        stepNumber: "03",
+        title: "Review the automatic entry",
+        description:
+          "Every saved invoice or PO posts its own double entry to the general ledger. System-generated rows carry an 'Otomatis' badge, distinguishing them from manual accounting adjustments during audit.",
+        image: {
+          src: `${base}/05-c1-journal-list.webp`,
+          alt: "Journal entries ledger with Otomatis badge on system-written rows",
+          caption:
+            "Journal ledger: system-posted lines carry an 'Otomatis' badge, eliminating manual journal typing for routine trade.",
+          width: 3360,
+          height: 2000,
+        },
+      },
+      {
+        id: "read-group-performance",
+        stepNumber: "04",
+        title: "Read group performance",
+        description:
+          "The owner opens the consolidated report directly at any time. Per-entity revenue, profit share, balance sheets, and key performance ratios like ROE and ROA are derived live from ledger entries in just four clicks.",
+        image: {
+          src: `${base}/03c-consolidation-entities.webp`,
+          alt: "Group consolidation summary showing side-by-side performance of all three entities",
+          caption:
+            "Group consolidation summary: each entity's contribution and elimination columns rendered live from source ledgers.",
+          width: 3360,
+          height: 2000,
+        },
+      },
+    ],
+  },
+  keyDecisions: [
+    {
+      title: "Show the accounting consequence before committing",
+      problem:
+        "In legacy accounting systems, staff entered figures blindly and only discovered ledger discrepancies weeks later when the balance sheet failed to balance.",
+      decision:
+        "The sales invoice form shows credit limits, remaining limits, DPP, and VAT live as items are typed, validating the transaction before posting.",
+      reasoning:
+        "Turning documents into interactive guardrails eliminates post-posting journal corrections and prevents unauthorized credit extensions at the point of sale.",
+      outcome:
+        "Zero manual journal adjustments needed for routine commercial sales.",
+      image: {
+        label: "Sales invoice form showing live credit and tax calculation",
+        src: `${base}/07-c1-invoice-form.webp`,
+        caption:
+          "The sales invoice form validates consequences live before saving.",
+        ...SHOT,
+      },
+    },
+    {
+      title: "Mark system-generated entries with 'Otomatis'",
+      problem:
+        "Auditors and finance staff couldn't distinguish which ledger lines were posted from verified commercial documents versus manual adjustments.",
+      decision:
+        "Every system-posted double entry carries an explicit 'Otomatis' badge in the journal list, while manual adjustments remain unbadged.",
+      reasoning:
+        "Maintains audit clarity and builds trust in automated bookkeeping while preserving the flexibility for accountants to make manual closing adjustments.",
+      outcome:
+        "Audit trails are immediately transparent without running complex database queries.",
+      image: {
+        label: "Journal entries list with Otomatis badges",
+        src: `${base}/05-c1-journal-list.webp`,
+        caption:
+          "The journal ledger clearly highlights system-generated lines with an 'Otomatis' badge.",
+        ...SHOT,
+      },
+    },
+    {
+      title: "Adapt the sidebar, not the mental model",
+      problem:
+        "Three completely different businesses (cement distribution, port logistics, coffee shop) had to run on a single shared accounting core without feeling fragmented.",
+      decision:
+        "Switching entities swaps the operational modules and master data in the sidebar, but keeps the header, layout, table patterns, and financial reports identical.",
+      reasoning:
+        "Eliminates cognitive friction for administrative and finance personnel who manage books across multiple businesses on the same afternoon.",
+      outcome:
+        "Finance staff moved between entities with zero retraining or workflow confusion.",
+      image: {
+        label: "Entity workspace dashboard with tailored sidebar",
+        src: `${base}/02-c1-dashboard.webp`,
+        caption:
+          "Consistent operational layout with business-specific modules in the sidebar.",
+        ...SHOT,
+      },
+    },
+    {
+      title: "Key Stats with explicit formula printing",
+      problem:
+        "The business owner lacked financial software confidence and had to rely on a desk calculator for critical ratios like ROE, ROA, or ROIC.",
+      decision:
+        "Key Stats organizes executive metrics into 4 blocks (achievement, profitability, return & efficiency, growth) with the exact accounting formula printed directly beneath each value.",
+      reasoning:
+        "Printing 'ROE: Laba Bersih / Ekuitas' demystifies the metric and gives executive leadership genuine confidence in what they are reading.",
+      outcome:
+        "The owner reviews group return on capital independently without waiting for accountant briefings.",
+      image: {
+        label: "Key Stats dashboard with printed formulas",
+        src: `${base}/04-key-stats.webp`,
+        caption:
+          "Key Stats dashboard showing every ratio with its explicit formula printed beneath.",
+        ...SHOT,
+      },
+    },
+  ],
   desktopFeatures: true,
   features: [],
   caseStudySections: [

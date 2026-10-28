@@ -21,6 +21,10 @@ export type {
   CaseStudyTable,
   CaseStudyStat,
   CaseStudySection,
+  ProjectAtAGlance,
+  WalkthroughStep,
+  Walkthrough,
+  KeyDecision,
   Project,
 } from "./types";
 

@@ -11,6 +11,22 @@ export const designSystem: Project = {
   year: "2024",
   cover: `${wix}/thumbnail-47e960.jpg`,
   gradient: "from-purple-100 via-background to-card",
+  prominence: "standard",
+  caseStudyType: "standard",
+  problemSummary:
+    "Style drift with dozens of arbitrary color variants, inconsistent button states, and zero documentation caused friction between design and engineering.",
+  roleSummary:
+    "Lead Product Designer — Figma Architecture, WCAG Contrast Tokens & Engineering Handoff",
+  atAGlance: {
+    targetAudience:
+      "Internal product designers and front-end engineers across Linkz Asia's web applications",
+    role: "Lead Product Designer",
+    team: "Lead Product Designer in direct collaboration with Front-end Engineering Leads",
+    timeline: "3-day intensive sprint",
+    scope:
+      "Design Audit, Color Token Re-palette (WCAG 2.0 AA), Material Design Architecture, Figma Component Tokens",
+    status: "Adopted as official component library in Linkz Asia",
+  },
   tags: ["Figma", "Material Design", "Components"],
   summary:
     "A complete overhaul of Linkz Asia's B2B SaaS design system, migrating from an unorganized legacy UI kit to an intentional component library grounded in Material Design principles and WCAG 2.0 accessibility standards.",
@@ -20,6 +36,75 @@ export const designSystem: Project = {
     "Audited the existing SaaS platform to eliminate unused variants, rebuilt the core component library from the ground up in Figma using Material Design component architecture, and established an accessible color token palette compliant with WCAG 2.0 contrast standards. Embedded usage guidelines and state definitions directly within Figma to streamline engineering handoff.",
   outcome:
     "Cut UI delivery time for new modules, established a unified visual language across Linkz Asia's invoicing and inventory products, and enabled engineering to build from verified, tokenized components.",
+  walkthrough: {
+    title: "Guided Design System Walkthrough",
+    subtitle:
+      "Four steps demonstrating how the Figma component library was structured from token foundations to complex UI modules",
+    disclaimer:
+      "Tokens and component variants shown reflect the official Linkz Asia Figma design library.",
+    steps: [
+      {
+        id: "ds-step-1",
+        stepNumber: "01",
+        title: "WCAG 2.0 color token architecture",
+        description:
+          "Replaced uncontrolled color bloat with disciplined semantic tokens, ensuring every text, surface, and border pairing passes WCAG 2.0 AA contrast requirements.",
+        image: {
+          src: `${wix}/colors-3bdb5a.png`,
+          alt: "WCAG 2.0 compliant color token system in Figma",
+          caption:
+            "Color tokens: accessible palette architecture with explicit contrast ratios and role definitions.",
+          width: 1200,
+          height: 700,
+        },
+      },
+      {
+        id: "ds-step-2",
+        stepNumber: "02",
+        title: "Standardized button matrix & interaction states",
+        description:
+          "Defined unified button hierarchies (Primary, Secondary, Text) across all interaction states (default, hover, active, focused, disabled, loading) with fixed border radiuses.",
+        image: {
+          src: `${wix}/buttons-13e152.png`,
+          alt: "Complete button component states and variants",
+          caption:
+            "Button component matrix: clear variant properties and states ready for React implementation.",
+          width: 1200,
+          height: 700,
+        },
+      },
+      {
+        id: "ds-step-3",
+        stepNumber: "03",
+        title: "Form fields & inline validation feedback",
+        description:
+          "Built text inputs, dropdowns, and textareas with persistent helper text, explicit focus outlines, and standardized error messaging for form reliability.",
+        image: {
+          src: `${wix}/tex-field-cb1054.png`,
+          alt: "Form text fields, dropdowns, and validation states",
+          caption:
+            "Form inputs: unified layout, accessibility focus indicators, and error boundaries.",
+          width: 1200,
+          height: 700,
+        },
+      },
+      {
+        id: "ds-step-4",
+        stepNumber: "04",
+        title: "Modular navigation & operational sidebars",
+        description:
+          "Structured scalable sidebar menus, status chips, checkboxes, and floating action buttons (FABs) designed to adapt across desktop SaaS screens.",
+        image: {
+          src: `${wix}/menu-side-bar-3027b3.png`,
+          alt: "Modular navigation sidebars and status components",
+          caption:
+            "Navigation architecture: structured menus and status indicators supporting Linkz Asia's B2B suites.",
+          width: 1200,
+          height: 700,
+        },
+      },
+    ],
+  },
   features: [
     {
       title: "Product-Needs-First Components",

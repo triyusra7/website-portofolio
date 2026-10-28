@@ -21,12 +21,91 @@ export const tangkianLogistics: Project = {
     "Designed a dedicated operational workflow centered around maritime units: Vessel Registry, Voyage Tracking, and Job Orders (PBM and Dooring). Every job order links directly to its bill of lading and manifest. Completed operations feed directly into logistics invoicing, seamlessly posting revenues to the group's shared accounting core.",
   outcome:
     "Dock operations, vessel dispatch, and subcontractor manifests are managed in one unified operational system. Invoices generate directly from verified manifests, eliminating billing lag and manual spreadsheet reconciliations.\n\nShipped as the second dedicated program in the Tangkian corporate group series.",
-  resultStats: [
-    { value: "100%", label: "of job orders traceable to vessel & bill of lading" },
-    { value: "0", label: "duplicate spreadsheets required between dock and finance" },
-    { value: "Same-day", label: "invoicing upon vessel discharge completion" },
-    { value: "Parent ERP", label: "seamless accounting integration without manual journals" },
-  ],
+  prominence: "standard",
+  caseStudyType: "standard",
+  problemSummary:
+    "Dock stevedoring and haulage required tracking vessels, bills of lading, and subcontractors, while manual tally sheets caused 2-week billing delays.",
+  roleSummary:
+    "Lead Product Designer — Maritime Units IA, Job Order Tracking & Integrated Billing",
+  atAGlance: {
+    targetAudience:
+      "Port dispatchers, quay tally clerks, and logistics finance personnel at PT. Tangkian Samudera Logistik",
+    role: "Lead Product Designer & System Architect",
+    team: "Tri Anugerah Yusra (Design & Architecture), Muhammad Jihad Robbani (Engineering)",
+    timeline: "Shipped as follow-up specialized system in the Tangkian series",
+    scope:
+      "Vessel Registry, Voyage Tracking, PBM & Dooring Job Orders, Integrated Group Billing",
+    status: "Shipped to production (companion to Tangkian ERP)",
+  },
+  walkthrough: {
+    title: "Guided Port Logistics Workflow",
+    subtitle:
+      "Four steps demonstrating how dock dispatchers track vessels, assign stevedoring job orders, and generate billing directly to the parent ERP ledger",
+    disclaimer:
+      "All vessel names and voyage manifests shown are demonstration operational data.",
+    steps: [
+      {
+        id: "log-step-1",
+        stepNumber: "01",
+        title: "Quay & fleet operational dashboard",
+        description:
+          "Dispatchers track active vessel berthings, monthly job orders, and stevedoring progress directly from the quay-side overview.",
+        image: {
+          src: `${base}/20-c2-dashboard.webp`,
+          alt: "PT. Tangkian Samudera Logistik operational overview dashboard",
+          caption:
+            "Operational dashboard: live tracking of vessel arrivals, cargo discharge, and logistics revenue.",
+          width: 3360,
+          height: 2000,
+        },
+      },
+      {
+        id: "log-step-2",
+        stepNumber: "02",
+        title: "Issue stevedoring job orders (SPK)",
+        description:
+          "Staff create job orders directly linked to the vessel voyage and customer BL, setting equipment and subcontractor allocations before discharge begins.",
+        image: {
+          src: `${base}/21-c2-jobs.webp`,
+          alt: "Job orders registry keyed to bill of lading and voyage",
+          caption:
+            "Job order management: linking stevedoring tasks directly to incoming vessel manifests.",
+          width: 3360,
+          height: 2000,
+        },
+      },
+      {
+        id: "log-step-3",
+        stepNumber: "03",
+        title: "Automated logistics billing",
+        description:
+          "Upon discharge completion, verified tally sheets aggregate into draft invoices that post directly to the shared group accounting ledger under logistics revenue.",
+        image: {
+          src: `${base}/22-c2-invoices.png`,
+          alt: "Automated Dooring and PBM invoicing screen",
+          caption:
+            "Logistics invoicing: automated billing generation from verified manifests without duplicate spreadsheets.",
+          width: 3360,
+          height: 2000,
+        },
+      },
+      {
+        id: "log-step-4",
+        stepNumber: "04",
+        title: "Operational performance reporting",
+        description:
+          "Logistics leadership reviews cargo tonnage, demurrage, and subcontractor haulage expenses by voyage to maintain dock margins.",
+        image: {
+          src: `${base}/23-c2-report.png`,
+          alt: "Voyage performance and subcontracted haulage report",
+          caption:
+            "Voyage reporting: breakdown of cargo discharge tonnage, operational costs, and profitability.",
+          width: 3360,
+          height: 2000,
+        },
+      },
+    ],
+  },
   desktopFeatures: true,
   features: [],
   caseStudySections: [

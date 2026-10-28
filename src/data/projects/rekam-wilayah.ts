@@ -11,6 +11,22 @@ export const rekamWilayah: Project = {
   year: "2021 – 2022",
   cover: "/projects/rekam-wilayah-cover.jpg",
   gradient: "from-emerald-100 via-background to-card",
+  prominence: "standard",
+  caseStudyType: "standard",
+  problemSummary:
+    "Field agents needed to verify farm boundaries for trade and loan underwriting, but complex desktop GIS tools failed on rural low-end smartphones.",
+  roleSummary:
+    "UI/UX Designer — Walk-to-Trace GPS Interaction, Field Usability & Auto-closing Polygons",
+  atAGlance: {
+    targetAudience:
+      "Rural field agents, collectors, and farmers walking agricultural land plots with limited connectivity",
+    role: "UI/UX Designer",
+    team: "2 UI/UX Designers, 4 Developers, 1 Tech Lead, 1 QA, 1 PM",
+    timeline: "1 sprint (2 weeks)",
+    scope:
+      "Field Observation, Walk-to-Trace Interaction Logic, Point Geopinning, Offline-resilient UI",
+    status: "Shipped in PasarMIKRO mobile application",
+  },
   tags: ["GPS", "Field Research", "Mobile App"],
   summary:
     "A mobile field mapping tool built for PasarMIKRO's agricultural supply chain platform (~1,000 registered traders and smallholders). Designed walk-to-trace GPS boundary recording and point pinning to give rural users accurate land measurement and commodity traceability without complex GIS tools.",
@@ -20,6 +36,75 @@ export const rekamWilayah: Project = {
     "Designed a lightweight, two-mode capture system optimized for low-end mobile devices and field conditions: 'Plot' mode allows users to walk their perimeter while GPS traces coordinates into an auto-closing polygon that calculates acreage in real time; 'Point' mode allows quick geopinning of specific collection sites. Structured input forms attach commodity data directly to each perimeter record, bridging physical land plots to marketplace transaction records.",
   outcome:
     "Shipped within a single 2-week sprint and rolled out across PasarMIKRO's active user base (~600 active traders and smallholders). Enabled instant, verifiable land documentation directly from field walks, establishing the groundwork for commodity traceability and verified transaction data.",
+  walkthrough: {
+    title: "Guided Field Mapping Walkthrough",
+    subtitle:
+      "Four steps showing how rural field agents map physical farm plots, auto-close boundaries, and link land to crop records",
+    disclaimer:
+      "All coordinates and acreage figures shown are demonstration field data from PasarMIKRO.",
+    steps: [
+      {
+        id: "rw-step-1",
+        stepNumber: "01",
+        title: "Launch field mapping from activity hub",
+        description:
+          "Field agents open Rekam Wilayah directly from the Rekam Aktivitas hub, initiating GPS boundary recording with high-contrast sunlight readability.",
+        image: {
+          src: "/projects/rekam-wilayah/screen-1.png",
+          alt: "Rekam Aktivitas entry screen for boundary tracking",
+          caption:
+            "Entry point: accessing plot mapping from the mobile activity hub.",
+          width: 390,
+          height: 844,
+        },
+      },
+      {
+        id: "rw-step-2",
+        stepNumber: "02",
+        title: "Walk-to-trace perimeter (Plot Mode)",
+        description:
+          "The agent taps 'Mulai' and walks the perimeter. GPS traces waypoints in real time across low-end mobile devices without draining battery or requiring GIS expertise.",
+        image: {
+          src: "/projects/rekam-wilayah/screen-2.png",
+          alt: "Walk-to-trace live GPS mapping in progress",
+          caption:
+            "Walk-to-trace mode: live waypoint logging and perimeter tracing as the agent walks the farm edge.",
+          width: 390,
+          height: 844,
+        },
+      },
+      {
+        id: "rw-step-3",
+        stepNumber: "03",
+        title: "Auto-closing polygon & acreage calculation",
+        description:
+          "As the agent loops back to the start coordinate, the algorithm snaps the polygon shut and computes the exact area in hectares (Ha) and square kilometers automatically.",
+        image: {
+          src: "/projects/rekam-wilayah/screen-4.png",
+          alt: "Completed land boundary polygon and calculated acreage",
+          caption:
+            "Perimeter closure: immediate calculation of land area in hectares with high precision.",
+          width: 390,
+          height: 844,
+        },
+      },
+      {
+        id: "rw-step-4",
+        stepNumber: "04",
+        title: "Attach commodity & partner metadata",
+        description:
+          "A bottom-sheet form captures crop variety, planting cycles, and partner identifiers without covering the map, creating permanent origin traceability.",
+        image: {
+          src: "/projects/rekam-wilayah/screen-3.png",
+          alt: "Commodity and territory metadata input bottom sheet",
+          caption:
+            "Metadata sheet: linking physical plot boundaries directly to commodity harvest records.",
+          width: 390,
+          height: 844,
+        },
+      },
+    ],
+  },
   features: [
     {
       title: "Rekam Aktivitas Entry Point",
